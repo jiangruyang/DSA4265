@@ -13,4 +13,4 @@ print("Starting Credit Card Rewards Optimizer...")
 print("If you have T&C PDFs, make sure they are in the data/card_tcs/pdf directory")
 
 # Run Streamlit app
-os.system("streamlit run src/app.py")
+os.system("streamlit run src/user_interface/streamlit_app.py")

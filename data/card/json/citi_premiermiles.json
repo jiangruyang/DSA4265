@@ -1,0 +1,68 @@
+{
+  "rewards_and_benefits": {
+    "key_features": [
+      "Citi Miles never expire",
+      "Earn up to 2.2 Citi Miles per S$1 on your spend",
+      "Receive renewal bonus of 10,000 Citi Miles on your Card anniversary",
+      "Earn up to 10 Citi Miles per S$1 on online travel bookings via Kaligo and Agoda",
+      "Principal Cardholder gets to enjoy 2 complimentary visits every year to over 1,300 airport lounges worldwide.",
+      "With Citi PayAll, you can earn and accumulate Citi Miles, Citi ThankYou PointsSM or Cash Back quickly when you pay your big-ticket bills such as rent, insurance premiums, education expenses, taxes, utilities and more",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "air_miles": [
+      "Citi Miles never expire so you can accumulate them over time",
+      "Citi Miles conversion rate: 10,000 Citi Miles for 10,000 airline miles/hotel points",
+      "Citi Miles redemption via Citi ThankYouSM Rewards allows you to transfer miles earned to 11 airline partners, including Singapore Airlines’ Krisflyer miles program. Subject to S$25 + prevailing GST per Points Transfer",
+      "1.2 Citi Miles per S$1 local spend. No minimum spend, although general exclusions such as insurance, educational institution fees etc., do apply",
+      "2.2 Citi Miles per S$1 overseas spend on foreign currency. Subject to 3.25% admin fee per transaction",
+      "With Citi PayAll, you can earn and accumulate Citi Miles, Citi ThankYou PointsSM or Cash Back quickly when you pay your big-ticket bills such as rent, insurance premiums, education expenses, taxes, utilities and more"
+    ],
+    "overseas_spending": [
+      "No minimum spend nor cap",
+      "Earn 2.2 Citi Miles per S$1 overseas spend charged in foreign currency",
+      "Online travel bookings charged in foreign currency: Earn 7 Citi Miles per S$1 overseas spend with Agoda’s Bonus Miles promotion; earn 10 Citi Miles per S$1 overseas spend with Kaligo’s Bonus Miles promotion",
+      "All foreign currency transactions subject to 3.25% admin fee",
+      "With Citi PayAll, you can earn and accumulate Citi Miles, Citi ThankYou PointsSM or Cash Back quickly when you pay your big-ticket bills such as rent, insurance premiums, education expenses, taxes, utilities and more"
+    ],
+    "bill_payment": [
+      "Manage and schedule bill payments with Citi PayAll feature on the Citi Mobile App",
+      "With Citi PayAll, you can earn and accumulate Citi Miles, Citi ThankYou PointsSM or Cash Back quickly when you pay your big-ticket bills such as rent, insurance premiums, education expenses, taxes, utilities and more"
+    ],
+    "petrol": [
+      "Best for: Petrol transactions at Esso and Shell",
+      "Esso: 5% Esso site discount + 5% Esso Smiles discount + 4% Citi card discount = Total of 14% savings effectively",
+      "Shell: 5% Shell site discount + 5% Shell Escape discount + 4% Citi card discount = Total of 14% savings effectively",
+      "With Citi PayAll, you can earn and accumulate Citi Miles, Citi ThankYou PointsSM or Cash Back quickly when you pay your big-ticket bills such as rent, insurance premiums, education expenses, taxes, utilities and more"
+    ]
+  },
+  "eligibility": [
+    "MoneySmart Exclusive Promotion is valid from 19-March 2025 to 31-March-2025",
+    "Applicable for New-to Citibank Cardmembers only",
+    "Activate the approved Eligible Card via the Citi Mobile App and spend a minimum of S$500 which falls under “Qualifying Spend” within a 30-day period inclusive of account approval date.",
+    "Log into your MoneySmart account and submit your claim by 30th April 2025"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "S$98.10",
+    "annual_fee_waiver": "First year annual fee waiver available",
+    "interest_free_period": "25 days",
+    "annual_interest_rate": "27.9%",
+    "late_payment_fee": "Determined by credit card issuer",
+    "minimum_monthly_repayment": "1% plus 1% of any outstanding unbilled instalment amounts plus interest charges plus late payment charge or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8% or S$15, whichever is higher"
+  },
+  "minimum_income": {
+    "singaporean_pr": "30,000",
+    "non_singaporean": "42,000"
+  },
+  "documents_required": {
+    "sg_citizens_prs": "Apply via MyInfo",
+    "passport_validity": "6 months",
+    "work_permit_validity": "6 months",
+    "utility_bill": "With Full Name and Address",
+    "income_tax_notice": "Income Tax Notice of Assessment",
+    "payslip": "Latest Original Computerised Payslip"
+  },
+  "card_association": "Mastercard"
+}
