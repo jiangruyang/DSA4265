@@ -1,0 +1,71 @@
+{
+  "card_name": "UOB Absolute Cashback Card",
+  "card_type": "Cashback",
+  "issuer": "UOB",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Enjoy 1.7% limitless cashback across all your local retail spend including groceries, insurance, as well as big purchases such as home furnishings, electronics and luxury shopping.",
+      "Enjoy 1.7% limitless cashback across all your overseas spend.",
+      "Enjoy 0.3% limitless cashback on generally excluded spend such as Grab mobile wallet top-up, Charity, Education, Government, Healthcare, Utilities and other Professional services.",
+      "No minimum spend and no spend exclusions (\"No spend exclusions\" does not include NETS transactions made with the UOB Absolute Cashback Card)",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "overseas_spending": [
+      "Enjoy 1.7% limitless cashback across all your overseas spend."
+    ],
+    "petrol": [
+      "Enjoy up to 14% fuel discount at Shell Enjoy up to 15% fuel discount at SPC"
+    ],
+    "cash_back": [
+      "Enjoy 1.7% limitless cashback across all your overseas spend and local retail spend including groceries, insurance, as well as big purchases such as home furnishings, electronics and luxury shopping.",
+      "Enjoy 0.3% limitless cashback on generally excluded spend such as Grab mobile wallet top-up, school fees, healthcare and government services."
+    ],
+    "entertainment": [
+      "1.7% Limitless Cashback on Entertainment including recurring subscription such as Netflix, Disney+ and more"
+    ],
+    "grocery": [
+      "1.7% Limitless Cashback on Grocery"
+    ],
+    "dining": [
+      "1.7% Limitless Cashback on Dining"
+    ],
+    "online_shopping": [
+      "1.7% Limitless Cashback on Online Shopping"
+    ],
+    "shopping": [
+      "1.7% Limitless Cashback on Shopping, especially for big purchases such as luxury shoppings, home furnishings and more"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "MoneySmart Exclusive Promotion is valid from 15-March-2025 to 31-March-2025",
+    "UOB Online Promotion is valid from 01-March-2025 to 31-March-2025",
+    "The promotion is only applicable for new-to-UOB credit card customers only.",
+    "Customers need to apply through MoneySmart to be eligible",
+    "Log into your MoneySmart account and submit a claim by 14th April 2025 in order to qualify for our MoneySmart Exclusive offers."
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "1st supplementary card free; $98.10 for subsequent cards",
+    "annual_fee_waiver": "1st year fee waiver",
+    "interest_free_period": "21 days",
+    "annual_interest_rate": "27.80%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is higher",
+    "cash_advance_fee": "8%",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$40,000"
+  },
+  "documents_required": {
+    "sg_citizens_prs": "Identity Card Proof",
+    "passport_validity": "At least 6 months' validity",
+    "work_permit_validity": "EP or S Pass only with at least 6 months’ validity",
+    "utility_bill": "Latest Billing Proof",
+    "income_tax_notice": "N/A",
+    "payslip": "Yes"
+  },
+  "card_association": "American Express"
+}

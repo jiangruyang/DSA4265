@@ -1,0 +1,50 @@
+{
+  "card_name": "DBS Woman's Card",
+  "card_type": "Online Shopping",
+  "issuer": "DBS",
+  "rewards_and_benefits": {
+    "key_features": [
+      "5X DBS Points per S$5 / 2 miles per S$1 on online purchases",
+      "1X DBS Points per S$5 / 0.4 miles per S$1 on other purchases",
+      "Complimentary e-Commerce Protection on online purchases",
+      "Enjoy first year annual fee waiver",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "rewards": [
+      "DBS Points earned in your first year expire in a year from card application. Subsequent DBS Points earned expire a year from earned date"
+    ],
+    "buffet_promotion": [
+      ""
+    ],
+    "online_shopping": [
+      "",
+      "",
+      ""
+    ],
+    "shopping": [
+      "1X DBS Points per S$5",
+      "0.4 miles per S$1 on other purchases"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old"
+  ],
+
+  "fees": {
+    "annual_fee": "S$163.50",
+    "supplementary_card_fee": "S$81.75",
+    "annual_fee_waiver": "First year waived",
+    "interest_free_period": "25 days",
+    "annual_interest_rate": "27.80% p.a. chargeable on daily basis (subject to compounding)",
+    "late_payment_fee": "S$100 (For outstanding balance above S$200)",
+    "minimum_monthly_repayment": "3.00% or S$50, whichever is greater",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8% or S$15, whichever is greater",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$45,000"
+  },
+  "card_association": "Mastercard"
+}

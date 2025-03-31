@@ -1,0 +1,70 @@
+{
+  "card_name": "Standard Chartered Journey Credit Card (No Annual Fee)",
+  "card_type": "Miles",
+  "issuer": "Standard Chartered",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Up to 3 miles for every $1 spent",
+      "2 complimentary visits to Priority Pass lounges around the world each year",
+      "Complimentary travel insurance coverage of up to S$500,000.",
+      "360 Rewards Points do not expire",
+      "S$10 off Grab rides to or from Changi Airport",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "air_miles": [
+      "Earn 3 miles per S$1 spent on Online Transactions: Transportation, Grocery and Food Delivery Merchants",
+      "Earn 2 miles per S$1 for Foreign Spends",
+      "Earn 1.2 miles per S$1 for Local Spends",
+      "Flexibility of redemption: choice of Air Miles, Cash Rewards or Shopping Vouchers with your 360 Rewards Points",
+      "360 Rewards Points do not expire"
+    ],
+    "overseas_spending": [
+      "Earn 2 miles per S$1 for Foreign Spends"
+    ],
+    "petrol": [
+      "16% upfront discount for all fuel types at Caltex Singapore",
+      "Earn 1.2 miles per S$1 for Local Spends"
+    ],
+    "entertainment": [
+      "Earn 1.2 miles per S$1 for Local Spends",
+      "Earn 2 miles per S$1 for Foreign Spends"
+    ],
+    "grocery": [
+      "Earn 3 miles per S$1 spent on Online Transactions: Grocery",
+      "Earn 1.2 miles per S$1 for Local Spends"
+    ],
+    "dining": [
+      "Earn 1.2 miles per S$1 for Local Spends",
+      "Earn 3 miles per S$1 spent on Online Transactions: Food Delivery Merchants"
+    ],
+    "online_shopping": [
+      "Earn 3 miles per S$1 spent on Online Transactions: Transportation, Grocery and Food Delivery Merchants",
+      "Earn 2 miles per S$1 for Foreign Spends",
+      "Earn 1.2 miles per S$1 for Local Spends"
+    ],
+    "shopping": [
+      "Earn 1.2 miles per S$1 for Local Spends",
+      "Earn 2 miles per S$1 for Foreign Spends"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "Promotion is valid from 12-March-2025 to 31-March-2025",
+    "Applicable for New-to card holders only",
+    "Customers need to apply through MoneySmart to be eligible",
+    "Charge a minimum of S$500 in eligible transactions (on either the physical or digital version of the Credit Card) within 30 days from the Credit Card’s approval date on the approved Credit Card"
+  ],
+  "fees": {
+    "annual_fee": "S$0",
+    "supplementary_card_fee": "S$0",
+    "interest_free_period": "Available",
+    "annual_interest_rate": "27.90%",
+    "minimum_monthly_repayment": "S$50 or 1% of Principal/ Interest, Fees & Charges/ Overlimit amount/ Past Due amount, whichever is higher",
+    "cash_advance_fee": "8% per transaction"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$90,000"
+  },
+  "card_association": "Visa"
+}

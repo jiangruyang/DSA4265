@@ -1,0 +1,51 @@
+{
+  "card_name": "OCBC Great Eastern Cashflo Credit Card",
+  "card_type": "Cash Rebate",
+  "issuer": "OCBC",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Enjoy interest-free instalments",
+      "Earn up to 1.2% cash rebate every month",
+      "Stretch payments across 3, 6, or 12* months with 0% interest",
+      "2 years fee waiver, subsequent years waived with min. spend S$10,000 p.a."
+    ],
+    "bill_payment": [
+      "Earn 0.3% cash rebate if your monthly billed amount of eligible retail spend (excluding GE Life and GE General Insurance Premiums) is below S$1,000",
+      "Earn 1.2% cash rebate if your monthly billed amount of eligible retail spend (excluding GE Life and GE General Insurance Premiums) is S$1,000 and above, capped at S$100 a month.",
+      "Enjoy hassle-free payments when you automatically split your bills into 3, 6 or 12-month instalments.",
+      "Enjoy interest-free instalments",
+      "Split your bills over up to 12 months (1% processing fee applies) for eligible GE Life and GE General Insurance premiums*",
+      "For all other payments, split across 3 months for transactions between S$100 and S$1,000, or across 6 months for transactions of S$1,000 and above."
+    ],
+    "petrol": [
+      "Best for: Petrol transactions at Esso & Caltex",
+      "14% discount at Esso stations - 5% Esso site discount + 5% Smiles card discount + 4% OCBC card discount",
+      "16% upfront discount at Caltex stations, includes station onsite discount and OCBC card discount"
+    ],
+    "cash_back": [
+      "Earn 0.3% cash rebate if your monthly billed amount of eligible retail spend (excluding GE Life and GE General Insurance Premiums) is below S$1,000",
+      "Earn 1.2% cash rebate if your monthly billed amount of eligible retail spend (excluding GE Life and GE General Insurance Premiums) is S$1,000 and above, capped at S$100 a month."
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old"
+  ],
+  "fees": {
+    "annual_fee": "S$163.50",
+    "supplementary_card_fee": "S$81.75",
+    "annual_fee_waiver": "Available",
+    "interest_free_period": "23 days",
+    "annual_interest_rate": "27.78%",
+    "late_payment_fee": "S$80",
+    "minimum_monthly_repayment": "3% or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "foreign_check_fee": "N/A",
+    "cash_advance_fee": "6% or S$15, whichever is higher",
+    "overlimit_fee": "N/A"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$45,000"
+  },
+  "card_association": "Mastercard"
+}

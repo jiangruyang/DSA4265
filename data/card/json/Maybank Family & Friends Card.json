@@ -1,0 +1,87 @@
+{
+  "card_name": "Maybank Family & Friends Card",
+  "card_type": "Cashback",
+  "issuer": "Maybank",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Earn 8% cashback globally on your 5 preferred cashback categories",
+      "Up to 8% cashback in local and overseas restaurant dining and Online Food Delivery (e.g. Foodpanda and Deliveroo)",
+      "Up to 8% cashback on petrol and passenger transportation services such as contactless bus and train rides, taxi, private hire rides (e.g. SimplyGO, Grab rides, ComfortDelGro etc.)",
+      "Up to 8% cashback on online local and overseas groceries (e.g. Redmart, FairPrice Online)",
+      "Up to 8% cashback on data communication & online TV streaming",
+      "Earn 8% cashback on all Malaysian Ringgit and Indonesian Rupiah spend on top of your 5 preferred cashback categories",
+      "Unlimited 0.3% cashback on all other spend",
+      "3 years annual fee waived; spend min. S$12,000 per year to get subsequent waiver",
+      "Be empowered with the choice of card design that best represents you! Select your preferred card design from the 3 designs offered by Maybank!"
+    ],
+    "overseas_spending": [
+      "Up to 8% cashback on your 5 preferred cashback categories",
+      "Earn up to 8% cashback on all Malaysian Ringgit and Indonesian Rupiah spend",
+      "Exclusive Regional Treats, from dining to shopping, spanning across Malaysia, Indonesia, Cambodia & Philippines"
+    ],
+    "bill_payment": [],
+    "petrol": [
+      "Earn up to 26.45% at all Caltex Petrol Stations in Singapore with Diamond Sky Fuel Card",
+      "Up to 8% cashback on all petrol stations globally",
+      "Up to 8% cashback for your EV car charging"
+    ],
+    "cash_back": [
+      "Earn up to 8% cashback globally on your 5 preferred cashback categories",
+      "Earn up to 8% cashback on all Malaysian Ringgit and Indonesian Rupiah spend",
+      "Up to 8% cashback on groceries, dining, transport and petrol spend in Singapore and Malaysia",
+      "Up to 8% cashback on shopping, data communication & online TV streaming",
+      "Unlimited 0.3% cashback on all other spend"
+    ],
+    "rewards": [
+      "Earn up to 26.45% at all Caltex Petrol Stations in Singapore with Diamond Sky Fuel Card",
+      "Unlimited 0.3% cashback on all other spend"
+    ],
+    "entertainment": [
+      "Up to 8% cashback at Data Communication & Online TV Streaming merchants in Singapore",
+      "Up to 8% cashback at bars, drinking places, cinemas and live concert or play",
+      "Online TV Streaming merchants includes Netflix, Spotify and/or other pay television, cable and radio services in Singapore",
+      "Unlimited 0.3% cashback on all other spend"
+    ],
+    "grocery": [
+      "Up to 8% cashback at all supermakets (including online grocery stores) in Singapore & Malaysia",
+      "Cashback for groceries including offline and online merchants",
+      "Merchants include Income Fairprice/Finest/X-tra, Cold Storage, Market Place, Jasons, Giant, Sheng Siong, RedMart, Honestbee and all other groceries stores and supermarkets in Singapore and Malaysia",
+      "Unlimited 0.3% cashback on all other spend"
+    ],
+    "dining": [
+      "Up to 8% cashback in local and overseas restaurant dining",
+      "Up to 8% cashback for Fast Food",
+      "Up to 8% cashback for Food Delivery",
+      "Unlimited 0.3% cashback on all other spend"
+    ],
+    "online_shopping": [
+      "Up to 8% cashback on local and overseas online fashion"
+    ],
+    "shopping": [
+      "Up to 8% cashback on selected merchants",
+      "Merchants include POPULAR Bookstores, Toys 'R' Us and Yamaha Music",
+      "Unlimited 0.3% cashback on all other spend"
+    ]
+  },
+  "eligibility": [
+    "Principal: Min. 21 years old",
+    "Supplementary: Min. 18 years old"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "S$0",
+    "annual_fee_waiver": "Available",
+    "interest_free_period": "20 days",
+    "annual_interest_rate": "27.90% p.a. subject to a minimum charge of S$3.00",
+    "late_payment_fee": "5% of the minimum monthly repayment or S$100, whichever is higher, if minimum monthly repayment is not received by due date",
+    "minimum_monthly_repayment": "3% of outstanding balance or S$20, whichever is higher",
+    "foreign_transaction_fee": "All transactions in foreign currency will be subject to an administrative fee of 2.25% and a currency conversion charge of 1% imposed by the respective card associations",
+    "cash_advance_fee": "8% of the transaction amount or S$15, whichever is higher",
+    "overlimit_fee": "N/A"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$60,000"
+  },
+  "card_association": "Mastercard"
+}

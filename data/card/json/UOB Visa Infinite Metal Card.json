@@ -1,0 +1,67 @@
+{
+  "card_name": "UOB Visa Infinite Metal Card",
+  "card_type": "Miles",
+  "issuer": "UOB",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Unlimited access to 1,300 airport lounges worldwide, for you and a guest",
+      "Earn 2.4 air miles per S$1 spent in foreign currency, and 1.4 air miles per S$1 spent locally",
+      "Bonus 15,000 air miles upon renewal with min. S$100,000 spend in membership year",
+      "Waiver of miles conversion fees",
+      "Complimentary welcome drinks and up to 50% off at Michelin-starred and fine dining restaurants",
+      "Complimentary GrabGifts vouchers monthly",
+      "Travel with a peace of mind with up to S$1,000,000 Travel Personal Accident Insurance coverage",
+      "24/7 UOB Visa Infinite Concierge for your banking and lifestyle needs"
+    ],
+    "air_miles": [
+      "Earn 2.4 air miles per S$1 spent in foreign currency and 1.4 air miles per S$1 spent locally",
+      "Bonus 15,000 air miles upon renewal with min. S$100,000 spend in membership year",
+      "Waiver of miles conversion fees"
+    ],
+    "overseas_spending": [
+      "Earn 2.4 air miles per S$1 spent in foreign currency (Overseas or Online)"
+    ],
+    "petrol": [
+      "Up to 14% off at Shell and up to 20% off at SPC"
+    ],
+    "rewards": [
+      "Complimentary GrabGifts vouchers monthly"
+    ],
+    "entertainment": [
+      "Complimentary weekday green fees at Sentosa Golf Club with 1 fee paying guest"
+    ],
+    "dining": [
+      "Complimentary welcome drinks at Michelin-starred and top restaurants locally and overseas",
+      "Up to 50% discount at participating restaurants from Pan Pacific Hotels Group, The Fullerton Hotels Singapore, The Ritz-Carlton Millenia Singapore and Sheraton Towers Singapore"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old"
+  ],
+  "fees": {
+    "annual_fee": "S$654 (inclusive of 9% GST)",
+    "supplementary_card_fee": "First Supplementary Card: Free for life. S$293.38 (inclusive of 9% GST) for second and subsequent card(s)",
+    "annual_fee_waiver": "Strictly no waiver",
+    "interest_free_period": "Up to 21 days",
+    "annual_interest_rate": "27.8%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% of current balance or $50, whichever is higher, plus any overdue amounts",
+    "foreign_transaction_fee": "3.25%",
+    "foreign_check_fee": "N/A",
+    "cash_advance_fee": "8% of cash advance amount subject to min. S$15",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income Minimum annual income of S$120,000 is required",
+    "non_singaporean": "Non-Singaporean Minimum Income Minimum annual income of S$120,000 is required"
+  },
+  "documents_required": {
+    "sg_citizens_prs": "Apply via MyInfo",
+    "passport_validity": "6 months",
+    "work_permit_validity": "6 months",
+    "utility_bill": "Utility or Telephone Bill",
+    "income_tax_notice": "Income Tax Notice of Assessment",
+    "payslip": "Latest Original Computerised Payslip"
+  },
+  "card_association": "Visa"
+}

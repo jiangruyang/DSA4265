@@ -1,0 +1,80 @@
+{
+  "card_name": "Standard Chartered SimplyCash Credit Card",
+  "card_type": "Cashback",
+  "issuer": "Standard Chartered",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Flat 1.5% cashback rate for all eligible purchases",
+      "No cashback cap and no minimum spend",
+      "Enjoy dining and shopping discount privileges at over 3,000 outlets in Asia with Standard Chartered’s The Good Life Program",
+      "1 year annual fee waiver, no minimum spend required",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "overseas_spending": [
+      "1.5% cashback awarded for all eligible purchases on overseas spend",
+      "No cashback cap and no minimum spend",
+      "3.5% foreign currency transaction fee"
+    ],
+    "petrol": [
+      "Up to 23.7% fuel savings at Caltex with your Simply Cash Credit card",
+      "Visit https://www.sc.com/sg/promotions/caltex/ for more details."
+    ],
+    "cash_back": [
+      "1.5% cashback awarded for all eligible purchases, such as dining, online shopping, local and overseas spend",
+      "Cashback terms and conditions: General exclusions such as bills, payments to educational, financial, and governmental institutions, and GrabPay top up apply"
+    ],
+    "buffet_promotion": [
+      "Flat 1.5% cashback rate for all eligible purchases",
+      "No cashback cap and no minimum spend"
+    ],
+    "entertainment": [
+      "Flat 1.5% cashback rate for all eligible purchases",
+      "No cashback cap and no minimum spend"
+    ],
+    "grocery": [
+      "Flat 1.5% cashback rate for all eligible purchases",
+      "No cashback cap and no minimum spend"
+    ],
+    "dining": [
+      "Enjoy dining discount privileges at over 3,000 outlets in Asia with Standard Chartered’s The Good Life Program",
+      "Flat 1.5% cashback rate for all eligible purchases"
+    ],
+    "shopping": [
+      "Enjoy shopping discount privileges at over 3,000 outlets in Asia with Standard Chartered’s The Good Life Program",
+      "Flat 1.5% cashback rate for all eligible purchases",
+      "No cashback cap and no minimum spend"
+    ],
+    "installment": [
+      "Enjoy credit card rewards on your spends and manage your finances with EasyPay",
+      "Enjoy flexible instalments tenures from 3 to 12 months",
+      "Apply seamlessly via Standard Chartered Mobile or Online Banking",
+      "Minimum purcahse amount of S$150",
+      "Enjoy 0% interest monthly instalments with your Standard Chartered Credit Card using Standard Chartered Instalment Payment Plan (IPP)"
+    ]
+  },
+  "eligibility": [
+    "21-65 years old",
+    "Promotion is valid from 01-March-2025 to 31-March-2025",
+    "Applicable for New-to card holders only",
+    "Customers need to apply through MoneySmart to be eligible",
+    "Spend a minimum of S$500 in eligible transactions (on either the physical or digital version of the Credit Card) within 30 days from the Credit Card’s approval date",
+    "Log into your MoneySmart account and submit your claim by 30th April 2025"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "S$0",
+    "annual_fee_waiver": "First 1 year waived",
+    "interest_free_period": "Available",
+    "annual_interest_rate": "27.90%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "S$50 OR 1% of principal / interest, fees & charges / overlimit amount / past due amount, whichever is higher",
+    "foreign_transaction_fee": "3.5%",
+    "cash_advance_fee": "8%",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "30,000",
+    "non_singaporean": "90,000"
+  },
+  "card_association": "Mastercard"
+}

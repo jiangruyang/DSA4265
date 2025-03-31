@@ -1,0 +1,58 @@
+{
+  "card_name": "Maybank FC Barcelona Visa Signature",
+  "card_type": "Rewards",
+  "issuer": "Maybank",
+  "rewards_and_benefits": {
+    "key_features": [
+      "1.6% Unlimited cashback on all local spend",
+      "2X TREATS Points for every S$1 spent on foreign currency transactions",
+      "Stand a chance to watch FC Barcelona LIVE in Camp Nou every football season",
+      "5% discount at the FCBotiga official store in Camp Nou",
+      "Complimentary travel insurance coverage of up to S$300,000",
+      "2 years annual fee waived"
+    ],
+    "overseas_spending": [
+      "2X TREATS Points for every S$1 spent on foreign currency transactions",
+      "No minimum spend and no cap on spending",
+      "Enjoy 5% discount on merchandise at the FCBotiga official store at Camp Nou in Barcelona, Spain",
+      "3.25% foreign currency transaction fee"
+    ],
+    "cash_back": [
+      "1.6% Unlimited cashback on all local spend",
+      "No minimum spend and no cashback cap"
+    ],
+    "dining": [
+      "1.6% Unlimited cashback on all local spend",
+      "No minimum spend and no cashback cap"
+    ],
+    "online_shopping": [
+      "1.6% Unlimited cashback on all local spend",
+      "2X TREATS Points for every S$1 spent in foreign currency"
+    ],
+    "shopping": [
+      "1.6% Unlimited cashback on all local spend",
+      "2X TREATS Points for every S$1 spent in foreign currency",
+      "Enjoy 5% discount on merchandise at the FCBotiga official store at Camp Nou in Barcelona, Spain"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old"
+  ],
+  "fees": {
+    "annual_fee": "S$130.80",
+    "supplementary_card_fee": "Complimentary",
+    "annual_fee_waiver": "Available with a total yearly minimum spend of S$10,000",
+    "interest_free_period": "20 days",
+    "annual_interest_rate": "27.90% p.a. subject to a minimum charge of S$3.00",
+    "late_payment_fee": "5% of the minimum monthly repayment or S$100, whichever is higher, if minimum monthly repayment is not received by due date",
+    "minimum_monthly_repayment": "3% of outstanding balance or S$20, whichever is higher",
+    "foreign_transaction_fee": "All transactions in foreign currency will be subject to an administrative fee of 2.25% and a currency conversion charge of 1% imposed by the respective card associations",
+    "cash_advance_fee": "8% of the transaction amount or S$15, whichever is higher",
+    "overlimit_fee": "N/A"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$60,000"
+  },
+  "card_association": "Visa"
+}

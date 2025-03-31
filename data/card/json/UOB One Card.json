@@ -1,0 +1,82 @@
+{
+  "card_name": "UOB One Card",
+  "card_type": "Cashback",
+  "issuer": "UOB",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Enjoy up to 20% cashback at DFI Retail Group, Grab, McDonald's, Shopee and SimplyGo when you successfully apply from 1 January 2025 to 31 March 2025. Other T&Cs apply.",
+      "Up to 10% cashback on McDonald's (including McDelivery®)",
+      "Up to 10% cashback at Shopee Singapore (excludes ShopeePay)",
+      "Up to 10% cashback at DFI Retail Group (Cold Storage, CS Fresh, Giant, Guardian, 7-Eleven & more)",
+      "Up to 10% cashback at Grab (including GrabFood, excludes Grab mobile wallet top-ups)",
+      "Up to 10% cashback on SimplyGo (bus and train rides)",
+      "Up to 10% cashback on UOB Travel",
+      "Up to 4.33% cashback on Singapore Power utilities bill.",
+      "Up to 3.33% cashback on all retail spend (based on S$500, S$1,000 or S$2,000)",
+      "Fuel savings of up to 24% at Shell and SPC",
+      "Exclusions and T&Cs at uob.com.sg/onetncs",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "bill_payment": [
+      "Up to 4.33% cashback on Singapore Power utilities bill",
+      "Up to 3.33% cashback on all retail spend (based on S$500, S$1,000 or S$2,000)"
+    ],
+    "petrol": [
+      "At SPC Stations, up to 22.66% savings on fuel purchases",
+      "At Shell Stations, up to 24% savings on fuel purchases"
+    ],
+    "cash_back": [
+      "Enjoy up to 20% cashback at DFI Retail Group, Grab, McDonald's, Shopee and SimplyGo when you successfully apply from 1 January 2025 to 31 March 2025. Other T&Cs apply.",
+      "Up to 10% cashback on McDonald's (including McDelivery®)",
+      "Up to 10% cashback at Shopee Singapore (excludes ShopeePay)",
+      "Up to 10% cashback at DFI Retail Group (Cold Storage, CS Fresh, Giant, Guardian, 7-Eleven & more)",
+      "Up to 10% cashback at Grab (including GrabFood, excludes Grab mobile wallet top-ups)",
+      "Up to 10% cashback on SimplyGo (bus and train rides)",
+      "Up to 10% cashback on UOB Travel",
+      "Up to 4.33% cashback on Singapore Power utilities bill",
+      "Up to 3.33% cashback on all retail spend (based on S$500, S$1,000 or S$2,000)"
+    ],
+    "grocery": [
+      "Up to 20% cashback at DFI Retail Group (Cold Storage, CS Fresh, Giant, Guardian, 7-Eleven & more)",
+      "Up to 3.33% cashback on other groceries spend (based on S$500, S$1,000 or S$2,000)"
+    ],
+    "dining": [
+      "Up to 20% cashback on McDonald's (including McDelivery®)",
+      "Up to 20% cashback at Grab (including GrabFood, excludes Grab mobile wallet top-ups)",
+      "Up to 3.33% cashback on all retail spend (based on S$500, S$1,000 or S$2,000)",
+      "Enjoy up to 50% off with UOB dining privileges (e.g. 1-for-1 buffet and more)"
+    ],
+    "online_shopping": [
+      "Up to 20% cashback at Shopee Singapore (excludes ShopeePay)",
+      "Up to 3.33% cashback on all online spend (based on S$500, S$1,000 or S$2,000)"
+    ],
+    "shopping": [
+      "Up to 3.33% cashback on all retail spend (based on S$500, S$1,000 or S$2,000)"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "MoneySmart Exclusive Promotion is valid from 15-March-2025 to 31-March-2025",
+    "UOB Online Promotion is valid from 01-March-2025 to 31-March-2025",
+    "Both promotions are only applicable for New-to-UOB credit card customers only",
+    "Customers need to apply through MoneySmart to be eligible",
+    "Log into your MoneySmart account and submit a claim by 14th April 2025 in order to qualify for our MoneySmart Exclusive offers."
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "1st Supplementary Card free, $98.10 for subsequent Supplementary Cards",
+    "annual_fee_waiver": "1st year fee waiver",
+    "interest_free_period": "21 days",
+    "annual_interest_rate": "27.80%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% of S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8%",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "30,000",
+    "non_singaporean": "40,000"
+  },
+  "card_association": "Visa"
+}

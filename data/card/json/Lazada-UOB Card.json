@@ -1,0 +1,60 @@
+{
+  "card_name": "Lazada-UOB Card",
+  "card_type": "Cash Rebate",
+  "issuer": "UOB",
+  "rewards_and_benefits": {
+    "key_features": [
+      "20% rebates on Lazada spend",
+      "6% rebates on Redmart spend",
+      "5% rebates on Dine, Entertainment & Transport spend",
+      "0.3% on all other spend"
+    ],
+    "cash_back": [
+      "20% rebates on Lazada spend",
+      "6% rebates on Redmart spend",
+      "5% rebates on Dine, Entertainment & Transport spend",
+      "0.3% on all other spend"
+    ],
+    "entertainment": [
+      "5% on Entertainment spend"
+    ],
+    "grocery": [
+      "6% rebates on Redmart spend"
+    ],
+    "dining": [
+      "5% on all Dining spend"
+    ],
+    "online_shopping": [
+      "20% rebates on Lazada spend",
+      "6% rebates on Redmart spend"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "1st Supplementary Card free, S$98.10 for subsequent Supplementary Cards",
+    "annual_fee_waiver": "1st year fee waiver",
+    "interest_free_period": "21 days",
+    "annual_interest_rate": "27.8%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is higher",
+    "foreign_transaction_fee": "S$3.25",
+    "cash_advance_fee": "8% of cash advance amount subject to a minimum fee of S$15.00",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$40,000"
+  },
+  "documents_required": {
+    "sg_citizens_prs": "Apply via MyInfo",
+    "passport_validity": "6 months",
+    "work_permit_validity": "6 months",
+    "utility_bill": "Yes",
+    "income_tax_notice": "Yes",
+    "payslip": "Yes"
+  },
+  "card_association": "Mastercard"
+}

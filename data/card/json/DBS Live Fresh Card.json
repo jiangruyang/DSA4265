@@ -1,0 +1,81 @@
+{
+  "card_name": "DBS Live Fresh Card",
+  "card_type": "Cashback",
+  "issuer": "DBS",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Score up to 6% cashback on your shopping sprees & daily commutes",
+      "Up to 6% cashback on Shopping & Transport Spend",
+      "0.3% unlimited cashback on All Spend",
+      "Enjoy first year annual fee waiver",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "overseas_spending": [
+      "Get up to 6% cashback on Shopping and Transport Spend overseas with a minimum spend of S$800 for each calendar month",
+      "Terms & Conditions: Valid with a minimum spend of S$800 for each calendar month. Cashback is capped at S$50 on eligible Shopping spend and S$20 on eligible Transport spend for each calendar month."
+    ],
+    "petrol": [
+      "Get 0.3% unlimited cashback on your petrol spend",
+      "Enjoy up to 14% instant fuel savings at Esso"
+    ],
+    "cash_back": [
+      "Get 0.3% unlimited cashback on All Spend",
+      "Get up to 6% cashback on Shopping and Transport Spend with a minimum spend of S$800 for each calendar month.",
+      "Minimum Spend Requirement Terms & Conditions: Eligible transaction(s) include retail, recurring bill payments, and refunds in both local and foreign currency that is charged to your DBS Live Fresh Card per calendar month. General exclusions, such as instalments, cash advances, fees charged by DBS and bill payments via internet banking, apply.",
+      "Cashback Terms & Conditions: Cashback is capped at S$50 on eligible Shopping spend and S$20 on eligible Transport spend for each calendar month. Refunded transactions will be deducted from the computation of Minimum Spend Requirement and computation of Cashback in the same month that the refunded transactions occurred. Cashback is computed to the nearest 2 decimal places per transaction.",
+      "Cashback will be awarded to the Principal Cardmember’s Card Account (that is of good standing) by the end of the following calendar month. Cashback awarded will be reflected in the monthly Card Account statement.",
+      "Cashback will automatically be applied to pay part of the billed amount for that statement month."
+    ],
+    "buffet_promotion": [
+      "Get 0.3% unlimited cashback on your dining spend",
+      "Enjoy more fresh deals and exclusive dining perks"
+    ],
+    "entertainment": [
+      "Get 0.3% unlimited cashback on your entertainment spend"
+    ],
+    "grocery": [
+      "Get 0.3% unlimited cashback on your grocery spend"
+    ],
+    "dining": [
+      "Get 0.3% unlimited cashback on your dining spend",
+      "Enjoy more fresh deals and exclusive dining perks"
+    ],
+    "online_shopping": [
+      "Get up to 6% cashback on your shopping spend",
+      "Terms & Conditions: Valid with a minimum spend of S$800 for each calendar month. Cashback is capped at S$50 on eligible Shopping Spend for each calendar month.",
+      "Shopping Spend refers to in-store and online transaction(s) made in Singapore and overseas and classified under these categories: Apparel, Department Stores, Electronics & Computers, Home/Office Furnishing & Appliances, Personal Services, Specialty Retail and Watches & Jewellery.",
+      "Enjoy more fresh deals and exclusive shopping perks"
+    ],
+    "shopping": [
+      "Get up to 6% cashback on your shopping spend",
+      "Terms & Conditions: Valid with a minimum spend of S$800 for each calendar month. Cashback is capped at S$50 on eligible Shopping Spend for each calendar month.",
+      "Shopping Spend refers to in-store and online transaction(s) made in Singapore and overseas and classified under these categories: Apparel, Department Stores, Electronics & Computers, Home/Office Furnishing & Appliances, Personal Services, Specialty Retail and Watches & Jewellery.",
+      "Terms & Conditions: Valid with a minimum spend of S$800 for each calendar month. Cashback is capped at S$50 on eligible Shopping Spend for each calendar month."
+    ],
+    "installment": [
+      "Get 0.3% unlimited cashback on your entertainment spend"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "Valid for New Cardmembers only.",
+    "Spend a minimum of S$800 within 60 days from the date of Card approval."
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "S$98.10",
+    "annual_fee_waiver": "First year waived",
+    "interest_free_period": "25 days",
+    "annual_interest_rate": "27.80%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3.00% or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8% or S$15, whichever is higher",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$45,000"
+  },
+  "card_association": "Visa"
+}

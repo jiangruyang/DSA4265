@@ -1,0 +1,64 @@
+{
+  "card_name": "CIMB World Mastercard",
+  "card_type": "Cashback",
+  "issuer": "CIMB",
+  "rewards_and_benefits": {
+    "key_features": [
+      "2% Unlimited Cashback on Wine & Dine, Online Food Delivery, Movies & Digital Entertainment, Taxi & Automobile, Luxury Goods.",
+      "1%* Cashback on all other spends.",
+      "Access to Over 1,300 Airport Lounges via Mastercard Travel Pass App provided by Dragonpass",
+      "50% Off Green Fees at golf courses across the region",
+      "No annual fees for life"
+    ],
+    "bill_payment": [
+      "With CIMB 0% i.Pay Plan (IPP) enjoy 0% interest instalment payments with a one time processing fee.",
+      "A one time processing fee of 3% of transaction amount for 3 or 6 months, and 5% for 12 months tenure, 6% for 24 months tenure",
+      "Earn cash rebates on instalment payment plan and save on your daily expenses."
+    ],
+    "cash_back": [
+      "2%* Unlimited Cashback on Wine & Dine, Online Food Delivery, Movies & Digital Entertainment, Taxi & Automobile, Luxury Goods.",
+      "* To qualify for the 2% unlimited cashback on Eligible Categories, you must spend at least S$1000 and above posted in the same statement month.",
+      "Unlimited 1%* Cashback on all other spends",
+      "* To qualify for the 2% unlimited cashback on Eligible Categories, you must spend at least S$1000 and above posted in the same statement month.",
+      "Other terms and conditions apply."
+    ],
+    "dining": [
+      "2% Unlimited Cashback on Wine & Dine, Online Food Delivery, Movies & Digital Entertainment, Taxi & Automobile, Luxury Goods.",
+      "1%* Cashback on all other spends."
+    ],
+    "shopping": [
+      "2% Unlimited Cashback on Wine & Dine, Online Food Delivery, Movies & Digital Entertainment, Taxi & Automobile, Luxury Goods.",
+      "1%* Cashback on all other spends."
+    ],
+    "installment": [
+      "With CIMB 0% i.Pay Plan (IPP) enjoy 0% interest instalment payments with a one time processing fee.",
+      "A one time processing fee of 3% of transaction amount for 3 or 6 months, and 5% for 12 months tenure, 6% for 24 months tenure",
+      "Earn cash rebates on instalment payment plan and save on your daily expenses.",
+      "Minimum of S$300 and maximum of S$30K can be converted per transaction."
+    ]
+  },
+  "eligibility": [
+    "Principal: 21-70 years old",
+    "Supplementary: Min. 18 years old",
+    "Promotion is valid from 10-March-2025 to 31-March-2025",
+    "Applicable for New-to-CIMB card holders only",
+    "Customers need to apply through MoneySmart to be eligible",
+    "Log into your MoneySmart account and submit your claim by 30th April 2025"
+  ],
+  "fees": {
+    "annual_fee": "S$0",
+    "supplementary_card_fee": "Free",
+    "annual_fee_waiver": "Available",
+    "interest_free_period": "23 days",
+    "annual_interest_rate": "27.8%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is higher",
+    "foreign_transaction_fee": "3%",
+    "cash_advance_fee": "8% or S$15, whichever is higher",
+    "overlimit_fee": "S$50 or 5% of the excess amount, whichever is higher."
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000"
+  },
+  "card_association": "Mastercard"
+}

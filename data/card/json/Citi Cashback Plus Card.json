@@ -1,0 +1,89 @@
+{
+  "card_name": "Citi Cashback Plus Card",
+  "card_type": "Cashback",
+  "issuer": "Citi",
+  "rewards_and_benefits": {
+    "key_features": [
+      "1.6% cash back on your eligible spend all year round",
+      "No minimum spend required and no cap on cash back earned",
+      "Cash back earned does not expire",
+      "Redeem your cash back instantly on-the-go",
+      "Earn 0.4% Bonus Cash Back on your eligible spend if you are a Citi Plus customer who is the Primary Account Holder of a Citi Interest Booster Account",
+      "With Citi PayAll, you can earn and accumulate Citi Miles, Citi ThankYou PointsSM or Cash Back quickly when you pay your big-ticket bills such as rent, insurance premiums, education expenses, taxes, utilities and more. T&Cs apply.",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "overseas_spending": [
+      "1.6% cash back on your eligible spend all year round",
+      "Foreign Currency Transaction Fee of 3.25%"
+    ],
+    "petrol": [
+      "Flat 1.6% cashback on all your purchases, no minimum spend",
+      "No caps on the cashback you can earn, and cashback earned does not expire"
+    ],
+    "cash_back": [
+      "1.6% cash back on your eligible spend all year round",
+      "No minimum spend required and no cap on cash back earned",
+      "Cash back earned does not expire",
+      "Redeem your cash back instantly on-the-go",
+      "General exclusions apply, for e.g. annual fees, instalments, bills, payments to educational, governmental, and financial institutions, insurance premiums, and more",
+      "With Citi PayAll, you can earn and accumulate Citi Miles, Citi ThankYou PointsSM or Cash Back quickly when you pay your big-ticket bills such as rent, insurance premiums, education expenses, taxes, utilities and more. T&Cs apply."
+    ],
+    "buffet_promotion": [
+      "1.6% cash back on your eligible spend all year round",
+      "No minimum spend required and no cap on cash back earned"
+    ],
+    "entertainment": [
+      "1.6% cash back on your eligible spend all year round",
+      "No minimum spend required and no cap on cash back earned"
+    ],
+    "grocery": [
+      "1.6% cash back on your eligible spend all year round",
+      "No minimum spend required and no cap on cash back earned"
+    ],
+    "dining": [
+      "Get up to 25% off a la carte food items at Lawry's The Prime Rib Singapore",
+      "1.6% cash back on your eligible spend all year round",
+      "No minimum spend required and no cap on cash back earned"
+    ],
+    "online_shopping": [
+      "1.6% cash back on your eligible spend all year round",
+      "No minimum spend required and no cap on cash back earned"
+    ],
+    "shopping": [
+      "1.6% cash back on your eligible spend all year round",
+      "No minimum spend required and no cap on cash back earned"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "MoneySmart Exclusive Promotion is valid from 01-March 2025 to 31-March-2025",
+    "Applicable for New-to Citibank Cardmembers only",
+    "Activate the approved Eligible Card via the Citi Mobile App and spend a minimum of S$500 which falls under “Qualifying Spend” within a 30-day period inclusive of account approval date.",
+    "Log into your MoneySmart account and submit your claim by 30th April 2025"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "S$98.10",
+    "annual_fee_waiver": "First year annual fee waived",
+    "interest_free_period": "25 days",
+    "annual_interest_rate": "27.9%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "1% of the current balance plus 1% of any outstanding unbilled instalment amounts plus interest charges plus late payment charge or S$50, whichever is greater",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8% or S$15, whichever is higher",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "30,000",
+    "non_singaporean": "42,000"
+  },
+  "documents_required": {
+    "sg_citizens_prs": "Apply via MyInfo",
+    "passport_validity": "6 months",
+    "work_permit_validity": "6 months",
+    "utility_bill": "With Full Name and Address",
+    "income_tax_notice": "Income Tax Notice of Assessment",
+    "payslip": "Latest Original Computerised Payslip"
+  },
+  "card_association": "Mastercard"
+}

@@ -1,0 +1,94 @@
+{
+  "card_name": "Citi Cash Back Card",
+  "card_type": "Miles",
+  "issuer": "Citibank",
+  "rewards_and_benefits": {
+    "key_features": [
+      "8% cash back on petrol and private commute spend",
+      "6% cash back on dining and groceries spend",
+      "0.2% cash back on all other retail spend",
+      "Up to 23.64% savings at Caltex, Esso and Shell",
+      "Up to S$1,000,000 coverage when you charge your travel tickets to the card",
+      "With Citi PayAll, you can earn and accumulate Citi Miles, Citi ThankYou PointsSM or Cash Back quickly when you pay your big-ticket bills such as rent, insurance premiums, education expenses, taxes, utilities and more. T&Cs apply.",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "petrol": [
+      "Best for: Petrol transactions at Caltex, Esso and Shell",
+      "Base cashback rate: 0.2% on all petrol transactions",
+      "An additional 7.8% cashback will be applied to your petrol transactions if you spend at least S$800 on your card per statement month",
+      "Eligible petrol merchants include service stations, and automated fuel dispensers worldwide",
+      "Caltex Discount: 17% instant discount at Caltex on all Techron® fuels and 8% cash back with Citi Cash Back Card (on nett purchase after discounts)",
+      "Esso Discount: 5% Esso station site discount + 5% Esso Smiles card discount + 4% Citi Card discount + 8% cash back (on nett purchase after discounts) = Total of 20.88% savings effectively",
+      "Shell Discount: 5% Shell station site discount + 5% Shell GO discount + 4% Citi Card discount + 8% cash back (on nett purchase after discounts) = Total of 20.88% savings effectively",
+      "With Citi PayAll, you can earn and accumulate Citi Miles, Citi ThankYou PointsSM or Cash Back quickly when you pay your big-ticket bills such as rent, insurance premiums, education expenses, taxes, utilities and more. T&Cs apply"
+    ],
+    "cash_back": [
+      "Base cashback rate: 0.2% on all retail purchases",
+      "An additional 5.8% cashback will be applied to your dining and groceries transactions if you spend at least S$800 on your card per statement month",
+      "An additional 7.8% cashback will be applied to your private commute and petrol transactions if you spend at least S$800 on your card per statement month",
+      "Total cash back is capped at S$80 combined across all retail spend per statement month",
+      "Up to 23.64% savings at Caltex, Esso and Shell",
+      "Cashback earned will be accumulated and automatically credited to your credit card statement when it reaches S$50. You will also be able to track your cashback earned on the Citi Mobile App"
+    ],
+    "rewards": [
+      "Base cashback rate: 0.2% on all retail purchases",
+      "An additional 5.8% cashback will be applied to your dining and groceries transactions if you spend at least S$800 on your card per statement month",
+      "An additional 7.8% cashback will be applied to your private commute and petrol transactions if you spend at least S$800 on your card per statement month",
+      "Total cash back is capped at S$80 combined across all retail spend per statement month",
+      "Cashback earned will be accumulated and automatically credited to your credit card statement when it reaches S$50. You will also be able to track your cashback earned on the Citi Mobile App"
+    ],
+    "buffet_promotion": [
+      "Base cashback rate: 0.2% on all dining transactions",
+      "An additional 5.8% cashback will be applied to your dining transactions if you spend at least S$800 on your card per statement month"
+    ],
+    "grocery": [
+      "Supports all retail grocery stores",
+      "Base cashback rate: 0.2% on all grocery transactions",
+      "An additional 5.8% cashback will be applied to your grocery transactions if you spend at least S$800 on your card per statement month",
+      "Eligible grocery merchants include grocery stores and supermarkets worldwide",
+      "With Citi PayAll, you can earn and accumulate Citi Miles, Citi ThankYou PointsSM or Cash Back quickly when you pay your big-ticket bills such as rent, insurance premiums, education expenses, taxes, utilities and more. T&Cs apply",
+      "Supports all restaurants, cafes and bars"
+    ],
+    "dining": [
+      "Base cashback rate: 0.2% on all dining transactions",
+      "An additional 5.8% cashback will be applied to your dining transactions if you spend at least S$800 on your card per statement month",
+      "Eligible dining merchants include caterers, eating places, restaurants, and fast food restaurants worldwide"
+    ],
+    "shopping": [
+      "0.2% cashback on all retail spend",
+      "With Citi PayAll, you can earn and accumulate Citi Miles, Citi ThankYou PointsSM or Cash Back quickly when you pay your big-ticket bills such as rent, insurance premiums, education expenses, taxes, utilities and more. T&Cs apply"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "MoneySmart Exclusive Promotion is valid from 01-March 2025 to 31-March-2025",
+    "Applicable for New-to Citibank Cardmembers only",
+    "Activate the approved Eligible Card via the Citi Mobile App and spend a minimum of S$500 which falls under “Qualifying Spend” within a 30-day period inclusive of account approval date.",
+    "Log into your MoneySmart account and submit your claim by 30th April 2025"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "S$98.10",
+    "annual_fee_waiver": "Available",
+    "interest_free_period": "25 days",
+    "annual_interest_rate": "27.9%",
+    "late_payment_fee": "Determined by credit card issuer",
+    "minimum_monthly_repayment": "1% plus 1% of any outstanding unbilled instalment amounts plus interest charges plus late payment charge or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "N/A",
+    "overlimit_fee": "8% or $15, whichever is higher"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$42,000"
+  },
+  "documents_required": {
+    "sg_citizens_prs": "Apply via MyInfo",
+    "passport_validity": "6 months",
+    "work_permit_validity": "6 months",
+    "utility_bill": "With Full Name and Address",
+    "income_tax_notice": "Income Tax Notice of Assessment",
+    "payslip": "Latest Original Computerised Payslip"
+  },
+  "card_association": "Mastercard"
+}

@@ -1,0 +1,86 @@
+{
+  "card_name": "Citi Rewards Card",
+  "card_type": "Rewards",
+  "issuer": "Citi",
+  "rewards_and_benefits": {
+    "key_features": [
+      "10X Points for online purchases (for online grocery, food delivery, ride-hailing and more). Excludes mobile wallet and travel-related transactions. Bank's T&Cs apply",
+      "10X Points for shopping purchases (for department store, clothing stores and more). Bank's T&Cs apply",
+      "1X Point for all other purchases Bank's T&Cs apply",
+      "For every 10X Points Eligible Transaction charged to the Eligible Card, an Eligible Cardholder will be awarded:",
+      "(i) 1 Base Point for every S$1 of a 10X Points Eligible Transaction (“Base Points”); and",
+      "(ii) 9 Bonus Points for every S$1 of a 10X Points Eligible Transaction (“Bonus Points”).",
+      "Points shall be calculated on the amount of each 10X Points Eligible Transaction, rounded down to the nearest S$1.",
+      "Base Points are not subject to any cap. However, Bonus Points are subject to a cap of 9,000 Bonus Points per statement month.",
+      "10X Points = 4 Miles",
+      "Rewards points expire at the end of 60 months (5 years). Each subsequent Points Validity Period will commence on the expiry of the previous one.",
+      "Offset your purchases with Citi Pay with Points or choose to redeem for merchandise or shopping vouchers through Citi ThankYouSM Rewards",
+      "With Citi PayAll, you can earn and accumulate Citi Miles, Citi ThankYouSM Points or Cash Back quickly when you pay your big-ticket bills such as rent, insurance premiums, education expenses, taxes, utilities and more.",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "petrol": [
+      "Best for: Petrol transactions at Esso and Shell",
+      "Esso: 5% Esso station discount + 5% Esso Smiles discount + 4% Citi Card discount = Total of 14% savings effectively",
+      "Shell: 5% Shell site discount + 5% Shell GO+ discount + 4% Citi Card discount = Total of 14% savings effectively",
+      "With Citi PayAll, you can earn and accumulate Citi Miles, Citi ThankYou PointsSM or Cash Back quickly when you pay your big-ticket bills such as rent, insurance premiums, education expenses, taxes, utilities and more"
+    ],
+    "rewards": [
+      "Redeem rewards points across multiple categories via the Citi Mobile® App for dining and shopping vouchers, Pay with Points, cash rebates, and more"
+    ],
+    "buffet_promotion": [
+      "Find out Citi Exclusive deals at https://www.citiworldprivileges.com/sg-singapore"
+    ],
+    "dining": [
+      "Find out Citi Exclusive deals at https://www.citiworldprivileges.com/sg-singapore"
+    ],
+    "online_shopping": [
+      "Earn 10X Points for online purchases (for online grocery, food delivery, ride-hailing and more). Excludes mobile wallet and travel-related transactions. Bank's T&Cs apply",
+      "Examples of Online purchases are:",
+      "Online Groceries: Cold Storage, NTUC FairPrice, Giant, Sheng Siong",
+      "E-commerce: Shopee, Lazada, Taobao",
+      "Ride-Hailing: Grab, Gojek",
+      "Food Delivery: Foodpanda, Deliveroo",
+      "Online purchases refers to qualifying charges made via the internet or mobile applications, which is determined by system indicators reflecting that it is an online transaction and which are processed by the respective merchants/acquirers as an online transaction through Visa/Mastercard networks. These indicators are decided by the relevant merchant and/or their acquirer and are not determined by Citibank.",
+      "With Citi PayAll, you can earn and accumulate Citi Miles, Citi ThankYouSM Points or Cash Back quickly when you pay your big-ticket bills such as rent, insurance premiums, education expenses, taxes, utilities and more."
+    ],
+    "shopping": [
+      "Earn 10X Points for shopping purchases (for department store, clothing stores and more) Bank's T&Cs apply",
+      "Examples of Shopping purchases are:",
+      "Department Store: TANGS, ISETAN etc.",
+      "Clothing, Bags & Shoes: Uniqlo, ZALORA, Love Bonito, OYSHO, Timberland etc.",
+      "With Citi PayAll, you can earn and accumulate Citi Miles, Citi ThankYou PointsSM or Cash Back quickly when you pay your big-ticket bills such as rent, insurance premiums, education expenses, taxes, utilities and more"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "MoneySmart Exclusive Promotion is valid from 20-March 2025 to 31-March-2025",
+    "Applicable for New-to Citibank Cardmembers only",
+    "Activate the approved Eligible Card via the Citi Mobile App and spend a minimum of S$500 which falls under “Qualifying Spend” within a 30-day period inclusive of account approval date.",
+    "Log into your MoneySmart account and submit your claim by 30th April 2025"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "S$98.10",
+    "annual_fee_waiver": "Available",
+    "interest_free_period": "25 days",
+    "annual_interest_rate": "27.9%",
+    "late_payment_fee": "Determined by credit card issuer",
+    "minimum_monthly_repayment": "1% plus 1% of any outstanding unbilled instalment amounts plus interest charges plus late payment charge or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8% or $15, whichever is higher",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "30,000",
+    "non_singaporean": "42,000"
+  },
+  "documents_required": {
+    "sg_citizens_prs": "Apply via MyInfo",
+    "passport_validity": "6 months",
+    "work_permit_validity": "6 months",
+    "utility_bill": "With Full Name and Address",
+    "income_tax_notice": "Income Tax Notice of Assessment",
+    "payslip": "Latest Original Computerised Payslip"
+  },
+  "card_association": "Mastercard"
+}

@@ -1,0 +1,73 @@
+{
+  "card_name": "NTUC Link Credit Card by Trust",
+  "card_type": "Rewards",
+  "issuer": "Trust",
+  "rewards_and_benefits": {
+    "key_features": [
+      "No Foreign Transaction Fees (not even the 1% Visa charge)",
+      "No Annual Fees and Cash Advance fees",
+      "Great exchange rates",
+      "Up to 21% savings on groceries and food at FairPrice Group merchants",
+      "Up to 20% petrol savings at Caltex and Esso",
+      "Track rewards and get repayment reminders with the Trust app"
+    ],
+    "overseas_spending": [
+      "Enjoy zero foreign transaction fees when spending overseas"
+    ],
+    "bill_payment": [
+      "Track rewards and get repayment reminders with the Trust app",
+      "Up to 21% savings on groceries and food at FairPrice Group merchants",
+      "Up to 20% petrol savings at Caltex and Esso"
+    ],
+    "petrol": [
+      "Up to 20% petrol savings at Caltex and Esso"
+    ],
+    "cash_back": [
+      "Up to 20% petrol savings at Caltex and Esso",
+      "Up to 21% savings on groceries and food at FairPrice Group merchants"
+    ],
+    "rewards": [
+      "Up to 21% in Linkpoints which can be used at FairPrice supermarkets, Unity pharmacies, Kopitiam outlets, and a wide variety of Link Partners such as Caltex, Cathay Pacific, and more"
+    ],
+    "entertainment": [
+      "Up to 20% petrol savings at Caltex and Esso",
+      "Up to 21% savings on groceries and food at FairPrice Group merchants"
+    ],
+    "grocery": [
+      "Up to 21% in Linkpoints which can be used at FairPrice supermarkets, Unity pharmacies, Kopitiam outlets, and a wide variety of Link Partners such as Caltex, Cathay Pacific, and more"
+    ],
+    "dining": [
+      "Up to 21% savings on groceries and food at FairPrice Group merchants"
+    ],
+    "online_shopping": [
+      "Up to 21% savings on groceries and food at FairPrice Group merchants"
+    ],
+    "shopping": [
+      "Up to 21% in Linkpoints which can be used at FairPrice supermarkets, Unity pharmacies, Kopitiam outlets, and a wide variety of Link Partners such as Caltex, Cathay Pacific, and more"
+    ]
+  },
+  "eligibility": [
+    "21 to 55 years old"
+  ],
+  "fees": {
+    "annual_fee": "S$0",
+    "supplementary_card_fee": "S$0",
+    "interest_free_period": "45 days",
+    "annual_interest_rate": "Interest on purchases – Effective Interest Rate (EIR): 26.9% per annum based on a 365-day year (minimum). If payment is not made in full by the due date, interest will be calculated daily at 0.074% from the respective transaction dates for all transactions until the date the payment is received.",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "(a) The greater of either S$50 or 1% of principal, plus (b) interest, finance fees and charges, and (c) any overlimit amount and past due amount.",
+    "foreign_transaction_fee": "0%",
+    "foreign_check_fee": "S$0"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income $30,000 Annual Income",
+    "non_singaporean": "Non-Singaporean Minimum Income $60,000 Annual Income"
+  },
+  "documents_required": {
+    "sg_citizens_prs": "Apply via MyInfo",
+    "passport_validity": "NA",
+    "work_permit_validity": "NA",
+    "payslip": "Yes + copy of Passport"
+  },
+  "card_association": "Visa"
+}

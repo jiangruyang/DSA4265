@@ -1,0 +1,82 @@
+{
+  "card_name": "UOB PRVI Miles Mastercard Card",
+  "card_type": "Miles",
+  "issuer": "UOB",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Earn 3 miles per S$1 spend (UNI$7.5 per S$5 spend) on regional spend in Indonesia, Malaysia, Thailand, Vietnam, including online shopping on overseas websites.",
+      "Earn 2.4 miles per S$1 spend (UNI$6 per S$5 spend) on other overseas spend, including online shopping on overseas websites.",
+      "Earn 1.4 miles per S$1 spend (UNI$3.5 per S$5 spend) on local spend, including bus and train rides.",
+      "4 complimentary lounge visits for principal cardholders.",
+      "Earn up to 8 miles per S$1 spend (UNI$20 per S$5 spend) on agoda and Expedia bookings via UOB PRVI Miles website.",
+      "Earn up to 6 bonus KrisFlyer miles for every S$1 spend if you also apply for a new KrisFlyer UOB Account. Terms and conditions apply for all above-mentioned privileges. Visit here for more details. Insured up to S$100,000 by SDIC.",
+      "Complimentary personal accident coverage and emergency medical assistance of up to S$500,000.",
+      "Choice to redeem for miles, cashback, or vouchers.",
+      "No minimum spend and no cap on earned miles",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "air_miles": [
+      "Earn 3 miles per S$1 spend (UNI$7.5 per S$5 spend) on regional spend in Indonesia, Malaysia, Thailand, Vietnam, including online shopping on overseas website.",
+      "Earn 2.4 miles per S$1 spend (UNI$6 per S$5 spend) on other overseas spend, including online shopping on overseas websites.",
+      "Earn 1.4 miles per S$1 spend (UNI$3.5 per S$5 spend) on local spend.",
+      "Earn up to 8 miles per S$1 spend (UNI$20 per S$5 spend) on agoda and Expedia bookings via UOB PRVI Miles website.",
+      "Earn up to 6 bonus KrisFlyer miles for every S$1 spend if you also apply for a new KrisFlyer UOB Account. Terms and conditions apply for all above-mentioned privileges. Visit here for more details. Insured up to S$100,000 by SDIC.",
+      "No minimum spend and no cap on earned miles"
+    ],
+    "overseas_spending": [
+      "Earn 3 miles per S$1 spend (UNI$7.5 per S$5 spend) on regional spend in Indonesia, Malaysia, Thailand, Vietnam, including online shopping on overseas website.",
+      "Earn 2.4 miles per S$1 spend (UNI$6 per S$5 spend) on other overseas spend, including online shopping on overseas websites.",
+      "Earn up to 8 miles per S$1 spend (UNI$20 per S$5 spend) on agoda and Expedia bookings via UOB PRVI Miles website.",
+      "3.25% foreign currency transaction fee"
+    ],
+    "petrol": [
+      "Enjoy up to 14% fuel discount at Shell",
+      "Enjoy up to 15% fuel discount at SPC"
+    ],
+    "entertainment": [
+      "Earn 1.4 miles per S$1 spend (UNI$3.5 per S$5 spend) on local spend.",
+      "Earn 2.4 miles per S$1 spend (UNI$6 per S$5 spend) on other overseas spend, including online shopping on overseas websites."
+    ],
+    "grocery": [
+      "Earn 1.4 miles per S$1 spend (UNI$3.5 per S$5 spend) on local spend.",
+      "Earn 2.4 miles per S$1 spend (UNI$6 per S$5 spend) on other overseas spend, including online shopping on overseas websites."
+    ],
+    "dining": [
+      "Earn 1.4 miles per S$1 spend (UNI$3.5 per S$5 spend) on local spend.",
+      "Earn 2.4 miles per S$1 spend (UNI$6 per S$5 spend) on other overseas spend, including online shopping on overseas websites."
+    ],
+    "online_shopping": [
+      "Earn 1.4 miles per S$1 spend (UNI$3.5 per S$5 spend) on local spend.",
+      "Earn 1.4 miles per S$1 spend (UNI$3.5 per S$5 spend) on local spend."
+    ],
+    "shopping": [
+      "Earn 1.4 miles per S$1 spend (UNI$3.5 per S$5 spend) on local spend.",
+      "Earn 2.4 miles per S$1 spend (UNI$6 per S$5 spend) on other overseas spend, including online shopping on overseas websites."
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "MoneySmart Exclusive Promotion is valid from 15-March-2025 to 31-March-2025",
+    "UOB Online Promotion is valid from 01-March-2025 to 31-March-2025",
+    "Both promotions are only applicable for New-to-UOB credit card customers only",
+    "Customers need to apply through MoneySmart to be eligible",
+    "Log into your MoneySmart account and submit a claim by 14th April 2025 in order to qualify for our MoneySmart Exclusive offers."
+  ],
+  "fees": {
+    "annual_fee": "S$261.60",
+    "supplementary_card_fee": "S$130.80",
+    "annual_fee_waiver": "1 year fee waiver, 1st supplementary card free",
+    "interest_free_period": "21 days",
+    "annual_interest_rate": "27.80%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8%",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$40,000"
+  },
+  "card_association": "Mastercard"
+}

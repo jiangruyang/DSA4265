@@ -1,0 +1,58 @@
+{
+  "card_name": "American Express Platinum Credit Card",
+  "card_type": "Rewards",
+  "issuer": "American Express",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Live the way you want with S$200 statement credits that can be used with trending restaurants or fashion brands.",
+      "Enjoy up to 50% savings at premium dining locations with Love Dining by Platinum.",
+      "Enjoy 1-for-1 first drink and complimentary drinks with purchase at some of the most bespoke bars in Singapore with Chillax by Platinum.",
+      "Enjoy up to 25% off à la carte spa services",
+      "Enjoy complimentary green fees* with a paying companion on weekdays, and two paying companions on weekends at premier golf and country clubs across Singapore, Cambodia, Indonesia, Malaysia, Philippines, Thailand and Vietnam.",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner.",
+      "Please refer to the American Express website (go.amex/moneysmart) for the most up to date information on card benefits and its terms & conditions."
+    ],
+    "rewards": [
+      "Give back to yourself when you spend—earn a total of 2 Membership Rewards points* for every full S$1.60 spent.",
+      "Your spending goes even further at our Platinum 10Xcelerator Partners like Maison 21G and The Hour Glass, where every full S$1.60 spent gives you 10 Membership Rewards points.",
+      "Be spoilt for choice. From a lavish feast to a shopping spree, treat yourself and take a pick from over 200 rewards in our Membership Rewards Catalogue.",
+      "Fly with freedom. Enjoy permanent waiver of the miles transfer fee (worth S$40) with the American Express Platinum Credit Card.",
+      "Downsize your Card bills, anytime, anywhere, by using your Membership Rewards points to pay for any purchase made with your American Express® Platinum Credit Card.",
+      "Your points never expire, which means you can take all the time to need to collect, redeem, and enjoy."
+    ],
+    "buffet_promotion": [],
+    "dining": [
+      "Privileges of up to 50% savings at selected restaurants in some of the best luxury hotels in Singapore with Love Dining @ Hotels by Platinum.",
+      "A range of delectable cuisines await, island-wide, with up to 50% off at our handpicked selection of restaurants with Love Dining @ Restaurants by Platinum.",
+      "Unwind with a drink - or maybe two. From bespoke cocktails to new twists on old classics, enjoy 1-for-1 first drink and complimentary drinks with purchase at some of the most bespoke bars in Singapore with Chillax by Platinum."
+    ],
+    "shopping": [
+      "Own your style in your favourite brands with up to S$200 statement credits every year from Amex Platinum.",
+      "Your spending goes even further at our Platinum 10Xcelerator Partners, where every full S$1.60 spent gives you 10 Membership Rewards points",
+      "90-days purchase protection* automatically insures your purchases against accidental damage or theft, up to S$10,000 per incidence of theft of damage."
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "Card Members will not be eligible to the Welcome Offers stated on AMEX website",
+    "Not applicable with any other Amex offers, promotions, in-house offers, programmes and vouchers",
+    "Bank T&Cs and go.amex.sgexclusions apply"
+  ],
+  "fees": {
+    "annual_fee": "S$327 (incl. of 9% GST)",
+    "supplementary_card_fee": "S$163.50 each (incl. of 9% GST)",
+    "annual_fee_waiver": "Not Available",
+    "interest_free_period": "22 days",
+    "annual_interest_rate": "27.80% p.a. compounded if payment of the closing balance in your statements is not made in full; or 3% p.a. on top of prevailing interest rate in the event that your account has three or more defaults in the last 12 months",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "5%",
+    "overlimit_fee": "N/A"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income Card application is subjected to customers meeting the regulatory minimum income requirement and internal assessment.",
+    "non_singaporean": "Non-Singaporean Minimum Income Card application is subjected to customers meeting the regulatory minimum income requirement and internal assessment."
+  },
+  "card_association": "American Express"
+}

@@ -1,0 +1,71 @@
+{
+  "card_name": "The American Express® Singapore Airlines Business Credit Card",
+  "card_type": "Business",
+  "issuer": "American Express",
+  "eligibility": [
+    "Age: 21 years and older",
+    "Card application is subjected to customers meeting the regulatory minimum income requirement and internal assessment.",
+    "Applicant should be a business owner and/or person with executive authority of a Company/Business with a valid UEN"
+  ],
+  "rewards_and_benefits": {
+    "key_features": [
+      "Earn 1.8 HighFlyer points per S$1 spent on all eligible purchases (worth 1.8 KrisFlyer miles)",
+      "Earn up to 8.5 HighFlyer points per S$1 spent on eligible Singapore Airlines and Scoot flights (worth 8.5 KrisFlyer miles)",
+      "Complimentary Accor Plus membership worth S$418 offering a free nights stay every year and up to 50% dining discounts",
+      "Priority Pass membership with two complimentary visits per year for you and a guest worth S$221",
+      "Get 5,000 HighFlyer points when you spend S$500 with Singapore Airlines Group in the first 12 months",
+      "Get 15,000 HighFlyer points when you spend S$10,000 with Singapore Airlines Group annually",
+      "Accelerate to KrisFlyer Elite Gold status when you spend S$15,000 with Singapore Airlines Group in the first year",
+      "Up to 51 days interest-free from transaction date",
+      "Complimentary Hertz Gold Status with 10% off standard rates, one car class upgrade and the additional driver fee waived",
+      "HighFlyer points are valid for 3 years and can be redeemed to pay for your Singapore Airlines bookings in part or in full, no caps and blackout dates",
+      "Convert HighFlyer points to KrisFlyer miles with a 1:1 rate, up to 100,000 miles per KrisFlyer account annually with no limit on the number of KrisFlyer accounts linked.",
+      "Refer to the American Express website for the most up to date information on card benefits and its Terms & Conditions.",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "air_miles": [
+      "Earn 1.8 HighFlyer points per S$1 spent on all eligible purchases (worth 1.8 KrisFlyer miles)",
+      "Earn up to 8.5 HighFlyer points per S$1 spent on eligible Singapore Airlines and Scoot flights (worth 8.5 KrisFlyer miles)",
+      "Priority Pass membership with two complimentary visits per year for you and a guest worth S$221",
+      "Accelerate to KrisFlyer Elite Gold status when you spend S$15,000 with Singapore Airlines Group in the first year",
+      "Convert HighFlyer points to KrisFlyer miles with a 1:1 rate, up to 100,000 miles per KrisFlyer account annually with no limit on the number of KrisFlyer accounts linked."
+    ],
+    "overseas_spending": [
+      "Earn 1.8 HighFlyer points per S$1 spent on all eligible purchases (worth 1.8 KrisFlyer miles)",
+      "Complimentary Hertz Gold Status with 10% off standard rates, one car class upgrade and the additional driver fee waived"
+    ],
+    "rewards": [
+      "Earn 1.8 HighFlyer points per S$1 spent on all eligible purchases (worth 1.8 KrisFlyer miles)",
+      "Earn up to 8.5 HighFlyer points per S$1 spent on eligible Singapore Airlines and Scoot flights (worth 8.5 KrisFlyer miles)",
+      "Priority Pass membership with two complimentary visits per year for you and a guest worth S$221",
+      "Get 5,000 HighFlyer points when you spend S$500 with Singapore Airlines Group in the first 12 months",
+      "Get 15,000 HighFlyer points when you spend S$10,000 with Singapore Airlines Group annually",
+      "Accelerate to KrisFlyer Elite Gold status when you spend S$15,000 with Singapore Airlines Group in the first year",
+      "Complimentary Accor Plus membership worth S$418 offering a free nights stay every year and up to 50% dining discounts",
+      "Complimentary Hertz Gold Status with 10% off standard rates, one car class upgrade and the additional driver fee waived"
+    ],
+    "dining": [
+      "Earn 1.8 HighFlyer points per S$1 spent on all eligible purchases (worth 1.8 KrisFlyer miles)",
+      "Complimentary Accor Plus membership worth S$418 offering a free nights stay every year and up to 50% dining discounts"
+    ],
+    "shopping": [
+      "Earn 1.8 HighFlyer points per S$1 spent on all eligible purchases (worth 1.8 KrisFlyer miles)"
+    ]
+  },
+  "fees": {
+    "annual_fee": "S$304.59 (incl. of 9% GST)",
+    "supplementary_card_fee": "S$100.85",
+    "annual_fee_waiver": "Not Available",
+    "interest_free_period": "21 days from statement date if closing balance is paid in full",
+    "annual_interest_rate": "26.90% p.a. compounded if payment of the closing balance in your statements is not made in full; or 29.99% p.a. in the event that your account has three or more defaults in the last 12 months",
+    "late_payment_fee": "S$100 if minimum monthly payment is not made by due date",
+    "minimum_monthly_repayment": "3% or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "5%"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income Card application is subjected to customers meeting the regulatory minimum income requirement and internal assessment",
+    "non_singaporean": "Non-Singaporean Minimum Income Card application is subjected to customers meeting the regulatory minimum income requirement and internal assessment"
+  },
+  "card_association": "American Express"
+}

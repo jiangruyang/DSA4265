@@ -1,0 +1,75 @@
+{
+  "card_name": "OCBC Inifinity Cashback Card",
+  "card_type": "Cashback",
+  "issuer": "OCBC",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Earn 1.6% in unlimited cashback on transactions made in stores or online, locally or overseas.",
+      "No minimum spending required to earn cashback",
+      "No limit to the cashback you can earn",
+      "Cashback willl be credited automatically to your card account"
+    ],
+    "overseas_spending": [
+      "Earn unlimited 1.6% cashback",
+      "3.25% foreign currency transaction fee"
+    ],
+    "petrol": [
+      "Earn unlimited 1.6% cashback",
+      "Up to 16% off fuel savings at Caltex Petrol Stations",
+      "14% off fuel savings at Esso Petrol Stations"
+    ],
+    "cash_back": [
+      "Earn unlimited 1.6% cashback",
+      "No minimum spending and no cap on cashback",
+      "Cashback automatically credited to your card account"
+    ],
+    "rewards": [
+      "Earn unlimited 1.6% cashback",
+      "No minimum spending and no cap on cashback"
+    ],
+    "entertainment": [
+      "Earn unlimited 1.6% cashback",
+      "No minimum spending and no cap on cashback"
+    ],
+    "grocery": [
+      "Earn unlimited 1.6% cashback",
+      "No minimum spending and no cap on cashback"
+    ],
+    "dining": [
+      "Earn unlimited 1.6% cashback",
+      "No minimum spending and no cap on cashback"
+    ],
+    "online_shopping": [
+      "Earn unlimited 1.6% cashback",
+      "Earn unlimited 1.6% cashback"
+    ],
+    "shopping": [
+      "Earn unlimited 1.6% cashback",
+      "No minimum spending and no cap on cashback"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "MoneySmart Exclusive Promotion is valid from 13-March-2025 to 31-March-2025",
+    "Applicable for New-to card holders only",
+    "Customers need to apply through MoneySmart to be eligible,",
+    "Charge at least 1 Qualifying Transaction to your card within 30 days of your application being approved"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20 a year (waived for the first year)",
+    "supplementary_card_fee": "S$98.10 a year (waived for the first year)",
+    "annual_fee_waiver": "Available",
+    "interest_free_period": "23 days",
+    "annual_interest_rate": "27.78%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "6% or $15, whichever is higher",
+    "overlimit_fee": "N/A"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000 and above for Singaporeans and Singapore PR",
+    "non_singaporean": "Non-Singaporean Minimum Income S$45,000 and above for foreigners"
+  },
+  "card_association": "Mastercard"
+}

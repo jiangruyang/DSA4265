@@ -1,0 +1,50 @@
+{
+  "card_name": "Maybank Platinum Visa Card",
+  "card_type": "Cashback",
+  "issuer": "Maybank",
+  "rewards_and_benefits": {
+    "key_features": [
+      "3.33% cashback on all local and foreign spend, up to S$200 per quarter",
+      "3.33% cashback on insurance payment (only 50% of each tier considered)",
+      "Complimentary Travel Insurance coverage up to S$500,000"
+    ],
+    "petrol": [
+      "Up to 23.38% fuel saving when you link your Diamond Sky Fuel Card to your Platinum Visa Card"
+    ],
+    "cash_back": [
+      "Up to 3.33% cashback on all local and foreign spend",
+      "Get up to S$30 Cashback per quarter when you spend a min. of S$300 in eligible transactions per month",
+      "Get up to S$100 Cashback per quarter when you spend a min. of S$1,000 in eligible transactions per month",
+      "Get up to S$200 Cashback per quarter when you spend a min. of S$2,000 in eligible transactions per month"
+    ],
+    "entertainment": [
+      "Up to 3.33% cashback on all local and foreign spend with a min. spend of S$300/month OR S$1000/month each quarter for S$30 OR S$100 cashback"
+    ],
+    "dining": [
+      "Up to 3.33% cashback on all local and foreign spend"
+    ],
+    "shopping": [
+      "Up to 3.33% cashback on all local and foreign spend"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20 (Waived for first 3 years)",
+    "supplementary_card_fee": "Free",
+    "annual_fee_waiver": "Subsequent annual fee will be automatically waived with a minimum spend of S$18,000 yearly",
+    "interest_free_period": "20 days",
+    "annual_interest_rate": "27.90% p.a. subject to a minimum charge of S$3.00",
+    "late_payment_fee": "5% of the minimum monthly repayment or S$100, whichever is higher, if minimum monthly repayment is not received by due date",
+    "minimum_monthly_repayment": "3% of outstanding balance or S$20, whichever is higher",
+    "foreign_transaction_fee": "All transactions in foreign currency will be subject to an administrative fee of 2.25% and a currency conversion charge of 1% imposed by the respective card associations",
+    "cash_advance_fee": "8% of the transaction amount or S$15, whichever is higher",
+    "overlimit_fee": "N/A"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$60,000"
+  },
+  "card_association": "Visa"
+}

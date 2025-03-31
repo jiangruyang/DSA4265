@@ -1,0 +1,69 @@
+{
+  "card_name": "American Express The Platinum Card",
+  "card_type": "Premium Charge",
+  "issuer": "American Express",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Enjoy S$400 Global Dining Credit every year to use at over 2,000 restaurants locally and around the world",
+      "Complimentary Access into Tower Club",
+      "Complimentary access for you, a supplementary cardholder and one guest each to 1,400 Lounges",
+      "Bask in benefits worth up to S$800 when you stay at over 1,500 Fine Hotels + Resorts properties worldwide",
+      "Gain instant status to higher tiers of leading hotel loyalty programs such as the Marriott Bonvoy™ Gold Elite Status and Hilton Honors Elite Gold Status",
+      "All Membership Rewards points never expire",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner.",
+      "Please refer to the American Express website (go.amex/moneysmart) for the most up to date information on card benefits and its terms & conditions."
+    ],
+    "air_miles": [
+      "Access to over 1,400 airport lounges in 650 cities worldwide for you, your Supplementary Members and one guest each.",
+      "Earn 5 Membership Rewards points for every full S$1.60 spent with Singapore Airlines and Scoot (equates to 1.95 miles per S$1)."
+    ],
+    "overseas_spending": [
+      "Should you need emergency assistance while travelling, we can provide immediate personal advice over the phone:",
+      "Travel Emergency Assistance - Should the unforeseen happen during your travel, you will have access to emergency services such as worldwide medical and legal assistance",
+      "Home Assist - For urgent situations around the house, we will arrange an emergency callout to assess and fix any problem.",
+      "Roadside Assist - With Roadside Assist, we offer around-the-clock help whenever you are on the road."
+    ],
+    "rewards": [
+      "Earn 2 Membership Rewards® points for every S$1.60 spent.",
+      "Earn a total of 20 Membership Rewards® points for every full S$1.60 spent with 10Xcelerator by Membership Rewards®.",
+      "Your points never expire."
+    ],
+    "entertainment": [
+      "Complimentary membership to Tower Club for you and your supplementary Card Members",
+      "Exclusive golf privileges at some of the finest courses at home or abroad.",
+      "S$400 Lifestyle Credit to use at curated lifestyle partners",
+      "Complimentary weekend parking at Great World City",
+      "Get up to S$17 per month (S$204 per year) to spend at over 10 entertainment brands"
+    ],
+    "dining": [
+      "Up to 50% savings at premium dining locations with Love Dining by Platinum.",
+      "Enjoy S$400 Global Dining Credit every year to use at over 2,000 restaurants locally and around the world"
+    ],
+    "shopping": [
+      "Receive $150 Complimentary Fashion Credit over a calendar year to use at NET-A-PORTER and MR PORTER"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "Pay the Annual Fee of S$1,744 (incl. of 9% GST) in the first statement",
+    "Charge a minimum of S$8,000 in eligible transactions to your charge card within 3 months from Card approval date",
+    "Bank T&Cs and go.amex.sgexclusions apply"
+  ],
+  "fees": {
+    "annual_fee": "S$1,744 (incl. of 9% GST)",
+    "supplementary_card_fee": "S$163.50 (incl. of 9% GST). First 2 Supplementary Cards fee permanently waived.",
+    "annual_fee_waiver": "Not Available",
+    "interest_free_period": "N/A",
+    "annual_interest_rate": "N/A",
+    "late_payment_fee": "2.5% / month of any overdue previous balance or S$100 /month (whichever is greater)",
+    "minimum_monthly_repayment": "N.A. (All Charges are due for payment in full in Singapore Dollars immediately on receipt of your monthly statement)",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "Handling fee of 5% of your withdrawal amount will apply for each withdrawal mount.",
+    "overlimit_fee": "N/A"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income Card application is subjected to customers meeting the regulatory minimum income requirement and internal assessment.",
+    "non_singaporean": "Non-Singaporean Minimum Income Card application is subjected to customers meeting the regulatory minimum income requirement and internal assessment."
+  },
+  "card_association": "American Express"
+}

@@ -1,0 +1,87 @@
+{
+  "card_name": "HSBC Live Plus Card",
+  "card_type": "Cashback",
+  "issuer": "HSBC",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Enjoy up to 8% cashback* when you dine, shop and live your life, both locally and overseas.\n- 8% cashback* on dining, shopping and entertainment\n- 5% cashback on fuel at Caltex and Shell gas stations in Singapore\n- 0.3% cashback on other spends\n- Terms and Conditions apply.",
+      "- 8% cashback* on dining, shopping and entertainment",
+      "",
+      "- 5% cashback on fuel at Caltex and Shell gas stations in Singapore",
+      "",
+      "Savour sweet deals of 15% discount at over 200 restaurants through our curated Live+ Dining Programme",
+      "Enjoy 1-for-1 dining, travel and lifestyle partners through your complimentary ENTERTAINER with HSBC app",
+      "Enjoy savings when you purchase movie tickets and HSBC's Movie Cards at any Golden Village multiplexes in Singapore.\n*Min. spend and other terms and conditions apply. Valid till 31 Dec 2024."
+    ],
+    "overseas_spending": [
+      "Enjoy up to 8% cashback* when you dine, shop and live your life, both locally and overseas.\n- 8% cashback* on dining, shopping and entertainment\n- 0.3% cashback on other spends",
+      "- 8% cashback* on dining, shopping and entertainment",
+      "",
+      "Savour sweet deals of 15% discount at over 200 restaurants through our curated Live+ Dining Programme",
+      "Enjoy 1-for-1 dining, travel and lifestyle partners through your complimentary ENTERTAINER with HSBC app"
+    ],
+    "petrol": [
+      "5% cashback on fuel at Caltex and Shell gas stations in Singapore"
+    ],
+    "cash_back": [
+      "Enjoy up to 8% cashback* when you dine, shop and live your life, both locally and overseas.\n- 8% cashback* on dining, shopping and entertainment\n- 5% cashback on fuel at Caltex and Shell gas stations in Singapore\n- 0.3% cashback on other spends",
+      "- 8% cashback* on dining, shopping and entertainment",
+      "",
+      "Savour sweet deals of 15% discount at over 200 restaurants through our curated Live+ Dining Programme"
+    ],
+    "buffet_promotion": [
+      "Enjoy up to 8% cashback* when you dine, shop and live your life, both locally and overseas.\n- 8% cashback* on dining, shopping and entertainment\n- 0.3% cashback on other spends",
+      "- 8% cashback* on dining, shopping and entertainment",
+      "",
+      "Savour sweet deals of 15% discount at over 200 restaurants through our curated Live+ Dining Programme",
+      "Enjoy 1-for-1 dining, travel and lifestyle partners through your complimentary ENTERTAINER with HSBC app"
+    ],
+    "entertainment": [
+      "Enjoy up to 8% cashback* when you dine, shop and live your life, both locally and overseas.\n- 8% cashback* on dining, shopping and entertainment\n- 0.3% cashback on other spends",
+      "- 8% cashback* on dining, shopping and entertainment",
+      "",
+      "Enjoy savings when you purchase movie tickets and HSBC's Movie Cards at any Golden Village multiplexes in Singapore",
+      "Enjoy 1-for-1 dining, travel and lifestyle partners through your complimentary ENTERTAINER with HSBC app"
+    ],
+    "dining": [
+      "Enjoy up to 8% cashback* when you dine, shop and live your life, both locally and overseas.\n- 8% cashback* on dining, shopping and entertainment\n- 0.3% cashback on other spends",
+      "- 8% cashback* on dining, shopping and entertainment",
+      "",
+      "Savour sweet deals of 15% discount at over 200 restaurants through our curated Live+ Dining Programme",
+      "Enjoy 1-for-1 dining, travel and lifestyle partners through your complimentary ENTERTAINER with HSBC app"
+    ],
+    "online_shopping": [
+      "Enjoy up to 8% cashback* when you dine, shop and live your life, both locally and overseas.\n- 8% cashback* on dining, shopping and entertainment\n- 0.3% cashback on other spends",
+      "- 8% cashback* on dining, shopping and entertainment",
+      "",
+      "Enjoy 1-for-1 dining, travel and lifestyle partners through your complimentary ENTERTAINER with HSBC app"
+    ],
+    "shopping": [
+      "Enjoy up to 8% cashback* when you dine, shop and live your life, both locally and overseas.\n- 8% cashback* on dining, shopping and entertainment\n- 0.3% cashback on other spends",
+      "- 8% cashback* on dining, shopping and entertainment",
+      "",
+      "Enjoy 1-for-1 dining, travel and lifestyle partners through your complimentary ENTERTAINER with HSBC app"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "Promotion is valid from 12-March-2025 to 31-March-2025",
+    "MoneySmart Exclusive gift is applicable for New-to-HSBC cardholders only",
+    "Customers need to apply through MoneySmart to be eligible",
+    "Applicants need to provide HSBC their consent to receive marketing and promotional materials from HSBC at the time of submitting their application"
+  ],
+  "fees": {
+    "annual_fee": "S$196.2 (inclusive of GST). First-year annual fee waived",
+    "supplementary_card_fee": "Free for life (up to 5 cards)",
+    "annual_fee_waiver": "For the second year onwards, we'll waive the Annual Fee for your card if you spend more than S$12,500 per year",
+    "interest_free_period": "20 days",
+    "annual_interest_rate": "Effective Rate: 27.8% p.a. (minimum), Minimum Charge: S$2.50",
+    "late_payment_fee": "S$100 if the minimum payment is not received on or before the Payment Due Date",
+    "minimum_monthly_repayment": "100% of the monthly instalment plan amount and interest/fees, 1% of remaining outstanding balances, excess amount above your credit limit (if your account is overlimit) or $50 (in the currency of your account), whichever is greater",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8% or $15, whichever is higher",
+    "overlimit_fee": "S$40",
+    "annual_interest_rate_on_cash_advance": "Effective Rate: 28.5% p.a. (minimum), Minimum Charge: S$2.50"
+  },
+  "card_association": "Visa"
+}

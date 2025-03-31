@@ -1,0 +1,46 @@
+{
+  "card_name": "American Express Singapore Airlines KrisFlyer Credit Card",
+  "card_type": "Miles",
+  "issuer": "American Express",
+  "rewards_and_benefits": {
+    "key_features": [
+      "First Year Annual Fee Waiver.",
+      "Receive S$150 cashback on your next purchase on singaporeair.com when you spend S$12,000 or more on eligible purchases within the qualifying period.",
+      "Up to S$350,000 Travel Inconvenience & Travel Accident Benefits",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner.",
+      "Please refer to the American Express website (go.amex/moneysmart) for the most up to date information on card benefits and its terms & conditions."
+    ],
+    "air_miles": [
+      "2 KrisFlyer miles = for every S$1 spent on eligible Singapore Airlines and Scoot flight bookings, and KrisShop purchases, with no cap.",
+      "Up to 2 KrisFlyer miles = for every S$1 spent on eligible Grab Singapore transactions up to S$200 spend in each calendar month.",
+      "1.1 KrisFlyer miles = for every S$1 spent on all other eligible purchases, with no cap.",
+      "No conversion fee, all KrisFlyer miles earned are conveniently credited directly into your KrisFlyer account"
+    ],
+    "cash_back": [
+      "Receive S$150 cashback on your next purchase on singaporeair.com when you spend S$12,000 or more on eligible purchases within the qualifying period."
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "Charge a minimum of S$1,000 in eligible transactions to your credit card within 30 days from Card approval date",
+    "Not stackable with Amex BAU offer",
+    "Bank T&Cs and go.amex.sgexclusions apply"
+  ],
+  "fees": {
+    "annual_fee": "S$179.85 (incl. of 9% GST), waived for the first year",
+    "supplementary_card_fee": "S$54.50 (incl. of 9% GST) waived for the first year for the first 2 Supplementary Cards.",
+    "annual_fee_waiver": "Available",
+    "interest_free_period": "22 days",
+    "annual_interest_rate": "27.80% p.a. compounded if payment of the closing balance in your statements is not made in full; or 3% p.a. on top of prevailing interest rate in the event that your account has three or more defaults in the last 12 months",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "N/A",
+    "overlimit_fee": "5%"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income Card application is subjected to customers meeting the regulatory minimum income requirement and internal assessment.",
+    "non_singaporean": "Non-Singaporean Minimum Income Card application is subjected to customers meeting the regulatory minimum income requirement and internal assessment."
+  },
+  "card_association": "American Express"
+}

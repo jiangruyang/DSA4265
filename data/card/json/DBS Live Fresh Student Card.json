@@ -1,0 +1,85 @@
+{
+  "card_name": "DBS Live Fresh Student Card",
+  "card_type": "Cashback",
+  "issuer": "DBS",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Singapore's first-ever eco-friendly recycled card, made from 85.5% recycled plastic",
+      "Get 5% Cashback on Golden Village, McDonald’s, McDelivery, Netflix, Spotify and Starbucks",
+      "Get an additional 5% Green Cashback on selected Eco-Eateries, Retailers and Transport Services",
+      "Get 0.3% Cashback on All Other Spend",
+      "Enjoy 5 years annual fee waiver",
+      "No minimum spend required",
+      "No minimum income required",
+      "To apply, students must be a Singapore Citizen/Permanent Resident between 21 to 27 years old and enrolled in either NUS, NTU, SIM, SIT, SMU, SUSS, SUTD, Nanyang Polytechnic, Ngee Ann Polytechnic, Temasek Polytechnic, Singapore Polytechnic or Republic Polytechnic",
+      "Credit limit is capped at S$500 per calendar month",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "petrol": [
+      "Get 0.3% Cashback on All Other Spend",
+      "Enjoy up to 14% instant fuel savings at Esso"
+    ],
+    "cash_back": [
+      "Get 0.3% Cashback on All Other Spend",
+      "Get 5% Cashback on Golden Village, McDonald’s, McDelivery, Netflix, Spotify and Starbucks",
+      "Get an additional 5% Green Cashback on selected Eco-Eateries, Retailers and Transport Services",
+      "Cashback T&Cs: Cashback is capped at S$15 on eligible Sustainable Spend, S$15 on eligible Merchant Spend and S$20 on All Other Spend for each calendar month. Cashback is computed to the nearest 2 decimal places per transaction. Cashback will be awarded to the Principal Cardmember’s Card Account (that is of good standing) by the end of the following calendar month. Cashback awarded will be reflected in the monthly Card Account statement. Cashback will automatically be applied to pay part of the billed amount for that statement month."
+    ],
+    "buffet_promotion": [
+      "Get 0.3% Cashback on All Other Spend",
+      "Enjoy exclusive dining offers"
+    ],
+    "entertainment": [
+      "Get 0.3% Cashback on All Other Spend",
+      "Get 5% Cashback on Golden Village"
+    ],
+    "grocery": [
+      "Get 0.3% Cashback on All Other Spend",
+      "Get an additional 5% Green Cashback on selected Eco-Retailers"
+    ],
+    "dining": [
+      "Get 0.3% Cashback on All Other Spend",
+      "Get 5% Cashback on McDonald’s, McDelivery and Starbucks",
+      "Get an additional 5% Green Cashback on selected Eco-Eateries",
+      "Enjoy exclusive dining offers"
+    ],
+    "online_shopping": [
+      "Get 0.3% Cashback on All Other Spend",
+      "Get an additional 5% Green Cashback on selected Eco-Retailers",
+      "Enjoy exclusive shopping offers"
+    ],
+    "shopping": [
+      "Get 0.3% Cashback on All Other Spend",
+      "Get an additional 5% Green Cashback on selected Eco-Retailers",
+      "Enjoy exclusive shopping offers"
+    ],
+    "student": [
+      "Get 0.3% Cashback on All Other Spend",
+      "Get 5% Cashback on Golden Village, McDonald’s, McDelivery, Netflix, Spotify and Starbucks",
+      "Get an additional 5% Green Cashback on selected Eco-Eateries, Retailers and Transport Services",
+      "Enjoy 5 year annual fee waiver"
+    ]
+  },
+  "eligibility": [
+    "Singapore Citizen/Permanent Resident between 21 to 27 years old and enrolled in either NUS, NTU, SIM, SIT, SMU, SUSS, SUTD, Nanyang Polytechnic, Ngee Ann Polytechnic, Temasek Polytechnic, Singapore Polytechnic or Republic Polytechnic",
+    "Not have an existing DBS/POSB Credit Card and/or other unsecured facilities# with DBS/POSB"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "N/A",
+    "annual_fee_waiver": "5 years",
+    "interest_free_period": "25 days",
+    "annual_interest_rate": "27.80%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is greater",
+    "foreign_transaction_fee": "3.25%",
+    "foreign_check_fee": "N/A",
+    "cash_advance_fee": "N/A",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$0",
+    "non_singaporean": "Non-Singaporean Minimum Income S$0"
+  },
+  "card_association": "Visa"
+}

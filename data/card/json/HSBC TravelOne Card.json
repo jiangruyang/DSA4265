@@ -1,0 +1,61 @@
+{
+  "card_name": "HSBC TravelOne Card",
+  "card_type": "Miles",
+  "issuer": "HSBC",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Instant reward redemption with an extensive selection of airline and hotel partners via HSBC Singapore mobile app",
+      "Accelerated earn rate: up to 2.4 miles for your spending",
+      "Travel privileges: Complimentary travel insurance coverage (including COVID-19), 4 x complimentary airport lounge visits for primary cardholders and guests of primary cardholders and more",
+      "Split flexibly: Split your purchases across a range of flexible tenors that suits your needs with HSBC Instalment Plans",
+      "Receive complimentary access to ENTERTAINER with HSBC app, with over 1,000 worldwide 1-for-1 deals on dining, lifestyle and travel.",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "air_miles": [
+      "Instant reward redemption with an extensive selection of airline and hotel partners via HSBC Singapore mobile app",
+      "Accelerated earn rate: up to 2.4 miles for your spending",
+      "Travel privileges: Complimentary travel insurance coverage (including COVID-19), 4 x complimentary airport lounge visits for primary cardholders and guests of primary cardholders and more",
+      "Split flexibly: Split your purchases across a range of flexible tenors that suits your needs with HSBC Instalment Plans",
+      "Receive complimentary access to ENTERTAINER with HSBC app, with over 1,000 worldwide 1-for-1 deals on dining, lifestyle and travel."
+    ],
+    "overseas_spending": [
+      "Instant reward redemption with an extensive selection of airline and hotel partners via HSBC Singapore mobile app",
+      "Accelerated earn rate: up to 2.4 miles for your spending",
+      "Travel privileges: Complimentary travel insurance coverage (including COVID-19), 4 x complimentary airport lounge visits for primary cardholders and guests of primary cardholders and more",
+      "Split flexibly: Split your purchases across a range of flexible tenors that suits your needs with HSBC Instalment Plans",
+      "Receive complimentary access to ENTERTAINER with HSBC app, with over 1,000 worldwide 1-for-1 deals on dining, lifestyle and travel."
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "Promotion is valid from 12-March-2025 to 31-March-2025",
+    "MoneySmart Exclusive gift is applicable for New-to-HSBC cardholders only",
+    "Customers need to apply through MoneySmart to be eligible",
+    "For HSBC TravelOne Card the first-year annual fee of S$196.20 (incl. GST) must be paid to be eligible for the promotion.",
+    "Applicants need to provide HSBC their consent to receive marketing and promotional materials from HSBC at the time of submitting their application",
+    "Spend a min. of S$800 in Qualifying Transactions from Card Account Opening Date to the end of the following calendar month.",
+    "Log into your MoneySmart account and submit your claim by 30th April 2025"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "annual_fee_waiver": "For the second year onwards, we'll waive the Annual Fee for your card if you spend more than S$25,000 per year",
+    "interest_free_period": "20 days",
+    "annual_interest_rate": "Effective Rate: 26.9% p.a. (minimum), Minimum Charge: S$2.50",
+    "late_payment_fee": "S$100 if the minimum payment is not received on or before the Payment Due Date",
+    "minimum_monthly_repayment": "100% of the monthly instalment plan amount and interest/fees, 1% of remaining outstanding balances, excess amount above your credit limit (if your account is overlimit) or $50 (in the currency of your account), whichever is greater",
+    "foreign_transaction_fee": "3.25%"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income To apply for an HSBC TravelOne card, you must be aged 21 or above and have a minimum annual income of: SGD30,000 (Singaporean or Permanent resident or SGD40,000 (self-employed or commission-based Singaporean or Permanent Resident)",
+    "non_singaporean": "Non-Singaporean Minimum Income To apply for an HSBC TravelOne card, you must be aged 21 or above and have a minimum annual income of: SGD40,000 (foreigner residing in Singapore)"
+  },
+  "documents_required": {
+    "sg_citizens_prs": "Apply via MyInfo",
+    "passport_validity": "6 months",
+    "work_permit_validity": "6 months",
+    "utility_bill": "With Full Name & Address",
+    "income_tax_notice": "Income Tax Notice of Assessment",
+    "payslip": "Latest Original Computerised Payslip"
+  },
+  "card_association": "Mastercard"
+}

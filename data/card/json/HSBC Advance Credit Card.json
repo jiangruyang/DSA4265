@@ -1,0 +1,58 @@
+{
+  "card_name": "HSBC Advance Credit Card",
+  "card_type": "Cashback",
+  "issuer": "HSBC",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Earn 1.5% Cashback on all local and overseas purchases with no min. spend",
+      "Earn 2.5% Cashback on all local and overseas purchases if you spend more than S$2,000 a month",
+      "Receive complimentary access to ENTERTAINER with HSBC app, with over 1,000 1-for-1 deals on dining, lifestyle and travel worldwide.",
+      "Base Cashback is capped at S$70 per calendar month."
+    ],
+    "overseas_spending": [
+      "Enjoy complimentary upgrades and privileges when you visit hotels and resorts by Visa Luxury Hotel Collection",
+      "Download the Visa Concierge app to enjoy the Visa Digital Concierge’s services",
+      "Enjoy worldwide retail and dining discounts such as 16% off Agoda bookings, 8% off Hotels.com bookings, 9% off Expedia hotel bookings, and more"
+    ],
+    "cash_back": [
+      "Base cashback rate: 1.5% on all purchases when you spend below S$2,000 per calendar month. Cashback capped at S$70 per calendar month",
+      "Enjoy 2.5% cashback on all local and overseas spend when you spend more than S$2,000 per calendar month. Cashback capped at S$70 per calendar month",
+      "HSBC Cashback terms and conditions: General exclusions such as payments via EZ-Link, YouTrip, AXS, tax, utilities, cash advances, payments to financial, governmental, insurance, educational institutions do not qualify for cash back"
+    ],
+    "dining": [
+      "Download Entertainer with HSBC app for worldwide dining and hotel 1 for 1 deals and discounts"
+    ],
+    "online_shopping": [
+      "Download Entertainer with HSBC app for worldwide dining and hotel 1 for 1 deals and discounts"
+    ],
+    "shopping": [
+      "Download Entertainer with HSBC app for worldwide dining and hotel 1 for 1 deals and discounts"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "Promotion is valid from 12-March-2025 to 31-March-2025",
+    "MoneySmart Exclusive gift is applicable for New-to-HSBC cardholders only",
+    "Customers need to apply through MoneySmart to be eligible",
+    "Applicants need to provide HSBC their consent to receive marketing and promotional materials from HSBC at the time of submitting their application",
+    "Spend a min. of S$800 in Qualifying Transactions from Card Account Opening Date to the end of the following calendar month.",
+    "Log into your MoneySmart account and submit your claim by 30th April 2025"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "N/A",
+    "annual_fee_waiver": "First year waived",
+    "interest_free_period": "20 days",
+    "annual_interest_rate": "26.90%",
+    "late_payment_fee": "S$100 if the minimum payment is not received on or before the Payment Due Date",
+    "minimum_monthly_repayment": "3% or S$50, whichever is greater",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "6% or $15, whichever is greater",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$40,000"
+  },
+  "card_association": "Visa"
+}

@@ -1,0 +1,50 @@
+{
+  "card_name": "DBS Takashimaya American Express Card",
+  "card_type": "Rewards",
+  "issuer": "DBS",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Additional 10% off during selected sale events at Takashimaya Department Store. Redeem S$30 worth of Takashimaya Gift Vouchers with every 100 Takashimaya Bonus Points.",
+      "Enjoy S$4 top-up to your CashCard for parking when you charge at least S$400 to your Card at Takashimaya Department Store.",
+      "6% voucher rebates in Takashimaya Department Store (Earn 2 Takashimaya Bonus Points1 with every S$10 charged)",
+      "2% voucher rebates in Takashimaya Shopping Centre (Earn 2 Takashimaya Bonus Points2 with every S$30 charged)",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "rewards": [
+      "S$5 = 1 DBS Point",
+      "Earn 2 Takashimaya Bonus Points with every S$10 charged",
+      "Get a $30 Takashimaya Voucher with 100 points ($500 spend)",
+      "Enjoy S$4 top-up to your CashCard for parking when you charge at least S$400 to your Card at Takashimaya Department Store"
+    ],
+    "buffet_promotion": [],
+    "dining": [],
+    "online_shopping": [],
+    "shopping": [
+      "Earn 2 Takashimaya Bonus Points with every S$10 charged",
+      "Get a $30 Takashimaya Voucher with 100 points ($500 spend)",
+      "Additional 10% off during selected sale events at Takashimaya Department Store. Redeem S$30 worth of Takashimaya Gift Vouchers with every 100 Takashimaya Bonus Points.",
+      "Enjoy S$4 top-up to your CashCard for parking when you charge at least S$400 to your Card at Takashimaya Department Store"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "Spend a minimum of S$300 within first month from Card approval date"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "S$98.10",
+    "annual_fee_waiver": "Available",
+    "interest_free_period": "20 days",
+    "annual_interest_rate": "25.90%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is greater",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8% or $15, whichever is greater",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$45,000"
+  },
+  "card_association": "American Express"
+}

@@ -1,0 +1,68 @@
+{
+  "card_name": "CIMB Visa Signature",
+  "card_type": "Cashback",
+  "issuer": "CIMB",
+  "rewards_and_benefits": {
+    "key_features": [
+      "10% Cashback on Beauty & Wellness, Online Shopping, Groceries, Pet Shops & Veterniary Services, Cruises",
+      "To qualify for the 10% cashback, you must spend at least S$800, posted in the same statement month.",
+      "Complimentary Travel Insurance up to S$500,000",
+      "Visa Signature Concierge",
+      "No annual fees for life",
+      "Apply for up to 4 supplementary cards and have annual fees waived for all supplementary cards",
+      "Access to over 1,000 regional deals with discounts up to 50%",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "overseas_spending": [
+      "10% cash back on cruises",
+      "Visa Signature Concierge - Premium service that gives you access to world class service and privileges. From travel reservations, booking tickets of a show to dinner reservations",
+      "Complimentary travel insurance - Get covered up to S$500,000 for you and your family"
+    ],
+    "cash_back": [
+      "10% Cash Back on Beauty & Wellness",
+      "10% Cash Back on Online Shopping",
+      "10% Cash Back on Groceries",
+      "10% Cash Back on Pet Shops & Veterinary Services",
+      "10% Cash Back on Cruises",
+      "To qualify for the 10% cashback, you must spend at least S$800, posted in the same statement month.",
+      "The 10% cashback is capped at S$100 per statement month per Principal Cardmember, and up to S$20 per category.",
+      "10% Cash back consists of the base Cash Back of 0.2% and an additional 9.8%",
+      "For spend beyond the cap, you will earn 0.2% cashback.",
+      "Other terms and conditions apply."
+    ],
+    "dining": [
+      "For updated deals, kindly visit https://deals.cimb.com/sg/dining"
+    ],
+    "online_shopping": [],
+    "installment": [
+      "With CIMB 0% i.Pay Plan (IPP) enjoy 0% interest instalment payments from 3 to 24 months",
+      "A one time processing fee of 3% of transaction amount for 3 or 6 months, and 5% for 12 months tenure, 6% for 24 months tenure",
+      "Earn cash rebates on instalment payment plan and save on your daily expenses.",
+      "Minimum of S$300 and maximum of S$30K can be converted per transaction."
+    ]
+  },
+  "eligibility": [
+    "Principal: 21-70 years old",
+    "Supplementary: Min. 18 years old",
+    "Promotion is valid from 10-March-2025 to 31-March-2025",
+    "Applicable for New-to-CIMB card holders only",
+    "Customers need to apply through MoneySmart to be eligible",
+    "Log into your MoneySmart account and submit your claim by 30th April 2025"
+  ],
+  "fees": {
+    "annual_fee": "S$0",
+    "supplementary_card_fee": "Free",
+    "annual_fee_waiver": "Available",
+    "interest_free_period": "23 days",
+    "annual_interest_rate": "27.80%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is higher",
+    "foreign_transaction_fee": "3%",
+    "cash_advance_fee": "8% of the amount withdrawn (minimum charge of S$15).",
+    "overlimit_fee": "S$50 or 5% of the excess amount, whichever is higher"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000"
+  },
+  "card_association": "Visa"
+}

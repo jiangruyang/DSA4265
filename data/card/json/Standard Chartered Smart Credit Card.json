@@ -1,0 +1,78 @@
+{
+  "card_name": "Standard Chartered Smart Credit Card",
+  "card_type": "Cashback",
+  "issuer": "Standard Chartered",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Get up to 10% bonus cashback on 3 bonus categories: Smart Dining, Smart Streaming and Smart Transport",
+      "Smart Dining merchants: McDonald's, KFC, Burger King, Ya Kun Kaya Toast, Toast Box, Starbucks, The Coffee Bean & Tea Leaf, and many more!",
+      "Smart Streaming merchants: Netflix, Spotify, YouTube, Disney+, Amazon Prime, Viu, iQiyi, HBO GO",
+      "Smart Transport: Bus & MRT commute via SimplyGo, Electric Vehicle Charging",
+      "Enjoy 1% cashback on all other eligible spends (for card spend above S$1,500)",
+      "No cap on your cashback",
+      "Enjoy SmartDelay - complimentary access to selected airport lounges worldwide in event of flight delay (effective 15 Jan 2025 onwards)",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "petrol": [
+      "Up to 23.4% fuel savings at Caltex with your Smart Credit card"
+    ],
+    "cash_back": [
+      "Earn 10% bonus cashback when you spend a min. of S$1,500 on the 3 Bonus Categories",
+      "Earn 8% bonus cashback when you spend a min. of S$800 to S$1,499 on the 3 Bonus Categories",
+      "Earn 4% bonus cashback* when you spend a less than S$800 on the 3 Bonus Categories (*valid from 6 Dec 2024 to 31 March 2025)",
+      "Earn 8% bonus cashback when you spend a min. of S$800 to S$1,499 on the 3 Bonus Categories",
+      "Bonus Categories include Smart Dining, Smart Streaming and Smart Transport",
+      "Smart Dining merchants: McDonald's, KFC, Burger King, Ya Kun Kaya Toast, Toast Box, Starbucks, The Coffee Bean & Tea Leaf, and many more!",
+      "Smart Streaming merchants: Netflix, Spotify, YouTube, Disney+, Amazon Prime, Viu, iQiyi, HBO GO",
+      "Smart Transport: Bus & MRT commute via SimplyGo, Electric Vehicle Charging",
+      "Earn 1% base cashback when you spend a min. of S$1,500 on all other eligible spends",
+      "Earn 0.5% base cashback when you spend less than S$1,500 on all other eligible spends"
+    ],
+    "rewards": [],
+    "entertainment": [
+      "Earn 10% bonus cashback when you spend a min. of S$1,500 on selected merchants",
+      "Earn 8% bonus cashback when you spend a min. of S$800 to S$1,499 on selected merchants",
+      "Earn 10% bonus cashback when you spend a min. of S$1,500 on selected merchants",
+      "Earn 8% bonus cashback when you spend a min. of S$800 to S$1,499 on selected merchants",
+      "Earn 4% bonus cashback* when you spend less than S$800 on selected merchants (*valid from 6 Dec 2024 to 31 March 2025)"
+    ],
+    "dining": [
+      "Earn 10% bonus cashback when you spend a min. of S$1,500 on selected merchants",
+      "Earn 8% bonus cashback when you spend a min. of S$800 to S$1,499 on selected merchants",
+      "Earn 4% bonus cashback* when you spend less than S$800 on selected merchants (*valid from 6 Dec 2024 to 31 March 2025)",
+      "From 1 April 2025 onwards, earn base cashback of 0.5% for spends less than S$800",
+      "Selected Food merchants: McDonald's, KFC, Burger King, Subway, Pizza Hut, Dominos",
+      "Selected Coffee merchants : Ya Kun Kaya Toast, Toast Box, Starbucks, The Coffee Bean & Tea Leaf"
+    ],
+    "installment": [
+      "Eligible for transaction above S$150",
+      "3-month interest-free instalments",
+      "Processing Fee applies from 8 Dec 2024 onwards"
+    ]
+  },
+  "eligibility": [
+    "21-65 years old",
+    "Promotion is valid from 01-March-2025 to 31-March-2025",
+    "Applicable for New-to card holders only",
+    "Customers need to apply through MoneySmart to be eligible",
+    "Spend a minimum of S$500 in eligible transactions (on either the physical or digital version of the Credit Card) within 30 days from the Credit Card’s approval date",
+    "Log into your MoneySmart account and submit your claim by 30th April 2025"
+  ],
+  "fees": {
+    "annual_fee": "S$91 (excluding GST)",
+    "supplementary_card_fee": "S$0",
+    "annual_fee_waiver": "Annual Fee waived if your annual spend is above S$10,000",
+    "interest_free_period": "Available",
+    "annual_interest_rate": "27.9%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "S$50 OR 1% of principal / interest, fees & charges / overlimit amount / past due amount, whichever is higher",
+    "foreign_transaction_fee": "3.5%",
+    "cash_advance_fee": "8%",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$90,000"
+  },
+  "card_association": "Visa"
+}

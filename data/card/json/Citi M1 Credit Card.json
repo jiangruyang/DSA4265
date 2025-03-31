@@ -1,0 +1,63 @@
+{
+  "card_name": "Citi M1 Credit Card",
+  "card_type": "Cashback",
+  "issuer": "Citi",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Earn 4.7% Bonus Citi M1 Rebate on eligible Entertainment spend.",
+      "Earn Up to 10% Citi M1 Rebate on your M1 recurring bills",
+      "Enjoy 2.7% Bonus Citi M1 Rebate on M1 Telco Bill Charges.",
+      "Earn 0.3% Citi M1 Rebate on retail transactions",
+      "Earn up to 1% Citi M1 Rebate on purchases at M1 Shops",
+      "Earn 2.7% Bonus Citi M1 Rebate on in-store purchases at M1 Shops",
+      "Enjoy 10% off device accessories at M1 Shops",
+      "Waiver of Activation Fees for Data Passport Registration Fees and M1 Value-Added Services",
+      "Citi M1 Rebate do not expire",
+      "Complimentary replacement for lost and damaged SIM cards"
+    ],
+    "bill_payment": [
+      "Earn Up to 10% Citi M1 Rebate on your M1 recurring bills"
+    ],
+    "cash_back": [
+      "Earn Up to 10% Citi M1 Rebate on your M1 recurring bills",
+      "Earn up to 1% Citi M1 Rebate on purchases at M1 Shops",
+      "Earn 0.3% Citi M1 Rebate on retail transactions",
+      "Citi M1 Rebate do not expire"
+    ],
+    "shopping": [
+      "Earn up to 1% Citi M1 Rebate on purchases at M1 Shops",
+      "Earn 0.3% Citi M1 Rebate on retail transactions"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "MoneySmart Exclusive Promotion is valid from 20-March 2025 to 31-March-2025",
+    "Applicable for New-to Citibank Cardmembers only",
+    "Activate the approved Eligible Card via the Citi Mobile App and spend a minimum of S$500 which falls under “Qualifying Spend” within a 30-day period inclusive of account approval date.",
+    "Log into your MoneySmart account and submit your claim by 30th April 2025"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "S$98.10",
+    "interest_free_period": "25 days",
+    "annual_interest_rate": "27.9%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "1% or S$50 (whichever is greater)",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "S$15 or 8% of the amount drawn, whichever is higher",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$42,000"
+  },
+  "documents_required": {
+    "sg_citizens_prs": "Apply via MyInfo",
+    "passport_validity": "6 months",
+    "work_permit_validity": "6 months",
+    "utility_bill": "with Full Name & Address",
+    "income_tax_notice": "Income Tax Notice of Assessment",
+    "payslip": "Latest Original Computerised Payslip"
+  },
+  "card_association": "Visa"
+}

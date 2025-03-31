@@ -1,0 +1,61 @@
+{
+  "card_name": "Maybank Manchester United Platinum Visa Card",
+  "card_type": "Rewards",
+  "issuer": "Maybank",
+  "rewards_and_benefits": {
+    "key_features": [
+      "1% Unlimited Cashback and 1X TREATS Points on all transactions",
+      "Up to 3% Cashback and 5X TREATS points when Manchester United wins a Premier League match",
+      "First 2 years annual fee waived, enjoy subsequent waiver at a minimum spend of S$3,600 per year"
+    ],
+    "overseas_spending": [
+      "5 TREATS Points for every $5 spend in local and/or foreign currency",
+      "1% Unlimited Cashback",
+      "Get complimentary travel insurance coverage of up to S$300,000"
+    ],
+    "cash_back": [
+      "1% Unlimited Cashback on all transactions",
+      "5 TREATS Points for every $5 spend in local and/or foreign currency"
+    ],
+    "rewards": [
+      "5 TREATS Points for every $5 spend in local and/or foreign currency",
+      "TREATS Points will expire one year after the end of each quarter period in which they are earned"
+    ],
+    "entertainment": [
+      "Stand a chance to win a trip for two to watch Manchester United LIVE every football season",
+      "20% discount on Manchester United Stadium and Museum Tour tickets purchased at the Old Trafford Football Ground",
+      "10% discount on food and drinks at the Red Cafe, at Old Trafford",
+      "On the day Manchester United wins in the English Premier League matches: Additional 4X TREATS Points for every S$1 spent, Additional 2% Cashback (capped at S$20)"
+    ],
+    "dining": [
+      "10% discount on food and drinks at the Red CafeÂ©, at Old Trafford",
+      "5 TREATS Points for every $5 spend in local and/or foreign currency",
+      "1% Unlimited cashback"
+    ],
+    "online_shopping": [
+      "10% discount at the United Direct Online Megastore",
+      "5 TREATS Points for every $5 spend in local and/or foreign currency",
+      "1% Unlimited Cashback"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old"
+  ],
+  "fees": {
+    "annual_fee": "S$87.20 (2 years fee waiver)",
+    "supplementary_card_fee": "S$0",
+    "annual_fee_waiver": "Available with a minimum of S$3,600 spent",
+    "interest_free_period": "20 days",
+    "annual_interest_rate": "27.90% p.a. subject to a minimum charge of S$3.00",
+    "late_payment_fee": "5% of the minimum monthly repayment or S$100, whichever is higher, if minimum monthly repayment is not received by due date",
+    "minimum_monthly_repayment": "3% of outstanding balance or S$20, whichever is higher",
+    "foreign_transaction_fee": "All transactions in foreign currency will be subject to an administrative fee of 2.25% and a currency conversion charge of 1% imposed by the respective card associations",
+    "cash_advance_fee": "8% of the transaction amount or S$15, whichever is higher",
+    "overlimit_fee": "N/A"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$60000. Malaysia Citizens (in employment for at least 1 year): S$45,000"
+  },
+  "card_association": "Visa"
+}

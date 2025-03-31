@@ -1,0 +1,71 @@
+{
+  "card_name": "Maybank Horizon Visa Signature",
+  "card_type": "Miles",
+  "issuer": "Maybank",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Earn 2.8 air miles (7X TREATS Points) for every S$1 spent on air tickets and foreign currency transactions when you charge a min. of S$800 per calendar month",
+      "Earn 1.2 air miles (3X TREATS Points) for every S$1 spent on all local shopping, groceries, dining, hotel bookings and many more",
+      "Complimentary lounge access with minimum spend of S$1,000 in a single transaction on a retail purchase, accompanying guest(s) enjoys 20% off walk-in rates for lounge access.",
+      "Complimentary Travel Insurance up to S$1,000,000",
+      "3 years annual fee waived; spend min. S$18,000 per year to get subsequent waiver"
+    ],
+    "air_miles": [
+      "Earn 2.8 air miles (7X TREATS Points) for every S$1 spent on air tickets and foreign currency transactions when you charge a min. of S$800 per calendar month",
+      "Earn 1.2 air miles (3X TREATS Points) for every S$1 spent on all local shopping, groceries, dining, hotel bookings and many more",
+      "No cap for TREATS Points earned for foreign spend",
+      "Capped at 40,000 Bonus TREATS Points per calendar month for air tickets only",
+      "Earn 0.4 air miles (1X TREAT Point) with no minimum spend amount",
+      "Complimentary lounge access with minimum spend of S$1,000",
+      "Complimentary Travel Insurance up to S$1,000,000"
+    ],
+    "overseas_spending": [
+      "Earn 2.8 air miles (7X TREATS Points) for every S$1 spent on air tickets and foreign currency transactions when you charge a min. of S$800 per calendar month",
+      "If the monthly accumulated spend is less than S$800, 1.2 air miles (3X TREATS Points) will be awarded for air tickets and foreign spend",
+      "No cap for TREATS Points earn on foreign spend",
+      "Earn 0.4 air miles (1X TREAT Point) with no minimum spend amount"
+    ],
+    "petrol": [
+      "Earn 1.2 air miles (3X TREATS Points) for every S$1 spent",
+      "No minimum spend required to spend 3X TREATS Points"
+    ],
+    "rewards": [
+      "Earn 2.8 air miles (7X TREATS Points) for every S$1 spent on air tickets and foreign currency transactions when you charge a min. of S$800 per calendar month",
+      "Earn 1.2 air miles (3X TREATS Points) for every S$1 spent on all local shopping, groceries, dining, hotel bookings and many more",
+      "No cap for TREATS Points earned for foreign spend",
+      "Capped at 40,000 Bonus TREATS Points per calendar month for air tickets only",
+      "1X TREAT Point with no minimum spend amount",
+      "Complimentary lounge access with minimum spend of S$1,000",
+      "Complimentary Travel Insurance up to S$1,000,000"
+    ],
+    "dining": [
+      "Earn 1.2 air miles (3X TREATS Points) for every S$1 spent on all local shopping, groceries, dining, hotel bookings and many more",
+      "No minimum spend required to spend 3X TREATS Points"
+    ],
+    "online_shopping": [
+      "Earn 1.2 air miles (3X TREATS Points) for every S$1 spent on all local shopping, groceries, dining, hotel bookings and many more",
+      "No minimum spend required to spend 3X TREATS Points"
+    ]
+  },
+  "eligibility": [
+    "Principal: Min. 21 years old",
+    "Supplementary: Min. 18 years old"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "Complimentary",
+    "annual_fee_waiver": "Available with a total yearly minimum spend of S$18,000",
+    "interest_free_period": "20 days",
+    "annual_interest_rate": "27.90% p.a. subject to a minimum charge of S$3.00",
+    "late_payment_fee": "5% of the minimum monthly repayment or S$100, whichever is higher, if minimum monthly repayment is not received by due date",
+    "minimum_monthly_repayment": "3% of outstanding balance or S$20, whichever is higher",
+    "foreign_transaction_fee": "All transactions in foreign currency will be subject to an administrative fee of 2.25% and a currency conversion charge of 1% imposed by the respective card associations",
+    "cash_advance_fee": "8% of the transaction amount or S$15, whichever is higher",
+    "overlimit_fee": "N/A"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$60000. Malaysia Citizens (in employment for at least 1 year): S$45,000"
+  },
+  "card_association": "Visa"
+}

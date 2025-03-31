@@ -1,0 +1,34 @@
+{
+  "card_name": "SAFRA DBS Card",
+  "card_type": "Cash Rebate",
+  "issuer": "DBS",
+  "rewards_and_benefits": {
+    "key_features": [
+      "3% cash rebate on your local Mastercard contactless transactions (including bus/train rides via SimplyGo)",
+      "3% cash rebate on online transactions",
+      "0.3% cash rebate on all other retail transactions",
+      "Exclusive access to 7 SAFRA Clubhouses islandwide: enjoy access to club facilities including swimming pools, gyms, and entertainment facilities at any of the 7 SAFRA Clubhouses.",
+      "Every dollar spent at participating outlets and facilities at SAFRA earns you 1 SAFRAPOINT, on top of the SAFRA DBS Card cash rebates.",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old"
+  ],
+  "fees": {
+    "annual_fee": "No annual fee, so long as you remain a SAFRA member. SAFRA membership fee applies.",
+    "interest_free_period": "25 days",
+    "annual_interest_rate": "27.80%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3.00% or S$50, whichever is greater",
+    "foreign_transaction_fee": "3.25%",
+    "foreign_check_fee": "N/A",
+    "cash_advance_fee": "8% or S$15, whichever is greater",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$45,000"
+  },
+  "card_association": "Mastercard"
+}

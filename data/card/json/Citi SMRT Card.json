@@ -1,0 +1,57 @@
+{
+  "card_name": "Citi SMRT Card",
+  "card_type": "Cashback",
+  "issuer": "Citi",
+  "rewards_and_benefits": {
+    "key_features": [
+      "No monthly rebates cap, although rebates are capped at 600 SMRT$ per year",
+      "Minimum spend of S$500 per statement month to earn maximum rebates across groceries, online shopping, taxi rides (including private hire operators such as Grab and Gojek) and SimplyGo transactions.",
+      "Earn up to 5% SMRT$ on groceries [0.3% (base rate) + 4.7% (bonus rate)]",
+      "Earn up to 5% SMRT$ on online shopping [0.3% (base rate) + 4.7% (bonus rate)]",
+      "Earn up to 5% on taxis and private hire cars [0.3% (base rate) + 4.7% (bonus rate)]",
+      "Earn up to 5% SMRT$ for SimplyGo (tap to pay) transactions [0.3% (base rate) + 4.7% (bonus rate)]",
+      "Earn 0.3% SMRT$ on all other retail spends",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "grocery": [
+      "Earn up to 5% SMRT$ with monthly min. statement spend of S$500",
+      "Note: online groceries transaction will only earn 1 x 5%"
+    ],
+    "online_shopping": [
+      "Earn up to 5% SMRT$ 5% with monthly min. statement spend of S$500",
+      "Exclusions: travel-related transactions"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "MoneySmart Exclusive Promotion is valid from 20-March 2025 to 31-March-2025",
+    "Applicable for New-to Citibank Cardmembers only",
+    "Activate the approved Eligible Card via the Citi Mobile App and spend a minimum of S$500 which falls under “Qualifying Spend” within a 30-day period inclusive of account approval date.",
+    "Log into your MoneySmart account and submit your claim by 30th April 2025"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20 (incl. 9% GST)",
+    "supplementary_card_fee": "S$98.10 (incl. 9% GST)",
+    "annual_fee_waiver": "Available",
+    "interest_free_period": "25 days",
+    "annual_interest_rate": "27.9%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "Current balance if current balance is between S$0 to S$50. For current balance S$50 & above, (i) 1% of the current balance; plus (ii) 1% of any outstanding unbilled instalment amounts; plus (iii) all interest charges (including interest charged under instalment plans); plus (iv) all upfront service fees for instalment plans; plus (v) late payment charges; or S$50 plus any overdue amounts.",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8% or $15, whichever is higher",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$42,000"
+  },
+  "documents_required": {
+    "sg_citizens_prs": "Apply via MyInfo",
+    "passport_validity": "6 months",
+    "work_permit_validity": "6 months",
+    "utility_bill": "With Full Name and Address",
+    "income_tax_notice": "Income Tax Notice of Assessment",
+    "payslip": "Latest Original Computerised Payslip"
+  },
+  "card_association": "Visa"
+}

@@ -1,0 +1,64 @@
+{
+  "card_name": "OCBC Rewards Credit Card",
+  "card_type": "Miles",
+  "issuer": "OCBC",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Earn 15 OCBC$ for every S$1 spent at selected popular retailers (new ones every three months!)",
+      "Earn 10x OCBC$ (equivalent to 4 air miles) per S$1 spent on eligible online and retail purchases",
+      "1x OCBC$ on all other eligible purchases",
+      "Additional 2% cash rebate at BEST Denki",
+      "E-Commerce Protection",
+      "First 2 years fee waiver for principal card (S$196.20 per year) and supplementary card (S$98.10 per year)",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "petrol": [
+      "Best for: Petrol transactions at Esso & Caltex",
+      "14% discount at Esso stations - 5% Esso site discount + 5% Smiles card discount + 4% OCBC card discount",
+      "16% upfront discount at Caltex stations, includes station onsite discount and OCBC card discount"
+    ],
+    "rewards": [
+      "Earn 15 OCBC$ for every S$1 spent at selected popular retailers (new ones every three months!)",
+      "Earn 10x OCBC$ (equivalent to 4 air miles) per S$1 spent on eligible online and retail purchases",
+      "Earn unlimited base OCBC$ and up to 120,000 bonus OCBC$ per card anniversary year",
+      "Offset shopping costs with rebates and discount vouchers or exchange OCBC$ for products and air miles"
+    ],
+    "online_shopping": [
+      "Supports selected Online stores such as AliExpress, Amazon, Ezbuy, Lazada, Shopbob, Taobao & many more",
+      "Earn 15 OCBC$ for every S$1 spent at selected popular retailers (new ones every three months!)",
+      "Earn 10x OCBC$ (equivalent to 4 air miles) per S$1 spent on eligible online and retail purchases",
+      "First 2 years fee waiver for principal card (S$196.20 per year) and supplementary card (S$98.10 per year). Subsequent years waived with min. spend of S$10,000 per card anniversary year",
+      "Enjoy e-Commerce Protection, which safeguards you against non-delivery or if the seller fails to reimburse you"
+    ],
+    "shopping": [
+      "Supports Department, Retail & Online stores",
+      "Earn 15 OCBC$ for every S$1 spent at selected popular retailers (new ones every three months!)",
+      "Earn 10x OCBC$ (equivalent to 4 air miles) per S$1 spent on eligible online and retail purchases",
+      "10x OCBC$ (10 points or 4 Miles) for every S$1 spent on clothes, shoes, bags, department stores, kidswear, electronic gadgets, offline, locally and overseas"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "MoneySmart Exclusive Promotion is valid from 13-March-2025 to 31-March-2025",
+    "Applicable for New-to card holders only",
+    "Customers need to apply through MoneySmart to be eligible,",
+    "Charge at least 1 Qualifying Transaction to your card within 30 days of your application being approved"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "S$98.10",
+    "annual_fee_waiver": "Available",
+    "interest_free_period": "23 days",
+    "annual_interest_rate": "27.78%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "6% or S$15, whichever is higher",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$45,000"
+  },
+  "card_association": "Mastercard"
+}

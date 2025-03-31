@@ -1,0 +1,60 @@
+{
+  "card_name": "UOB Preferred Platinum Visa Card",
+  "card_type": "Rewards",
+  "issuer": "UOB",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Up to UNI$10 per S$5 spend on selected online shopping and entertainment",
+      "Up to UNI$10 per S$5 spend via mobile contactless payment",
+      "Earn UOB$ cashback on all purchases in-store at over 1,000 participating merchants(across all categories islandwide) and use it to offset your next purchase",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "petrol": [
+      "Enjoy up to 14% fuel discount at Shell",
+      "Enjoy up to 15% fuel discount at SPC"
+    ],
+    "rewards": [
+      "S$5 spend = UNI$1",
+      "Up to UNI$10 per S$5 spend on selected online shopping and entertainment",
+      "Up to UNI$10 per S$5 spend via mobile contactless payment"
+    ],
+    "entertainment": [
+      "Up to UNI$10 per S$5 spend on selected online shopping and entertainment",
+      "Up to UNI$10 per S$5 spend via mobile contactless payment"
+    ],
+    "grocery": [
+      "Up to UNI$10 per S$5 spend on online shopping and entertainment",
+      "Up to UNI$10 per S$5 spend via mobile contactless payment"
+    ],
+    "dining": [
+      "Up to UNI$10 per S$5 spend via mobile contactless payment"
+    ],
+    "online_shopping": [
+      "Up to UNI$10 per S$5 spend on selected online shopping and entertainment"
+    ],
+    "shopping": [
+      "Up to UNI$10 per S$5 spend via mobile contactless payment"
+    ]
+  },
+  "eligibility": [
+    "Minimum age of 21 years old"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "1st Supplementary Card free, $98.10 for subsequent Supplementary Cards",
+    "annual_fee_waiver": "1st year fee waiver",
+    "interest_free_period": "21 days",
+    "annual_interest_rate": "27.80%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "foreign_check_fee": "N/A",
+    "cash_advance_fee": "8%",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$40,000"
+  },
+  "card_association": "Visa"
+}

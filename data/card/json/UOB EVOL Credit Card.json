@@ -1,0 +1,57 @@
+{
+  "card_name": "UOB EVOL Credit Card",
+  "card_type": "Cashback",
+  "issuer": "UOB",
+  "rewards_and_benefits": {
+    "key_features": [
+      "10% cashback on online/mobile contactless spend and overseas in-store FX spend.",
+      "No annual fees when you make 3 transactions per month consecutively for 12 months before your card annual fee charge date",
+      "S$80 cashback cap (capped at S$30 for Online/Mobile Contactless spend; $20 for overseas in-store spend in foreign currency; and $30 Other spend)",
+      "With min. S$800 spend per statement monthy, otherwise base on base cashback of 0.3% will be awareded. Exclusions and T&Cs at uob.com.sg/evoltncs",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "overseas_spending": [
+      "10% cashback on overseas in-store spend (in foreign currency)"
+    ],
+    "cash_back": [
+      "10% cashback on online, mobile contactless spend and overseas in-store FX spend.",
+      "No annual fees when you make 3 transactions per month consecutively for 12 months before your card annual fee charge date",
+      "S$80 cashback cap (capped at S$30 for Online/Mobile Contactless spend; $20 for overseas in-store spend in foreign currency; and $30 Other spend)",
+      "With min. S$800 spend per statement monthy, otherwise base on base cashback of 0.3% will be awareded. Exclusions and T&Cs at uob.com.sg/evoltncs"
+    ],
+    "dining": [
+      "10% cashback on mobile contactless spend and overseas in-store spend in foreign currency"
+    ],
+    "online_shopping": [
+      "10% cashback on online spend"
+    ],
+    "shopping": [
+      "10% cashback on mobile contactless spend and overseas in-store spend in foreign currency"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "MoneySmart Exclusive Promotion is valid from 15-March-2025 to 31-March-2025",
+    "UOB Online Promotion is valid from 01-March-2025 to 31-March-2025",
+    "Applicable for New-to-UOB credit card customers only",
+    "Customers need to apply through MoneySmart to be eligible",
+    "Log into your MoneySmart account and submit a claim by 14th April 2025 in order to qualify for our MoneySmart Exclusive offers."
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "1st Supplementary Card free, $98.10 for subsequent Supplementary Cards",
+    "annual_fee_waiver": "1st year fee waiver",
+    "interest_free_period": "21 days",
+    "annual_interest_rate": "27.80%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8%",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$40,000"
+  },
+  "card_association": "Visa"
+}

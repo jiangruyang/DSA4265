@@ -1,0 +1,78 @@
+{
+  "card_name": "HSBC Revolution Credit Card",
+  "card_type": "Miles",
+  "issuer": "HSBC",
+  "rewards_and_benefits": {
+    "key_features": [
+      "10X Reward points (equivalent to 4 miles or 2.5% Cashback) on online spend on Shopping, Dining & selected Travel purchases.",
+      "1X Reward point for all other types of spending.",
+      "No min. spend required.",
+      "No annual fee",
+      "Receive complimentary access to ENTERTAINER with HSBC app, with over 1,000 1-for-1 deals on dining, lifestyle and travel worldwide.",
+      "Cap of 10,000 rewards points per calendar month on eligible purchases. Other terms apply."
+    ],
+    "air_miles": [
+      "Base earn rate: 1 reward point per S$1 spent. No rewards cap",
+      "10X Points or 4 Miles bonus: On top of the base 1 reward point, get 9 extra reward points on every S$1 spent on online spend on dining, selected travel purchases and shopping.",
+      "Convert your HSBC rewards points to air miles by signing up for the HSBC Mileage Programme. Subject to S$42.80 annual programme fee and 3 weeks transfer processing time",
+      "Singapore Airlines Krisflyer: Convert 25,000 HSBC rewards points to 10,000 SQ Krisflyer miles online via the HSBC Rewards redemption catalogue",
+      "Cathay Pacific Asia Miles: Convert 25,000 HSBC rewards points to 10,000 Cathay Pacific Asia Miles online via the HSBC Rewards redemption catalogue"
+    ],
+    "petrol": [
+      "Get instant discounts of up to 16% off petrol at Caltex stations or 14% off at Shell stations."
+    ],
+    "cash_back": [
+      "10X Points or 4 Miles bonus: On top of the base 1 reward point, get 9 extra reward points on every S$1 spent on online spend on dining, selected travel purchases and shopping."
+    ],
+    "rewards": [
+      "Base earn rate: 1 reward point per S$1 spent. No rewards cap",
+      "10X Points or 4 Miles bonus: On top of the base 1 reward point, get 9 extra reward points on every S$1 spent on online spend on dining, selected travel purchases and shopping.",
+      "Bonus rewards points earned capped at 9,000 reward points per calendar month, equivalent to around S$1,000 spend per month",
+      "Eligible travel-related transactions include airlines, car rentals, hotels, cruises, agencies and tour operators",
+      "Eligible departmental and retail stores transactions include computer and network services, electronic, and camera stores, florists, marketplaces, department stores, duty-free, clothing, shoes, jewellery, leather and accessories stores, book, music and record stores, drug stores and pharmacies",
+      "Eligible groceries and dining transactions include grocery stores, supermarkets, candy, nuts, confectionery stores, bakeries, caterers, eating places and restaurants, bars, drinking places, nightclubs, fast food restaurants, and food delivery platforms such as GrabFood, FoodPanda, and Deliveroo",
+      "Eligible transport transactions include taxicabs and limousines such as Grab and Gojek rides",
+      "Eligible memberships transactions include athletic recreational and golf, and country clubs",
+      "Redeem your rewards points for home, dining, retail, travel, or charity cash vouchers online or offset cash rebates on transactions online via rewards catalogue or offset transactions via HSBC mobile app",
+      "HSBC Rewards terms and conditions: General exclusions such as payments via EZ-Link, YouTrip, AXS, tax, utilities, cash advances, payments to financial, governmental, insurance, educational institutions do not qualify for cash back",
+      "HSBC Rewards points earned expire in 37 months’ time, aka 3 years and 1 month"
+    ],
+    "grocery": [
+      "Base earn rate: 1 reward point per S$1 spent. No rewards cap",
+      "10X Points or 4 Miles bonus: On top of the base 1 reward point, get 9 extra reward points on every S$1 spent on online spend on dining"
+    ],
+    "dining": [
+      "10X Points or 4 Miles bonus: On top of the base 1 reward point, get 9 extra reward points on every S$1 spent on online spend on dining",
+      "Eligible groceries and dining transactions include grocery stores, supermarkets, candy, nuts, confectionery stores, bakeries, caterers, eating places and restaurants, bars, drinking places, nightclubs, fast food restaurants, and food delivery platforms such as GrabFood, FoodPanda, and Deliveroo"
+    ],
+    "online_shopping": [
+      "10X Points or 4 Miles bonus: On top of the base 1 reward point, get 9 extra reward points on every S$1 spent on online spend on dining, selected travel purchases and shopping.",
+      "Download Entertainer with HSBC app for worldwide dining and hotel 1 for 1 deals and discounts"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "Promotion is valid from 12-March-2025 to 31-March-2025",
+    "MoneySmart Exclusive gift is applicable for New-to-HSBC cardholders only",
+    "Customers need to apply through MoneySmart to be eligible",
+    "Applicants need to provide HSBC their consent to receive marketing and promotional materials from HSBC at the time of submitting their application",
+    "Spend a min. of S$800 in Qualifying Transactions from Card Account Opening Date to the end of the following calendar month.",
+    "Log into your MoneySmart account and submit your claim by 30th April 2025"
+  ],
+  "fees": {
+    "annual_fee": "S$0",
+    "supplementary_card_fee": "S$0",
+    "interest_free_period": "20 days",
+    "annual_interest_rate": "26.90%",
+    "late_payment_fee": "S$100 if the minimum payment is not received on or before the Payment Due Date",
+    "minimum_monthly_repayment": "3% or S$50, whichever is greater",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "6% or $15, whichever is greater",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "30,000",
+    "non_singaporean": "40,000"
+  },
+  "card_association": "Visa"
+}

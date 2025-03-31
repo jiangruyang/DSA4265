@@ -1,0 +1,103 @@
+{
+  "card_name": "UOB Lady's Card",
+  "card_type": "Miles",
+  "issuer": "UOB",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Up to 25X UNI$ for every S$5 spend (equiv. to 10 miles per S$1) on your preferred rewards category with no minimum spend required. Choose from Beauty & Wellness, Dining, Entertainment, Family, Fashion, Transport and Travel.",
+      "10X UNI$ (4 miles per S$1) + additional up to 15X UNI$ (6 miles per S$1) when you save with UOB Lady's Savings Account",
+      "Flexibility to change your Preferred Category Spending every quarter.",
+      "UOB Lady's LuxePay Plan 6 or 12-month installment plan with no interest or processing fees",
+      "Free e-Commerce protection for online purchases up to USD$200",
+      "Earn up to 6.0% p.a. interest with UOB One Account",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "air_miles": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on your selected category, valid for online, in-store, local and overseas spend",
+      "No min. spend, Bonus 9X UNI$ and up to 15X Lady's Savings Bonus UNI$ is capped at S$1,000 spend per calendar month for UOB Lady's Card.",
+      "Convert your UNI$ into air miles at the conversion rate of UNI$1 = 2 miles",
+      "Terms and conditions apply for all above-mentioned privileges. Visit here for more details. Insured up to S$100,000 by SDIC."
+    ],
+    "overseas_spending": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on your selected category, valid for online, in-store, local and overseas spend",
+      "No min. spend, Bonus 9X UNI$ and up to 15X Lady’s Savings Bonus UNI$ is capped at S$1,000 spend per calendar month for UOB Lady’s Card.",
+      "Convert your UNI$ into air miles at the conversion rate of UNI$1 = 2 miles"
+    ],
+    "petrol": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on Petrol with no min. spend required",
+      "Flexibility to change your category every quarter",
+      "Valid for online, in-stores, local and overseas spend"
+    ],
+    "rewards": [
+      "Base earn rate: UNI$1 per S$5 spent (equivalent to 0.4 miles per S$1)",
+      "UNI$1 per S$5 spent (equivalent to 0.4 miles per S$1) on all purchases",
+      "Select 1 rewards category for UOB Lady's Card to earn Bonus 9X UNI$ for every S$5 spent (equivalent to 3.6 miles per S$1)",
+      "Additional up to 15X UNI$ (6 miles per S$1) when you save with UOB Lady's Savings Account",
+      "No min. spend, Bonus 9X UNI$ and up to 15X Lady's Savings Bonus UNI$ is capped at S$1,000 spend per calendar month for UOB Lady's Card.",
+      "Convert your UNI$ into air miles at the conversion rate of UNI$1 = 2 miles",
+      "Choose from 7 Preferred Rewards Categories",
+      "Beauty and wellness: Bobby Brown, DrBrand, Elements Wellness, The Battleground, Jean Yip Beauty, NARS, Pablo Blau, Spa Esprit, Dr Lash, Raffles Spa and more",
+      "Dining: Haidilao Hot Pot, The Courtyard, The Fullerton Hotel Singapore, KPO Cafe & Bar, Tunglok Group, GrabFood, 2amdessertbar, Cinder Steakhouse, Nassim Hill Bakery Bistro Bar, Vineyard at Hortpark and more",
+      "Entertainment: Cathay Cineplexes, Golden Village, Shaw Theatres, Sistic, Zouk, KPO, Indochine, Harry’s, No. 5 Emerald Hill, Party World KTV, and more",
+      "Family: NTUC Fairprice, Cold Storage, CS Fresh, DON DON DONKI, Giant, Medi-Ya, Redmart, Motherswork, B_Together Dempsey Family Club, Healthway Medical, Lifescan Medical, LSC Eye Clinic, Raffles Dental",
+      "Fashion: Beyond the Vines, ByInviteOnly, Nike, Her Velvet Vase, Melissa, ZALORA, Club21, Kids21, SUSY + BAE, Luisa Via Roma and more",
+      "Transport: Grab, Gojek, Ryde, TADA, ComfortDelGro Taxi, SMRT Taxi, Premier Taxis, Shell Petrol Kiosks, Esso Petrol Kiosks, SPC, Caltex and more.",
+      "Travel: Agoda, AirAsia, Airbnb, ANA, Cathay Pacific, Emirates, EVA Air, Expedia, Jetstar, Korean Air, Scoot, Singapore Airlines, and more",
+      "Feel free to change your preferred rewards category as your lifestyle and interest evolves, any change will only take effect from the next calendar quarter.",
+      "UOB UNI$ Rewards points terms and conditions: General exclusions such as payments via AXS, EZ Link, PayPal, YouTrip, and bill payments, instalment plans, cash advance, payments to property, insurance, financial, educational, and governmental transactions will not qualify for UNI$ rewards points"
+    ],
+    "entertainment": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on Entertainment (Bars + concert tickets) with no min. spend required",
+      "Flexibility to change your category every quarter",
+      "Valid for online, in-stores, local and overseas spend"
+    ],
+    "grocery": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on Family (Grocery + Kidswear) with no min. spend required",
+      "Flexibility to change your category every quarter",
+      "Valid for online, in-stores, local and overseas spend"
+    ],
+    "dining": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on Dining with no min. spend required",
+      "Flexibility to change your category every quarter",
+      "Valid for online, in-stores, local and overseas spend"
+    ],
+    "online_shopping": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on Fashion with no min. spend required",
+      "Flexibility to change your category every quarter",
+      "Valid for online, in-stores, local and overseas spend"
+    ],
+    "shopping": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on Fashion with no min. spend required",
+      "Flexibility to change your category every quarter",
+      "Valid for online, in-stores, local and overseas spend"
+    ],
+    "installment": [
+      "UOB Lady's LuxePay Plan - Put your new luxury purchase (shoes and bags) worth S$500 or more (local, online or overseas) on a 0% p.a. 6 or 12-month instalment payment plan, absolutely free"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "MoneySmart Exclusive Promotion is valid from 15-March-2025 to 31-March-2025",
+    "UOB Online Promotion is valid from 01-March-2025 to 31-March-2025",
+    "Applicable for New-to-UOB credit card customers only",
+    "Customers need to apply through MoneySmart to be eligible",
+    "Log into your MoneySmart account and submit a claim by 14th April 2025 in order to qualify for our MoneySmart Exclusive offers."
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "1st Supplementary Card free, $98.10 for subsequent Supplementary Cards",
+    "annual_fee_waiver": "1st year fee waiver",
+    "interest_free_period": "21 days",
+    "annual_interest_rate": "27.80%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is greater",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8%",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "30,000",
+    "non_singaporean": "40,000"
+  },
+  "card_association": "Mastercard"
+}

@@ -1,0 +1,58 @@
+{
+  "card_name": "DBS Yuu Visa Card",
+  "card_type": "Rewards",
+  "issuer": "DBS",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Enjoy 5% cash rebates/ 10x yuu Points at yuu merchants with no min. spend no cap",
+      "Earn additional bonus 13% cash rebates / 26x yuu Points on your yuu merchant spend when you hit S$600 total Qualified Spend in a calendar month",
+      "Earn 0.5% cash rebates / 1x yuu Point on all other spend",
+      "Great for daily essentials like groceries, dining, telco and recreation",
+      "yuu merchant includes foodpanda,Gojek, Cold Storage, Giant, Guardian, BreadTalk, Toast Box, Food Republic, Food Junction, Mandai Wildlife Group and many more.",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "rewards": [
+      "Enjoy 5% cash rebates/ 10x yuu Points at yuu merchants with no min. spend no cap"
+    ],
+    "grocery": [
+      "Enjoy 5% cash rebates/ 10x yuu Points at yuu merchants with no min. spend no cap",
+      "Earn additional bonus 13% cash rebates / 26x yuu Points on your yuu merchant spend when you hit S$600 total Qualified Spend in a calendar month"
+    ],
+    "dining": [
+      "Earn 0.5% cash rebates / 1x yuu Point on all other spend",
+      "Enjoy 5% cash rebates/ 10x yuu Points at yuu merchants with no min. spend no cap",
+      "Earn additional bonus 13% cash rebates / 26x yuu Points on your yuu merchant spend when you hit S$600 total Qualified Spend in a calendar month",
+      "yuu merchant includes foodpanda, BreadTalk, Toast Box, selected Food Republic and Food Junction."
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "Valid for New Cardmembers only.",
+    "New Cardmembers need to spend a min. of S$800 within the first 60 days of card approval."
+  ],
+  "fees": {
+    "annual_fee": "S$196.20 (inclusive of GST)",
+    "supplementary_card_fee": "S$98.10 (inclusive of GST)",
+    "annual_fee_waiver": "First year waived",
+    "interest_free_period": "25 days",
+    "annual_interest_rate": "27.80% p.a. chargeable on daily basis (subject to compounding)",
+    "late_payment_fee": "S$100 (For outstanding balance above S$200)",
+    "minimum_monthly_repayment": "3% of statement balance or S$50 (whichever is greater)",
+    "foreign_transaction_fee": "3.25%, on top of the prevailing foreign exchange rate determined by Visa",
+    "cash_advance_fee": "8% of the amount withdrawn per transaction or S$15 (whichever is greater)",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$45,000"
+  },
+  "documents_required": {
+    "sg_citizens_prs": "Apply via MyInfo",
+    "passport_validity": "6 months",
+    "work_permit_validity": "6 months",
+    "utility_bill": "With Full Name and Address",
+    "income_tax_notice": "At least 1 year",
+    "payslip": "Yes"
+  },
+  "card_association": "Visa"
+}

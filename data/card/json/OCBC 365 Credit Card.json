@@ -1,0 +1,101 @@
+{
+  "card_name": "OCBC 365 Credit Card",
+  "card_type": "Cashback",
+  "issuer": "OCBC",
+  "rewards_and_benefits": {
+    "key_features": [
+      "6% cashback on fuel spend at all petrol service stations",
+      "5% cashback on everyday dining (including local, overseas and online food delivery)",
+      "3% cashback on groceries, land transport, recurring telco and electricity bills",
+      "3% cashback on streaming and EV charging",
+      "3% cashback at Watsons stores and Watsons Online",
+      "0.25% cashback on everything else",
+      "Min. spend of S$800 per month, with cashback capped at S$80 per month",
+      "Unlock up to S$160 cashback per month with a min. spend of S$1,600 per month",
+      "2 years fee waiver for principal card (S$196.20), subsequent years waived with min. spend of S$10,000 p.a.",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "overseas_spending": [
+      "5% cash back on everyday Dining (also applies to overseas spending)",
+      "6% cashback on fuel spend at all petrol service stations overseas",
+      "3% cashback on overseas groceries",
+      "3% cashback on overseas private hire rides e.g. Grab, Go-jek, TADA, ComfortDelGro",
+      "Minimum spend of S$800/month required",
+      "Cash back capped at S$80",
+      "3.25% foreign currency transaction fee"
+    ],
+    "bill_payment": [
+      "3% cashback on recurring bills from StarHub, Singtel, M1, MyRepublic, CirclesLife",
+      "3% cashback on recurring elecitrcity bills (Geneco, Keppel Electric, Sembcorp Power, Senoko Energy and Singapore Power)",
+      "3% cashback on streaming services like Netflix, Disney+, Spotify and Apple Music",
+      "Cashback capped at S$80/month if you spend min. of S$800. If you spend a min of S$1,600, cashback cap will be S$160/ month",
+      "2 years annual fee waiver of S$196.20/year"
+    ],
+    "petrol": [
+      "Best for: Petrol transactions at Caltex, Esso and Sinopec stations",
+      "6% cashback on fuel spend at all petrol service stations",
+      "Up to 22.92% fuel savings at Caltex (including 18% instant discount for all fuel)",
+      "Up to 21.04% fuel savings at Esso (including 16% instant discount for all fuel)",
+      "Up to 27.6% fuel savings at Sinopec Bukit Timah Station (including 23% instant discount for all fuel)",
+      "Up to 24.8% fuel savings at Sinopec Yishun & Woodlands Station (including 20% instant discount for all fuel)"
+    ],
+    "cash_back": [
+      "6% cashback on fuel spend at all petrol service stations",
+      "Enjoy fuel savings of up to 22.92% at Caltex stations, up to 21.04% at Esso and up to 27.6% at Sinopec",
+      "5% cashback on local and overseas dining, everyday",
+      "5% cashback on online food delivery e.g. Deliveroo and Foodpanda",
+      "3% cashback on local, overseas and online groceries e.g. Redmart, FairPrice Online",
+      "3% cashback on local and overseas private hire rides e.g. SimplyGo, Grab, ComfortDelGro, Go-jek, TADA",
+      "3% cashback on recurring bills from StarHub, Singtel, M1, MyRepublic, CirclesLife",
+      "3% cashback on recurring elecitrcity bills (Geneco, Keppel Electric, Sembcorp Power, Senoko Energy and Singapore Power)",
+      "3% cashback on EV charging (SP Digital, Greenlots, CDG ENGIE and City Energy)",
+      "3% cashback on streaming (Netflix, Disney+, Spotify and Apple Music)",
+      "3% cashback at Watsons stores and Watsons Online",
+      "0.25% cashback on everything else",
+      "Min. spend of S$800 per month, with cashback capped at S$80 per month",
+      "Unlock up to S$160 cashback per month with a min. spend of S$1600 per month"
+    ],
+    "buffet_promotion": [
+      "5% cash back on dining (local & overseas)"
+    ],
+    "grocery": [
+      "3% cashback on local and overseas groceries",
+      "3% cashback on online local and overseas groceries e.g. Redmart, FairPrice Online",
+      "Cashback capped at S$80/month if you spend min. of S$800. If you spend a min of S$1,600, cashback cap will be S$160/ month"
+    ],
+    "dining": [
+      "5% cashback on local and overseas dining, everyday",
+      "5% cashback on online food delivery e.g. Deliveroo and Foodpanda",
+      "Cashback capped at S$80/month if you spend min. of S$800. If you spend a min of S$1,600, cashback cap will be S$160/ month"
+    ],
+    "shopping": [
+      "3% cashback on local, overseas and online groceries e.g. Redmart, FairPrice Online",
+      "0.25% cashback on everything else",
+      "Cashback capped at S$80/month if you spend min. of S$800. If you spend a min of S$1,600, cashback cap will be S$160/ month"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "MoneySmart Exclusive Promotion is valid from 13-March-2025 to 31-March-2025",
+    "Applicable for New-to card holders only",
+    "Customers need to apply through MoneySmart to be eligible,",
+    "Charge at least 1 Qualifying Transaction to your card within 30 days of your application being approved"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "S$98.10",
+    "annual_fee_waiver": "Available",
+    "interest_free_period": "23 days",
+    "annual_interest_rate": "27.78%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8% or $15, whichever is higher",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "30,000",
+    "non_singaporean": "45,000"
+  },
+  "card_association": "Visa"
+}

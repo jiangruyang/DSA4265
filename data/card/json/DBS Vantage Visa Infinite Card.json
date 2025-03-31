@@ -1,0 +1,80 @@
+{
+  "card_name": "DBS Vantage Visa Infinite Card",
+  "card_type": "Miles or Cashback",
+  "issuer": "DBS",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Switch your rewards flexibly between up to 2.2 miles per S$1 or 2.2% Cashback",
+      "Complimentary Accor Plus Explorer membership with 1 free hotel night stay",
+      "Complimentary Priority Pass™ Digital Membership with access to over 1,500 airport lounges and travel experiences worldwide: 10 free visits within each 12-month period of your membership",
+      "Enjoy exclusive access to members-only dining privileges.",
+      "Receive 25,000 bonus miles (in the form of 12,500 DBS Points) when you pay the annual fee of S$599.50 (inclusive of GST)",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "air_miles": [
+      "1.5 miles for every S$1 local spend",
+      "2.2 miles for every S$1 overseas spend"
+    ],
+    "overseas_spending": [
+      "2.2 miles or 2.2% cashback for every S$1 overseas spend"
+    ],
+    "bill_payment": [
+      "1.5 miles or 1.5% cashback for every S$1 local spend",
+      "2.2 miles or 2.2% cashback for every S$1 overseas spend"
+    ],
+    "petrol": [
+      "Up to 19% off on Fuel Spending at Esso",
+      "5% Esso station site + 5% Esso Smiles card discount + 9% additional discount for Supreme+ fuel or 8% for all other grades",
+      "1.5 miles or 1.5% cashback for every S$1 local spend",
+      "2.2 miles or 2.2% cashback for every S$1 overseas spend"
+    ],
+    "cash_back": [
+      "1.5% cashback for every S$1 local spend",
+      "2.2% cashback for every S$1 overseas spend"
+    ],
+    "rewards": [
+      "1.5 miles or 1.5% cashback for every S$1 local spend",
+      "2.2 miles or 2.2% cashback for every S$1 overseas spend"
+    ],
+    "entertainment": [
+      "1.5 miles or 1.5% cashback for every S$1 local spend",
+      "2.2 miles or 2.2% cashback for every S$1 overseas spend"
+    ],
+    "grocery": [
+      "1.5 miles or 1.5% cashback for every S$1 local spend",
+      "2.2 miles or 2.2% cashback for every S$1 overseas spend"
+    ],
+    "dining": [
+      "1.5 miles or 1.5% cashback for every S$1 local spend",
+      "2.2 miles or 2.2% cashback for every S$1 overseas spend"
+    ],
+    "online_shopping": [
+      "1.5 miles or 1.5% cashback for every S$1 local spend",
+      "2.2 miles or 2.2% cashback for every S$1 overseas spend"
+    ],
+    "shopping": [
+      "1.5 miles or 1.5% cashback for every S$1 local spend",
+      "2.2 miles or 2.2% cashback for every S$1 overseas spend"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "Charge a minimum spend of S$4,000 to the approved DBS Vantage Card within the first 30 days from the card approval date",
+    "Payment of Annual Fee S$599.50 (inclusive of GST) is required"
+  ],
+  "fees": {
+    "annual_fee": "$599.50 (inclusive of 9% GST)",
+    "supplementary_card_fee": "S$0",
+    "annual_fee_waiver": "While the Annual Fee is strictly non-waivable for the first year, you will enjoy a waiver in the subsequent years if a minimum of S$60,000 worth of retail spend is made in the preceding Card Year",
+    "interest_free_period": "25 days",
+    "annual_interest_rate": "27.8%",
+    "late_payment_fee": "$100 for outstanding balance above $50",
+    "foreign_transaction_fee": "3.25%, on top of the prevailing foreign exchange rate determined by Visa",
+    "cash_advance_fee": "8% of the amount withdrawn per transaction or S$15 (whichever is greater)"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$120,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$120,000"
+  },
+  "card_association": "Visa"
+}

@@ -1,0 +1,76 @@
+{
+  "card_name": "POSB Everyday Card",
+  "card_type": "Cashback",
+  "issuer": "POSB",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Up to 10% cash rebates on your daily essentials when you dine, shop online or purchase groceries",
+      "50% off family attractions and other exclusive deals",
+      "Save up to 20.1% on fuel at SPC",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "bill_payment": [
+      "3% cash rebates at SP Group, Union Power, Tuas Power and Geneco with no minimum spend, capped at S$100 spend per calendar month",
+      "2% cash rebates at Keppel Electric, Senoko Energy and Sembcorp Power with no minimum spend, capped at S$100 spend per calendar month",
+      "3% cash rebates on phone bills (Singtel,Singtel GOMO,StarHub,StarHub giga,M1,MyRepublic, Circles.Life) when you spend above S$800 on your card per calendar month"
+    ],
+    "petrol": [
+      "20.1% fuel savings at SPC (10% SPC&U member discount + 5% DBS/POSB Card discount + 6% POSB Everyday Card cash rebates)",
+      "2% cash rebates at SpeedyCare"
+    ],
+    "cash_back": [
+      "10% cash rebates on online food delivery at foodpanda and Deliveroo when you spend above S$800 on your card per calendar month",
+      "8% Cash Rebates at POPULAR stores & POPULAR Online Store",
+      "5% cash rebates at Sheng Siong transactions in-store and Online, with no minimum spend, capped at S$600 spend per calendar month",
+      "5% cash rebates on your grocery transactions at RedMart when you spend above S$800 on your card per calendar month",
+      "5% Cash Rebates on Online Shopping (Amazon.sg, Lazada, Qoo10, Shopee, RedMart and Taobao) when you spend above S$800 on your card per calendar month",
+      "3% cash rebates at Pet Lovers Centre (purchases above S$15)",
+      "3% on dining transactions with caterers, eating places and restaurants, bars, cocktail lounges (excluding fast food spend) when you spend above S$800 on your card per calendar month",
+      "3% cash rebates on phone bills (Singtel,Singtel GOMO,StarHub,StarHub giga,M1,MyRepublic, Circles.Life) when you spend above S$800 on your card per calendar month",
+      "3% cash rebates at SP Group, Union Power, Tuas Power and Geneco with no minimum spend, capped at S$100 spend per calendar month",
+      "2% cash rebates at Keppel Electric, Senoko Energy and Sembcorp Power with no minimum spend, capped at S$100 spend per calendar month"
+    ],
+    "grocery": [
+      "5% cash rebates at Sheng Siong transactions in-store and Online, with no minimum spend, capped at S$600 spend per calendar month",
+      "5% cash rebates on your grocery transactions at RedMart when you spend above S$800 on your card per calendar month"
+    ],
+    "dining": [
+      "10% cash rebates on online food delivery at foodpanda and Deliveroo when you spend above S$800 on your card per calendar month",
+      "3% on all other dining transactions with caterers, eating places and restaurants, bars, cocktail lounges (excluding fast food spend) when you spend above S$800 on your card per calendar month",
+      "Enjoy exclusive 1-for-1 dining privileges and discounts at restaurants and bars islandwide"
+    ],
+    "online_shopping": [
+      "8% Cash Rebate at POPULAR Online Store",
+      "5% Cash Rebates on Online Shopping (Amazon.sg, Lazada, Qoo10, Shopee, RedMart and Taobao)",
+      "Watsons: Enjoy 3% cash rebates on health and beauty transactions in-store and online",
+      "Online shopping promotion: Enjoy cash rebates for online shopping when you spend above S$800 on your card per calendar month"
+    ],
+    "shopping": [
+      "8% Cash Rebate at POPULAR and POPULAR Online Store",
+      "5% Cash Rebates on Online Shopping (Amazon.sg, Lazada, Qoo10, Shopee, RedMart and Taobao) when you spend above S$800 on your card per calendar month",
+      "3% cash rebates at Pet Lovers Centre (purchases above S$15)"
+    ]
+  },
+  "eligibility": [
+    "21-75 years old",
+    "Valid for New Cardholders only.",
+    "Spend a minimum of S$800 within the first 60 days from the date of Card approval."
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "S$98.10",
+    "annual_fee_waiver": "First year waived",
+    "interest_free_period": "25 days",
+    "annual_interest_rate": "Prevailing interest rate of 27.8% p.a. (subject to compounding if the charges are not repaid in full) on the transaction amount, chargeable on a daily basis from the date of transaction until receipt of full payment. (Minimum charge: S$2.50)",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3.00% or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8% of the amount withdrawn per transaction or S$15, whichever is higher",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$45,000"
+  },
+  "card_association": "Mastercard"
+}

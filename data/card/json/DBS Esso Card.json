@@ -1,0 +1,42 @@
+{
+  "card_name": "DBS Esso Card",
+  "card_type": "Petrol",
+  "issuer": "DBS",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Get up to S$120 fuel savings when you apply for DBS Esso Card today!",
+      "Earn Smiles Points on all your shopping, dining and other card retail spends and redeem for free fuel!",
+      "Earn up to 23%* fuel savings & up to 2.2% Smiles saving",
+      "*18% instant fuel discount and additional S$11 fuel savings with min. S$180 nett fuel spend at Esso per calendar month",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "petrol": [
+      "Up to 23% Total Fuel savings",
+      "Enjoy 18% Instant fuel discount and 5% additional savings",
+      "Earn 1 Base Smiles Points for every litre of Synergy™ fuel purchased at any Esso Station",
+      "With 300 and 750 Smiles Points, you get to redeem S$10 and S$30 worth of Synergy fuel respectively, instantly!"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old",
+    "Min. S$180 nett fuel spends per month at any Esso station in Singapore for all 2 months from the date of Card approval"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "S$98.10",
+    "annual_fee_waiver": "First year waived",
+    "interest_free_period": "25 days",
+    "annual_interest_rate": "26.80%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3.00% or S$50, whichever is greater",
+    "foreign_transaction_fee": "3.25%",
+    "foreign_check_fee": "N/A",
+    "cash_advance_fee": "8% or S$15, whichever is greater",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$45,000"
+  },
+  "card_association": "Mastercard"
+}

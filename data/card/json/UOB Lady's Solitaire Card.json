@@ -1,0 +1,104 @@
+{
+  "card_name": "UOB Lady's Solitaire Card",
+  "card_type": "Rewards",
+  "issuer": "UOB",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Up to 25X UNI$ for every S$5 spend (equiv. to 10 miles per S$1) on up to 2 of your preferred rewards category(ies) with no minimum spend required.",
+      "Choose from Beauty & Wellness, Dining, Entertainment, Family, Fashion, Transport and Travel.",
+      "10X UNI$ (4 miles per S$1) with no min. spend + additional up to 15X UNI$ (6 miles per S$1) when you save with UOB Lady's Savings Account",
+      "Flexibility to change your Preferred Rewards Category(ies) Spending every quarter.",
+      "UOB Lady's LuxePay Plan 6 or 12-month installment plan with no interest or processing fees",
+      "Free e-Commerce protection for online purchases up to USD$200",
+      "Earn up to 6.0% p.a. interest with UOB One Account"
+    ],
+    "air_miles": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on your selected category(ies), valid for online, in-store, local and overseas spend",
+      "No min. spend, Bonus 9X UNI$ and up to 15X Lady's Savings Bonus UNI$ is capped at S$2,000 spend per calendar month for UOB Lady's Solitaire Card.",
+      "Convert your UNI$ into air miles at the conversion rate of UNI$1 = 2 miles"
+    ],
+    "overseas_spending": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on your selected category(ies), valid for online, in-store, local and overseas spend",
+      "No min. spend, Bonus 9X UNI$ and up to 15X Lady's Savings Bonus UNI$ is capped at S$2,000 spend per calendar month for UOB Lady's Solitaire Card.",
+      "Valid for online, in-stores, local and overseas spend"
+    ],
+    "petrol": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on Petrol with no min. spend required",
+      "Flexibility to change your category(ies) every quarter",
+      "Valid for online, in-stores, local and overseas spend"
+    ],
+    "rewards": [
+      "Base earn rate: UNI$1 per S$5 spent (equivalent to 0.4 miles per S$1)",
+      "UNI$1 per S$5 spent (equivalent to 0.4 miles per S$1) on all purchases",
+      "Select up to 2 rewards category(ies) to earn Bonus 9X UNI$ for every S$5 spent (equivalent to 3.6 miles per S$1). Additional up to 15X UNI$ (6 miles per S$1) when you save with UOB Lady's Savings Account",
+      "No min. spend, Bonus 9X UNI$ and up to 15X Lady's Savings Bonus UNI$ is capped at S$2,000 spend per calendar month for UOB Lady's Solitaire Card.",
+      "Convert your UNI$ into air miles at the conversion rate of UNI$1 = 2 miles",
+      "Choose from 7 Preferred Rewards Categories",
+      "Beauty and wellness: Bobbi Brown, DrBrand, Elements Wellness, The Battleground, Jean Yip Beauty, NARS, Pablo Blau, Spa Esprit, Dr Lash, Raffles Spa and more",
+      "Dining: Haidilao Hot Pot, The Courtyard, The Fullerton Hotel Singapore, KPO Cafe & Bar, Tunglok Group, GrabFood, 2amdessertbar, Cinder Steakhouse, Nassim Hill Bakery Bistro Bar, Vineyard at Hortpark and more",
+      "Entertainment: Cathay Cineplexes, Golden Village, Shaw Theatres, Sistic, Zouk, KPO, Indochine, Harry’s, No. 5 Emerald Hill, Party World KTV, and more",
+      "Family: NTUC Fairprice, Cold Storage, CS Fresh, DON DON DONKI, Giant, Medi-Ya, Redmart, Motherswork, B_Together Dempsey Family Club, Healthway Medical, Lifescan Medical, LSC Eye Clinic, Raffles Dental",
+      "Fashion: Beyond the Vines, ByInviteOnly, Nike, Her Velvet Vase, Melissa, ZALORA, Club21, Kids21, SUSY + BAE, Luisa Via Roma and more",
+      "Transport: Grab, Gojek, Ryde, TADA, ComfortDelGro Taxi, SMRT Taxi, Premier Taxis, Shell Petrol Kiosks, Esso Petrol Kiosks, SPC, Caltex and more.",
+      "Travel: Agoda, AirAsia, Airbnb, ANA, Cathay Pacific, Emirates, EVA Air, Expedia, Jetstar, Korean Air, Scoot, Singapore Airlines, and more",
+      "Feel free to change your preferred rewards category(ies) as your lifestyle and interest evolves, any change will only take effect from the next calendar quarter.",
+      "UOB UNI$ Rewards points terms and conditions: General exclusions such as payments via AXS, EZ Link, PayPal, YouTrip, and bill payments, instalment plans, cash advance, payments to property, insurance, financial, educational, and governmental transactions will not qualify for UNI$ rewards points"
+    ],
+    "entertainment": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on Entertainment (Bars + concert tickets) with no min. spend required",
+      "Flexibility to change your category(ies) every quarter",
+      "Valid for online, in-stores, local and overseas spend"
+    ],
+    "grocery": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on Family (Grocery + Kidswear) with no min. spend required",
+      "Flexibility to change your category(ies) every quarter",
+      "Valid for online, in-stores, local and overseas spend"
+    ],
+    "dining": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on Dining with no min. spend required",
+      "Flexibility to change your category(ies) every quarter",
+      "Valid for online, in-stores, local and overseas spend"
+    ],
+    "online_shopping": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on Fashion with no min. spend required",
+      "Flexibility to change your category(ies) every quarter",
+      "Valid for online, in-stores, local and overseas spend"
+    ],
+    "shopping": [
+      "Up to 25X UNI$ per S$5 spent (equivalent to 10 miles per S$1) on Fashion with no min. spend required",
+      "Flexibility to change your category(ies) every quarter",
+      "Valid for online, in-stores, local and overseas spend"
+    ],
+    "installment": [
+      "UOB Lady's LuxePay Plan - Put your new luxury purchase (shoes and bags) worth S$500 or more (local, online or overseas) on a 0% p.a. 6 or 12-month instalment payment plan, absolutely free"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old"
+  ],
+  "fees": {
+    "annual_fee": "S$414.20",
+    "supplementary_card_fee": "1st and 2nd Supplementary Cards free, $196.20 for subsequent Supplementary Cards",
+    "annual_fee_waiver": "1st year fee waiver",
+    "interest_free_period": "21 days",
+    "annual_interest_rate": "27.8%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is greater",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8%",
+    "overlimit_fee": "40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$120,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$120,000"
+  },
+  "documents_required": {
+    "sg_citizens_prs": "Apply via MyInfo",
+    "passport_validity": "6 months",
+    "work_permit_validity": "6 months",
+    "utility_bill": "Yes",
+    "income_tax_notice": "Yes",
+    "payslip": "Yes"
+  },
+  "card_association": "Mastercard"
+}

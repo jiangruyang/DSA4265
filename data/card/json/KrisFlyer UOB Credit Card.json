@@ -1,0 +1,63 @@
+{
+  "card_name": "KrisFlyer UOB Credit Card",
+  "card_type": "Miles",
+  "issuer": "UOB",
+  "rewards_and_benefits": {
+    "key_features": [
+      "Enjoy 3 KrisFlyer miles per S$1 spend on Singapore Airlines, Scoot, KrisShop and Kris+ purchases",
+      "Enjoy 3 KrisFlyer miles per S$1 spend on dining, food delivery, online shopping, online travel and transport spend with min. S$800 annual spend on Singapore Airlines, Scoot and KrisShop",
+      "Enjoy 1.2 KrisFlyer miles per S$1 spend on all other spend",
+      "5,000 KrisFlyer miles with first eligible spend (min. S$5)",
+      "10,000 KrisFlyer miles with payment of annual renewal fee",
+      "Earn up to additional 6 bonus KrisFlyer miles per S$1 spend when you open a KrisFlyer UOB Account and credit your salary (min. S$1,600). Terms and conditions apply for all above mentioned privileges. Find out more here. Insured up to S$100k by SDIC.",
+      "No miles conversion fee",
+      "Exclusive benefits on KrisShop, Grab rides, Scoot privileges and more!",
+      "At MoneySmart, we strive to keep our information accurate and up to date. This information may be different from what you see when you visit a financial institution, service provider, or specific product site. MoneySmart shall not be liable to compensate the Customer should the information is not as updated as our Partner."
+    ],
+    "air_miles": [
+      "Enjoy 3 KrisFlyer miles per S$1 spend on Singapore Airlines, Scoot, KrisShop and Kris+ purchases",
+      "Enjoy 3 KrisFlyer miles per S$1 spend on dining, food delivery, online shopping, online travel and transport spend with min. S$800 annual spend on Singapore Airlines, Scoot and KrisShop",
+      "Enjoy 1.2 KrisFlyer miles per S$1 spend on all other spend",
+      "5,000 KrisFlyer miles with first eligible spend (min. S$5)",
+      "10,000 KrisFlyer miles with payment of annual renewal fee",
+      "Earn up to additional 6 bonus KrisFlyer miles per S$1 spend when you open a KrisFlyer UOB Account and credit your salary (min. S$1,600). Terms and conditions apply for all above mentioned privileges. Find out more here. Insured up to S$100k by SDIC.",
+      "No miles conversion fee",
+      "Exclusive benefits on KrisShop, Grab rides, Scoot privileges and more!"
+    ],
+    "overseas_spending": [
+      "Enjoy 3 KrisFlyer miles per S$1 spend on Singapore Airlines, Scoot, KrisShop and Kris+ purchases",
+      "Enjoy 3 KrisFlyer miles per S$1 spend on dining, food delivery, online shopping, online travel and transport spend with min. S$800 annual spend on Singapore Airlines, Scoot and KrisShop",
+      "Enjoy 1.2 KrisFlyer miles per S$1 spend on all other spend"
+    ],
+    "rewards": [
+      "Enjoy 3 KrisFlyer miles per S$1 spend on Singapore Airlines, Scoot, KrisShop and Kris+ purchases",
+      "Enjoy 3 KrisFlyer miles per S$1 spend on dining, food delivery, online shopping, online travel and transport spend with min. S$800 annual spend on Singapore Airlines, Scoot and KrisShop",
+      "Enjoy 1.2 KrisFlyer miles per S$1 spend on all other spend",
+      "5,000 KrisFlyer miles with first eligible spend (min. S$5)",
+      "10,000 KrisFlyer miles with payment of annual renewal fee",
+      "Earn up to additional 6 bonus KrisFlyer miles per S$1 spend when you open a KrisFlyer UOB Account and credit your salary (min. S$1,600). Terms and conditions apply for all above mentioned privileges. Find out more here. Insured up to S$100k by SDIC.",
+      "No miles conversion fee",
+      "Exclusive benefits on KrisShop, Grab rides, Scoot privileges and more!"
+    ]
+  },
+  "eligibility": [
+    "Minimum age 21 years old"
+  ],
+  "fees": {
+    "annual_fee": "S$196.20",
+    "supplementary_card_fee": "1st Supplementary Card free, $98.10 for subsequent Supplementary Cards",
+    "annual_fee_waiver": "1st year fee waiver",
+    "interest_free_period": "21 days",
+    "annual_interest_rate": "27.80%",
+    "late_payment_fee": "S$100",
+    "minimum_monthly_repayment": "3% or S$50, whichever is higher",
+    "foreign_transaction_fee": "3.25%",
+    "cash_advance_fee": "8% of cash advance amount subject to a minimum fee of S$15.00",
+    "overlimit_fee": "S$40"
+  },
+  "minimum_income": {
+    "singaporean_pr": "Singaporean/PR Minimum Income S$30,000",
+    "non_singaporean": "Non-Singaporean Minimum Income S$40,000"
+  },
+  "card_association": "Mastercard"
+}
