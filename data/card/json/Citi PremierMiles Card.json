@@ -1,4 +1,7 @@
 {
+  "card_name": "Citi PremierMiles Card",
+  "card_type": "Miles",
+  "issuer": "Citi",
   "rewards_and_benefits": {
     "key_features": [
       "Citi Miles never expire",
