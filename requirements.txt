@@ -10,7 +10,7 @@ transformers>=4.15.0
 
 # For RAG pipeline
 sentence-transformers>=2.2.0
-chromadb>=0.3.0
+chromadb>=0.4.22
 
 # Frontend
 streamlit>=1.10.0
@@ -21,7 +21,7 @@ pdf2image>=1.16.0
 pytesseract>=0.3.9
 
 # Vector database
-faiss-cpu>=1.7.0
+faiss-cpu>=1.7.4
 pinecone-client>=2.0.0
 
 # Utilities
@@ -36,4 +36,8 @@ pytest>=6.2.5
 pytest-cov>=2.12.0
 
 # Docker support
-python-multipart>=0.0.5 
+python-multipart>=0.0.5
+
+# Added from the code block
+langchain>=0.1.0
+openai>=1.12.0 
