@@ -1,0 +1,41 @@
+{
+    "groceries": [
+        "ntuc", "fairprice", "coldstorage", "giant", "shengsiong", "cs fresh", "redmart", "prime supermarket", "market place", "little farms", "jasons deli", "mustafa centre", "song fish", "lee mart", "mahota", "ryans grocery", "medi-ya", "huber's butchery", "ang mo supermarket", "shine korea", "don don donki", "tanglin market", "tekka market", "tiong bahru market", "wet market", "fortune supermarket", "ue square supermarket", "buzz convenience", "7eleven", "7-eleven", "haomart", "cheers"
+    ],
+
+    "dining": [
+        "mcdonald", "mcd", "starbucks", "toastbox", "kfc", "burger king", "subway", "pizza hut", "domino's", "jollibee", "ya kun", "coffee bean", "kopitiam", "food republic", "old chang kee", "crystal jade", "din tai fung", "genki sushi", "sushi express", "haidilao", "ajisen ramen", "swensens", "nandos", "astons", "mos burger", "paris baguette", "breadtalk", "ichiban sushi", "tim ho wan", "long john silver", "liho", "koi cafe", "boost juice", "guzman y gomez", "maki-san", "collin's", "seoul garden", "manhattan fish market", "fish & co", "tamoya udon", "japan foods", "ippudo", "marche", "texas chicken", "stuff'd", "poke theory", "shake shack", "five guys", "twg tea", "lady m", "awfully chocolate", "polar puffs", "bengawan solo", "the coffee academics", "tcc cafe", "nam nam", "paul bakery", "mr bean", "chicha"
+    ],
+
+    "transportation": [
+        "grab", "gojek", "comfort", "delgro", "smrt", "sbs transit", "cdg zig", "tribecar", "bluesg", "shell", "esso", "caltex", "spc", "petrol", "bus interchange", "mrt", "ezlink", "transitlink", "tada", "getgo", "shell recharge", "ev charging", "blue charge"
+    ],
+
+    "shopping": [
+        "uniqlo", "h&m", "zara", "cotton on", "decathlon", "muji", "ikea", "daiso", "shopee", "lazada", "amazon", "qoo10", "sephora", "watsons", "guardian", "robinsons", "og store", "metro store", "charles & keith", "pedro", "courts", "harvey norman", "best denki", "challenger", "popular bookstore", "kinokuniya", "uniqgift", "takashimaya", "tangs", "mustafa", "value dollar", "love bonito", "asos", "zalora", "nike", "adidas", "puma", "skechers", "foot locker", "jd sports", "marks & spencer", "uniqgift", "fairprice xtra", "giant hypermarket", "mothercare", "toysrus", "smiggle", "muji sg", "anello", "sportslink", "uniqlo sg", "hugo boss", "coach", "kate spade", "fossil", "uniqlo online", "mr diy", "dollar store", "art friend"
+    ],
+
+    "entertainment": [
+        "golden village", "gv cinema", "shaw cinema", "cathay cineplex", "netflix", "spotify", "apple music", "disneyplus", "hbo", "youtube premium", "steam games", "playstation", "xbox", "nintendo", "sentosa", "universal studios", "sistic", "singapore flyer", "wild wild wet", "escape room", "timezone", "zouk", "marquee", "karaoke", "teoheng", "party world", "clarke quay", "boat quay", "barsg", "singapore zoo", "night safari", "bird park", "science centre", "snow city", "madame tussauds"
+    ],
+
+    "travel": [
+        "singapore airlines", "sia", "scoot", "jetstar", "airasia", "expedia", "booking.com", "agoda", "trip.com", "trivago", "marriott", "hilton", "hyatt", "accor", "shangri-la", "ritz-carlton", "ascott", "grabpay", "paypal travel", "airbnb", "changi airport", "traveloka"
+    ],
+
+    "utilities": [
+        "sp services", "singtel", "starhub", "m1", "myrepublic", "viewqwest", "pacificlight", "union power", "geneco", "keppel electric", "senoko energy", "sembcorp power", "tuas power", "pub singapore", "city gas", "power gas", "i-switch"
+    ],
+
+    "healthcare": [
+        "guardian pharmacy", "watsons pharmacy", "raffles medical", "parkway shenton", "mount elizabeth", "singhealth", "unity pharmacy", "nhg pharmacy", "thomson medical", "national healthcare", "fullerton health", "q&m dental", "smile dental", "db dental", "true dental", "nuffield dental"
+    ],
+
+    "education": [
+        "nus", "ntu", "smu", "sit", "sim global", "kaplan singapore", "psb academy", "british council", "mind stretcher", "kumon", "learning lab", "my first skool", "etonhouse", "sparkletots", "raffles institution", "acjc", "ngee ann poly", "temasek poly"
+    ],
+    
+    "others": [
+        "paypal", "stripe", "grabpay", "favepay", "carousell", "google pay", "apple pay", "paypal sg", "stripe sg", "worldpay", "paylah"
+    ]
+}
