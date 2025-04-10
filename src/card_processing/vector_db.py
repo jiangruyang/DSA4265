@@ -345,7 +345,7 @@ if __name__ == "__main__":
         import shutil
         shutil.rmtree(db_path)
         
-    db = VectorDB(db_path, collection_name="credit_cards")
+    db = VectorDB(db_path, collection_name="credit_cards", embedding_model="text-embedding-3-large")
     
     # Load card data from JSON files
     json_dir = "data/card/json"
