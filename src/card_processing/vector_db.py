@@ -1,9 +1,9 @@
-from typing import List, Dict, Any, Optional, Union, Callable
+from typing import List, Dict, Any, Optional, Union
 import os
 import json
-import asyncio
+
 from langchain_community.embeddings import OpenAIEmbeddings
-from langchain_community.vectorstores import Chroma, FAISS
+from langchain_community.vectorstores import Chroma
 from langchain.schema import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.retrievers.multi_query import MultiQueryRetriever
@@ -309,7 +309,6 @@ def load_pdf_data(pdf_dir: str, card_name_mapping: Dict[str, Any]) -> List[Dict[
             for i, chunk in enumerate(chunks):
                 if not chunk.page_content.strip():
                     continue
-                content = chunk.page_content
 
                 for card_name in mapped_names:
                     doc_id = f"{card_name}_chunk_{i}"
@@ -322,7 +321,7 @@ def load_pdf_data(pdf_dir: str, card_name_mapping: Dict[str, Any]) -> List[Dict[
                     }
                     documents.append({
                         "id": doc_id,
-                        "content": content,
+                        "page_content": chunk.page_content,
                         "metadata": metadata
                     })
 
