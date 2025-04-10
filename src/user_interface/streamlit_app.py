@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 import os
 import sys
 import asyncio
@@ -107,9 +108,19 @@ elif page == "Spending Input":
             
             # Display categorized spending
             st.subheader("Categorized Spending")
-            for category, amount in sorted(st.session_state.spending_profile.items(), key=lambda x: x[1], reverse=True):
-                if amount > 0:
-                    st.write(f"- {category.capitalize()}: ${amount:.2f}")
+            spending_data = [
+                {
+                    "Category": category.capitalize(),
+                    "Amount": f"${amount:.2f}"
+                }
+                for category, amount in sorted(
+                    st.session_state.spending_profile.items(),
+                    key=lambda x: x[1],
+                    reverse=True
+                )
+                if amount > 0
+            ]
+            st.table(pd.DataFrame(spending_data))
     
     else:  # Manual Entry
         st.subheader("Enter Monthly Spending by Category")
