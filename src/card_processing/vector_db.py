@@ -1,4 +1,4 @@
-from typing import List, Dict, Any, Optional, Union
+from typing import List, Dict, Any, Optional, Union, Tuple
 import os
 import json
 
@@ -200,11 +200,11 @@ class VectorDB:
         
         return rag_chain
 
-def load_card_data(json_dir: str) -> List[Dict[str, Any]]:
+def load_card_data(json_dir: str) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
 
     documents = []
-    
     json_files = [f for f in os.listdir(json_dir) if f.endswith('.json')]
+    card_data_dict = {}
     
     for json_file in json_files:
         try:
@@ -212,7 +212,6 @@ def load_card_data(json_dir: str) -> List[Dict[str, Any]]:
                 card_data = json.load(f)
                 
                 rewards_benefits = card_data.get('rewards_and_benefits', {})
-                eligibility = card_data.get('eligibility', '')
                 fees = card_data.get('fees', {})
                 minimum_income = card_data.get('minimum_income', {})
                 required_documents = card_data.get('documents_required', {})
@@ -273,17 +272,19 @@ def load_card_data(json_dir: str) -> List[Dict[str, Any]]:
                     "metadata": metadata
                 })
                 
+                card_data_dict[card_data.get('card_name', '')] = card_data
+                
         except Exception as e:
             print(f"Error loading {json_file}: {e}")
             continue
     
-    return documents
+    return documents, card_data_dict
 
 def load_card_mapping(mapping_file: str) -> Dict[str, Any]:
     with open(mapping_file, 'r') as f:
         return json.load(f)
 
-def load_pdf_data(pdf_dir: str, card_name_mapping: Dict[str, Any]) -> List[Dict[str, Any]]:
+def load_pdf_data(pdf_dir: str, card_name_mapping: Dict[str, Any], card_data_dict: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     documents = []
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,
@@ -317,7 +318,10 @@ def load_pdf_data(pdf_dir: str, card_name_mapping: Dict[str, Any]) -> List[Dict[
                         "page": chunk.metadata.get("page", 0),
                         "chunk": i,
                         "type": "pdf",
-                        "card_name": card_name
+                        "card_name": card_name,
+                        "card_type": card_data_dict.get(card_name, {}).get('card_type', ''),
+                        "issuer": card_data_dict.get(card_name, {}).get('issuer', ''),
+                        "card_association": card_data_dict.get(card_name, {}).get('card_association', '')
                     }
                     documents.append({
                         "id": doc_id,
@@ -335,21 +339,24 @@ def load_pdf_data(pdf_dir: str, card_name_mapping: Dict[str, Any]) -> List[Dict[
 if __name__ == "__main__":
     # Initialize vector database
     db_path = "data/vector_db/cards"
+    
+    # Delete the database if it exists
     if os.path.exists(db_path):
         import shutil
         shutil.rmtree(db_path)
+        
     db = VectorDB(db_path, collection_name="credit_cards")
     
     # Load card data from JSON files
     json_dir = "data/card/json"
-    json_documents = load_card_data(json_dir)
+    json_documents, card_data_dict = load_card_data(json_dir)
     
     # Load PDF data
     pdf_dir = "data/card/pdf"
     mapping_file = os.path.join(pdf_dir, '_mapping.json')
 
     card_name_mapping = load_card_mapping(mapping_file)
-    pdf_documents = load_pdf_data(pdf_dir, card_name_mapping)
+    pdf_documents = load_pdf_data(pdf_dir, card_name_mapping, card_data_dict)
     
     # Combine all documents
     all_documents = json_documents + pdf_documents
