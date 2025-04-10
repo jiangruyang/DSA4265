@@ -46,6 +46,7 @@ vector_db/
 .env.local
 .streamlit/secrets.toml
 notebooks/.ipynb_checkpoints/
+models/
 
 # Docker
 .docker/
