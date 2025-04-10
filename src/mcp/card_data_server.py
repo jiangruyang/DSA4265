@@ -3,6 +3,7 @@ import asyncio
 import os
 from typing import List, Dict, Any, Optional
 import json
+import random
 
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
@@ -142,6 +143,65 @@ async def search_cards(query: str, num_candidates: int = 10) -> List[Dict[str, A
         for result in results
     ]
 
+@server.tool()
+async def generate_questions(
+    question_history: List[str] = [],
+    num_questions: int = 5,
+    llm_model: str = "gpt-3.5-turbo-0125"
+    ) -> List[str]:
+    """Generate questions based on the question history
+    
+    Args:
+        question_history (List[str]): A list of previous questions.
+                Default is an empty list.
+        num_questions (int): The number of questions to generate.
+                Default is 3.
+        llm_model (str): The LLM model to use.
+                Default is "gpt-3.5-turbo-0125".
+        
+    Returns:
+        list: A list of questions
+    """
+    
+    retriever = cache.db.as_retriever(
+        search_type="similarity",
+        search_kwargs={
+            "k": 3,
+        }
+    )
+    
+    llm = ChatOpenAI(model=llm_model)
+    prompt = hub.pull("rlm/rag-prompt")
+    
+    def format_docs(docs):
+        return "\n\n".join(doc.page_content for doc in docs)
+    
+    rag_chain = (
+        {"context": retriever | format_docs, "question": RunnablePassthrough()}
+        | prompt
+        | llm
+        | StrOutputParser()
+    )
+    
+    questions = []
+    for _ in range(num_questions):
+        prompt = (
+            # Cold-start question
+            f"Come up with a short, one-line question on {random.choice(await get_available_cards())} that can be answered by the following context.",
+        ) if len(question_history) == 0 else (
+            # Chat-history-question
+            f"Come up with a short, one-line question.",
+            f"Additionally, make sure the question is relevant to all of these previously asked questions (but do not repeat an existing question): {questions}."
+        )
+
+        question = ""
+        for chunk in rag_chain.stream(' '.join(prompt)):
+            question += chunk
+
+        questions.append(question)
+            
+    return questions
+
 if __name__ == "__main__":
     # Determine port from environment or use default
     port = int(os.environ.get('PORT', 8001))
@@ -172,7 +232,9 @@ if __name__ == "__main__":
 
     result = asyncio.run(search_cards("What card has the highest miles for dining?"))
     assert len(result) > 0
-
+    
+    result = asyncio.run(generate_questions())
+    assert len(result) > 0
 
 
    
