@@ -87,7 +87,7 @@ class MerchantCategorizer:
             "others"
         ]
         
-    def __init__(self, model_path: Optional[str] = None):
+    def __init__(self, model_path: str = "models/merchant_categorizer"):
         """Initialize the merchant categorizer model
         
         Args:
@@ -144,7 +144,7 @@ class MerchantCategorizer:
         ]
         
         # Initialize tokenizer and model
-        if model_path and os.path.exists(model_path):
+        if os.path.exists(model_path):
             try:
                 self.tokenizer = AutoTokenizer.from_pretrained(model_path)
                 self.model = AutoModelForSequenceClassification.from_pretrained(model_path)
