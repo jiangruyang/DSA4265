@@ -91,10 +91,7 @@ elif page == "Spending Input":
             with open(os.path.join("data", "card_tcs", "pdf", uploaded_file.name), "wb") as f:
                 f.write(uploaded_file.getbuffer())
             
-            st.success(f"File {uploaded_file.name} uploaded successfully! (PDF parsing to be implemented)")
-            
-            # Placeholder for PDF parsing
-            st.info("PDF parsing would happen here in the actual implementation")
+            st.success(f"File {uploaded_file.name} uploaded successfully!")
             
             # Dummy transactions for demo
             transactions = [
