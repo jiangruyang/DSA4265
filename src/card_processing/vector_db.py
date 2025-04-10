@@ -208,7 +208,7 @@ def load_card_data(json_dir: str) -> Tuple[List[Dict[str, Any]], List[Dict[str, 
     
     for json_file in json_files:
         try:
-            with open(os.path.join(json_dir, json_file), 'r') as f:
+            with open(os.path.join(json_dir, json_file), 'r', encoding='utf-8') as f:
                 card_data = json.load(f)
                 
                 rewards_benefits = card_data.get('rewards_and_benefits', {})

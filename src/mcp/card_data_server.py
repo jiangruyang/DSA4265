@@ -3,6 +3,9 @@ import asyncio
 import os
 from typing import List, Dict, Any, Optional
 
+from langchain_chroma import Chroma
+from langchain_core.documents import Document
+
 # Initialize the MCP server for card data access using FastMCP
 server = FastMCP("card_data")
 
@@ -13,14 +16,7 @@ async def get_available_cards() -> List[Dict[str, Any]]:
     Returns:
         list: A list of dictionaries containing basic card information
     """
-    # Dummy implementation - will be replaced with actual database query
-    return [
-        {"id": "citi_premiermiles", "name": "Citi PremierMiles Card", "type": "miles", "annual_fee": 192.60},
-        {"id": "dbs_altitude", "name": "DBS Altitude Card", "type": "miles", "annual_fee": 192.60},
-        {"id": "uob_one", "name": "UOB One Card", "type": "cashback", "annual_fee": 192.60},
-        {"id": "ocbc_365", "name": "OCBC 365 Credit Card", "type": "cashback", "annual_fee": 192.60},
-        {"id": "amex_krisflyer", "name": "AMEX KrisFlyer Credit Card", "type": "miles", "annual_fee": 176.55}
-    ]
+    
 
 @server.tool()
 async def get_card_details(card_id: str) -> Dict[str, Any]:
