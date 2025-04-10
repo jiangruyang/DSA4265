@@ -325,7 +325,7 @@ def load_pdf_data(pdf_dir: str, card_name_mapping: Dict[str, Any], card_data_dic
                     }
                     documents.append({
                         "id": doc_id,
-                        "page_content": chunk.page_content,
+                        "content": chunk.page_content,
                         "metadata": metadata
                     })
 
