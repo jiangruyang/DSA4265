@@ -14,7 +14,7 @@ class CardOptimizerClient:
         self.initialized = False
         
         # Initialize merchant categorizer for reference
-        self.merchant_categorizer = MerchantCategorizer()
+        self.merchant_categorizer = MerchantCategorizer(model_path="models/merchant_categorizer")
         
     async def initialize(self):
         """Initialize the client by connecting to servers and getting tools"""
