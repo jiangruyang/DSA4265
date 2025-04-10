@@ -14,26 +14,9 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 class VectorDB:
-    """Vector database for storing and retrieving embeddings
-    
-    This class provides a simple interface for storing and retrieving
-    document embeddings. It's used for both card embeddings and 
-    Terms & Conditions (T&C) document embeddings, with Langchain 
-    integration for improved RAG capabilities.
-    """
     
     def __init__(self, db_path: str, collection_name: str = "default", 
                 embedding_model: Optional[Union[str, Any]] = None):
-        """Initialize the vector database
-        
-        Args:
-            db_path: Path to the vector database directory
-            collection_name: Name of the collection to use
-            embedding_model: Embedding model to use, either a string identifier
-                           or a Langchain embedding model instance
-                           (if None, uses OpenAIEmbeddings if API key set,
-                           otherwise falls back to a dummy implementation)
-        """
         self.db_path = db_path
         self.collection_name = collection_name
         
@@ -47,42 +30,27 @@ class VectorDB:
         self.vector_store = self._setup_vector_store()
     
     def _setup_embedding_model(self, embedding_model):
-        """Set up the embedding model to use"""
         if embedding_model is not None:
             if isinstance(embedding_model, str):
-                # Future: Handle different embedding model types based on string ID
                 return OpenAIEmbeddings(model=embedding_model)
             else:
-                # Assume it's already a Langchain embedding model
                 return embedding_model
         
-        # Check if OpenAI API key is available
         if os.environ.get("OPENAI_API_KEY"):
             return OpenAIEmbeddings()
         
         return None
     
     def _setup_vector_store(self):
-        """Set up the vector store based on embedding model availability"""
         if self.embedding_model is not None:
-            # Use Chroma with real embedding model
             return Chroma(
                 collection_name=self.collection_name,
                 embedding_function=self.embedding_model,
                 persist_directory=self.db_path
             )
-        
-        # Return None for dummy implementation
         return None
     
     def add_document(self, doc_id: str, content: str, metadata: Dict[str, Any] = None):
-        """Add a document to the vector database
-        
-        Args:
-            doc_id: Unique identifier for the document
-            content: Text content of the document
-            metadata: Additional metadata for the document
-        """
         if self.vector_store is not None:
             # Add document to real vector store
             doc = Document(
@@ -94,15 +62,7 @@ class VectorDB:
         
     
     def add_documents(self, documents: List[Dict[str, Any]], batch_size: int = 100):
-        """Add multiple documents to the vector database
-        
-        Args:
-            documents: List of document dictionaries, each with:
-                      - id: Unique identifier
-                      - content: Text content
-                      - metadata: Optional metadata dict
-            batch_size: Number of documents to process in each batch
-        """
+    
         if self.vector_store is not None:
             # Process documents in batches
             for i in range(0, len(documents), batch_size):
@@ -142,15 +102,6 @@ class VectorDB:
         return 
     
     def get_card_details(self, card_id: str) -> Optional[Dict[str, Any]]:
-        """Retrieve card details by loading data from a deeper JSON directory
-        
-        Args:
-            card_id: ID of the card (used as a subdirectory name)
-            
-        Returns:
-            Dictionary with card details if found, None otherwise
-        """
-        # Construct the deeper directory path using card_id
         json_dir = f"data/card/json"
         
         
@@ -159,34 +110,21 @@ class VectorDB:
         print(f"Loaded {len(documents)} documents from {json_dir}")
         matching_docs = [doc for doc in documents if doc['id'] == card_id]
         
-        # Assuming there's only one document per card_id directory
         if matching_docs:
-            doc = matching_docs[0]  # Take the first document
+            doc = matching_docs[0] 
             return {
                 'id': doc['id'],
                 'content': doc['content'][:2000]
-                # 'metadata': doc['metadata']
             }
         print(f"No details found for card ID: {card_id} in {json_dir}")
         return None
         
     def search(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
-        """Search for similar documents using vector similarity
-        
-        Args:
-            query: Text query to search for
-            top_k: Number of top results to return
-            
-        Returns:
-            List of matching documents with similarity scores
-        """
         if self.vector_store is not None:
-            # Use real vector store for search
             results = self.vector_store.similarity_search_with_relevance_scores(
                 query, k=top_k
             )
             
-            # Format results
             return [
                 {
                     'id': doc.metadata.get('id', f"doc_{i}"),
@@ -197,21 +135,12 @@ class VectorDB:
                 for i, (doc, score) in enumerate(results)
             ]
         
-        # Sort by score (descending) and take top-k
         results.sort(key=lambda x: x['score'], reverse=True)
         return results[:top_k]
     
     def get_document(self, doc_id: str) -> Optional[Dict[str, Any]]:
-        """Retrieve a document by its ID
         
-        Args:
-            doc_id: ID of the document to retrieve
-            
-        Returns:
-            Document dict if found, None otherwise
-        """
         if self.vector_store is not None:
-            # For real vector store, we need to search by metadata
             results = self.vector_store.get(
                 where={"id": doc_id}
             )
@@ -228,16 +157,7 @@ class VectorDB:
         return None
     
     def create_rag_chain(self, llm=None, prompt=None):
-        """Create a RAG chain for question answering
-        
-        Args:
-            llm: Language model to use for RAG (defaults to ChatOpenAI)
-            prompt: Prompt template to use (defaults to a standard RAG prompt)
-            num_queries: Number of query variations to generate for retrieval
-            
-        Returns:
-            A callable chain that takes a question and returns an answer
-        """
+    
         if self.vector_store is None:
             raise ValueError("RAG chains require a real vector store with embeddings")
         
@@ -251,7 +171,6 @@ class VectorDB:
             llm=llm
         )
         
-        # Set up default RAG prompt if not provided
         if prompt is None:
             prompt = PromptTemplate.from_template(
                 """Based on the provided context, identify and compare cards that match the user's query. 
@@ -269,13 +188,10 @@ class VectorDB:
                 Answer:"""
             )
         
-        # Format retrieved documents
         def format_docs(docs):
             formatted = "\n\n".join(doc.page_content for doc in docs)
-            #print(formatted)
             return formatted
         
-        # Create the RAG chain
         rag_chain = (
             {"context": retriever | format_docs, "question": RunnablePassthrough()}
             | prompt
@@ -285,17 +201,9 @@ class VectorDB:
         return rag_chain
 
 def load_card_data(json_dir: str) -> List[Dict[str, Any]]:
-    """Load card data from JSON files
-    
-    Args:
-        json_dir: Directory containing card JSON files
-        
-    Returns:
-        List of card documents ready for vector database
-    """
+
     documents = []
     
-    # Get all JSON files in the directory
     json_files = [f for f in os.listdir(json_dir) if f.endswith('.json')]
     
     for json_file in json_files:
@@ -308,6 +216,7 @@ def load_card_data(json_dir: str) -> List[Dict[str, Any]]:
                 fees = card_data.get('fees', {})
                 minimum_income = card_data.get('minimum_income', {})
                 required_documents = card_data.get('documents_required', {})
+
                 # Create a document from the card data
                 doc_id = json_file.replace('.json', '')
                 content = f"""
@@ -371,19 +280,10 @@ def load_card_data(json_dir: str) -> List[Dict[str, Any]]:
     return documents
 
 def load_card_mapping(mapping_file: str) -> Dict[str, Any]:
-    """Load card ID to name mapping from a JSON file"""
     with open(mapping_file, 'r') as f:
         return json.load(f)
 
 def load_pdf_data(pdf_dir: str, card_name_mapping: Dict[str, Any]) -> List[Dict[str, Any]]:
-    """Load PDF data from PDF files
-    
-    Args:
-        pdf_dir: Directory containing PDF files
-        
-    Returns:
-        List of PDF documents ready for vector database
-    """
     documents = []
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,
@@ -391,45 +291,47 @@ def load_pdf_data(pdf_dir: str, card_name_mapping: Dict[str, Any]) -> List[Dict[
         length_function=len,
     )
     
-    # Get all PDF files in the directory
     pdf_files = [f for f in os.listdir(pdf_dir) if f.endswith('.pdf')]
     
     for pdf_file in pdf_files:
         try:
-            # Load PDF file
             pdf_path = os.path.join(pdf_dir, pdf_file)
             loader = PyPDFLoader(pdf_path)
             pages = loader.load()
-            
-            # Split pages into chunks
             chunks = text_splitter.split_documents(pages)
-            card_name = card_name_mapping.get(pdf_file, pdf_file.replace('.pdf', ''))
+
+            # Get card names this PDF maps to
+            mapped_names = card_name_mapping.get(pdf_file, [pdf_file.replace('.pdf', '')])
+            if isinstance(mapped_names, str):
+                mapped_names = [mapped_names]
             
-            # Create documents from chunks
+            # Duplicate chunks for each mapped card
             for i, chunk in enumerate(chunks):
                 if not chunk.page_content.strip():
                     continue
-                doc_id = f"{card_name}_chunk_{i}"
                 content = chunk.page_content
-                
-                metadata = {
-                    "source": doc_id,
-                    "page": chunk.metadata.get("page", 0),
-                    "chunk": i,
-                    "type": "pdf"
-                }
-                
-                documents.append({
-                    "id": doc_id,
-                    "content": content,
-                    "metadata": metadata
-                })
-                
+
+                for card_name in mapped_names:
+                    doc_id = f"{card_name}_chunk_{i}"
+                    metadata = {
+                        "source": doc_id,
+                        "page": chunk.metadata.get("page", 0),
+                        "chunk": i,
+                        "type": "pdf",
+                        "card_name": card_name
+                    }
+                    documents.append({
+                        "id": doc_id,
+                        "content": content,
+                        "metadata": metadata
+                    })
+
         except Exception as e:
             print(f"Error loading {pdf_file}: {e}")
             continue
     
     return documents
+
 
 if __name__ == "__main__":
     # Initialize vector database
@@ -446,6 +348,7 @@ if __name__ == "__main__":
     # Load PDF data
     pdf_dir = "data/card/pdf"
     mapping_file = os.path.join(pdf_dir, '_mapping.json')
+
     card_name_mapping = load_card_mapping(mapping_file)
     pdf_documents = load_pdf_data(pdf_dir, card_name_mapping)
     
@@ -456,66 +359,26 @@ if __name__ == "__main__":
     print(f"Adding {len(json_documents)} cards and {len(pdf_documents)} PDF chunks to vector database...")
     db.add_documents(all_documents)
     
-    # Example searches
-    # print("\nExample searches:")
-    # queries = [
-    #     "What cards offer miles rewards?",
-    #     "Show me DBS credit cards",
-    #     "What are the terms and conditions for OCBC Rewards Card?"]
-    
-    # for query in queries:
-    #     print(f"\nSearching for: {query}")
-    #     results = db.search(query, top_k=3)
-    #     for i, result in enumerate(results, 1):
-    #         print(f"{i}. Score: {result['score']:.2f}")
-    #         if result['metadata'].get('type') == 'pdf':
-    #             print(f"   Source: {result['metadata']['source']}")
-    #             print(f"   Page: {result['metadata']['page']}")
-    #         else:
-    #             print(f"   Card: {result['metadata']['card_name']}")
-    #         print(f"   Content: {result['content'][:200]}...")
-    
-    # Test RAG chain if OpenAI API key is available
     if os.environ.get("OPENAI_API_KEY"):
         print("\nTesting search_cards with ranked card names...")
-        #retriever = db.vector_store.as_retriever()
         queries = ["air miles", "cashback on online shopping", "dining rewards"]
 
         for query in queries:
             results = db.search_cards(query)
             print(results)
         
-        # for query in queries:
-        #     print(f"\nSearching for: {query}")
-        #     results = db.search_cards(query)
-            
-        #     if not results:
-        #         print("   No matching cards found.")
-        #         continue
-            
-        #     print("   Top 5 most relevant cards:")
-        #     for i, result in enumerate(results, 1):
-        #         print(f"   {i}. {result['id']} (Score: {result['score']:.2f})")
-            #print(results)
-        
-        # Test get_card_details (unchanged)
+        # Test get_card_details 
         print("\nTesting get_card_details...")
         card_id = "Citi PremierMiles Card"
         details = db.get_card_details(card_id)
         if details:
             print(f"Details for {card_id}:")
             print(f"Content: {details['content']}...")
-            #print(f"Metadata: {details['metadata']}")
 
         print("\nTesting RAG chain with questions...")
         rag_chain = db.create_rag_chain()
         
         questions = [
-            # "What are the benefits of the Citi PremierMiles Card?",
-            # "What is the annual fee for the DBS Altitude Card?",
-            # "What rewards do I get with the HSBC Revolution Card?",
-            # "What are the terms and conditions for lounge access?",
-            # "What are the key benefits mentioned in the PDF documents?",
             "I want cards that have rewards for miles. Compare the two.",
             "Show me cashback cards from DBS and compare them.",
             "What are the best dining rewards cards? Compare three."
