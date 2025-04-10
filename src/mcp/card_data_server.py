@@ -121,19 +121,19 @@ async def query_tc(question: str, card_id: str, num_candidates: int = 5, llm_mod
         
 
 @server.tool()
-async def search_cards(query: str, num_candidates: int = 10, llm_model: str = "gpt-3.5-turbo-0125") -> List[Dict[str, Any]]:
+async def search_cards(query: str, num_candidates: int = 10) -> List[Dict[str, Any]]:
     """Semantic search for cards matching natural language criteria
     
     Args:
         query (str): Natural language query about card features 
                     (e.g., "high miles for dining", "no annual fee")
         num_candidates (int): The number of candidates to return (default is 10)
-        llm_model (str): The LLM model to use (default is "gpt-3.5-turbo-0125")
         
     Returns:
-        list: A list of dictionaries containing matching cards with relevance scores
+        list: A list of dictionaries containing matching cards with relevance scores.
+                Note: the distance score is euclidean distance, so lower is better.
     """
-    results = cache.db.similarity_search_with_score(query)
+    results = cache.db.similarity_search_with_score(query, k=num_candidates)
     return [
         {
             'card_name': result[0].metadata['card_name'],
