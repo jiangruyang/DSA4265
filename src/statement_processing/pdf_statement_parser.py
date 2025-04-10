@@ -1,10 +1,15 @@
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Union, BinaryIO
 import os
-import pdfplumber
 import re
-from datetime import datetime
 import logging
-from merchant_categorizer import MerchantCategorizer
+from datetime import datetime
+from io import BytesIO
+
+# PDF processing
+import pdfplumber
+
+# Local imports
+from .merchant_categorizer import MerchantCategorizer
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -55,53 +60,13 @@ class PDFStatementParser:
                 'deposit'
             ]
         }
-        
-        # Merchant categories
-        self.merchant_categories = {
-            'groceries': [
-                'fairprice', 'ntuc', 'cold storage', 'giant', 'sheng siong',
-                'prime', 'marketplace', 'supermarket'
-            ],
-            'dining': [
-                'restaurant', 'cafe', 'food', 'mcdonald', 'kfc', 'starbucks',
-                'coffee', 'hawker', 'food court'
-            ],
-            'transportation': [
-                'grab', 'gojek', 'comfort', 'taxi', 'uber', 'mrt', 'bus',
-                'transit', 'transport'
-            ],
-            'shopping': [
-                'uniqlo', 'zara', 'h&m', 'takashimaya', 'courts', 'challenger',
-                'retail', 'shop', 'store'
-            ],
-            'entertainment': [
-                'netflix', 'spotify', 'disney', 'cinema', 'ticket', 'movie',
-                'entertainment', 'leisure'
-            ],
-            'utilities': [
-                'sp group', 'singtel', 'starhub', 'm1', 'electricity',
-                'water', 'gas', 'utility'
-            ],
-            'healthcare': [
-                'clinic', 'hospital', 'pharmacy', 'guardian', 'watsons',
-                'medical', 'health'
-            ],
-            'education': [
-                'school', 'university', 'tuition', 'education', 'course',
-                'training', 'learning'
-            ],
-            'travel': [
-                'airline', 'hotel', 'booking', 'travel', 'flight',
-                'accommodation', 'tourism'
-            ],
-            'others': []  # Default category
-        }
     
-    def parse_statement(self, pdf_path: str) -> List[Dict[str, Any]]:
+    def parse_statement(self, pdf_file: Union[str, BytesIO, BinaryIO], is_path: bool = True) -> List[Dict[str, Any]]:
         """Parse a credit card statement PDF into structured transaction data
         
         Args:
-            pdf_path: Path to the PDF file to parse
+            pdf_file: Path to the PDF file or a file-like object containing PDF data
+            is_path: Whether pdf_file is a file path (True) or file-like object (False)
             
         Returns:
             List of transaction dictionaries with fields:
@@ -112,13 +77,9 @@ class PDFStatementParser:
             - category: Merchant category
             - description: Cleaned transaction description
         """
-        if not os.path.exists(pdf_path):
-            logger.error(f"PDF file not found at {pdf_path}")
-            return []
-            
         try:
             # Extract text from PDF
-            text = self.extract_text_from_pdf(pdf_path)
+            text = self.extract_text_from_pdf(pdf_file, is_path)
             
             # Parse transactions from text
             transactions = self.parse_text_with_llm(text)
@@ -129,26 +90,40 @@ class PDFStatementParser:
             return cleaned_transactions
             
         except Exception as e:
-            logger.error(f"Error parsing PDF statement: {str(e)}")
+            if is_path:
+                error_context = f"Error parsing PDF statement at {pdf_file}: {str(e)}"
+            else:
+                error_context = f"Error parsing PDF statement from memory: {str(e)}"
+            logger.error(error_context)
             return []
     
-    def extract_text_from_pdf(self, pdf_path: str) -> str:
-        """Extract text content from a PDF file
+    def extract_text_from_pdf(self, pdf_file: Union[str, BytesIO, BinaryIO], is_path: bool = True) -> str:
+        """Extract text content from a PDF file or file-like object
         
         Args:
-            pdf_path: Path to the PDF file
+            pdf_file: Path to the PDF file or a file-like object containing PDF data
+            is_path: Whether pdf_file is a file path (True) or file-like object (False)
             
         Returns:
             Extracted text content as string
         """
         try:
-            with pdfplumber.open(pdf_path) as pdf:
+            # Check if file exists when using path
+            if is_path and not os.path.exists(pdf_file):
+                logger.error(f"PDF file not found at {pdf_file}")
+                return ""
+                
+            # Use pdfplumber to extract text
+            with pdfplumber.open(pdf_file) as pdf:
                 text = ""
                 for page in pdf.pages:
                     text += page.extract_text() or ""
                 return text
         except Exception as e:
-            logger.error(f"Error extracting text from PDF: {str(e)}")
+            if is_path:
+                logger.error(f"Error extracting text from PDF at {pdf_file}: {str(e)}")
+            else:
+                logger.error(f"Error extracting text from PDF in memory: {str(e)}")
             return ""
     
     def _determine_transaction_type(self, description: str) -> str:
@@ -209,12 +184,12 @@ class PDFStatementParser:
                 if not all(k in trans for k in ['merchant', 'amount', 'date', 'transaction_type']):
                     continue
                     
-                # Clean merchant name and description
+                # Clean merchant name
                 merchant = trans['merchant'].strip()
                 if not merchant:
                     continue
                     
-                # Clean description
+                # Clean description - only handle simple text cleanup here
                 description = self._clean_description(merchant)
                 
                 # Validate amount
@@ -233,8 +208,10 @@ class PDFStatementParser:
                 except ValueError:
                     continue
                 
-                # Determine transaction type and category
+                # Determine transaction type (withdrawal/deposit)
                 trans_type = self._determine_transaction_type(trans['transaction_type'])
+                
+                # Use the merchant categorizer to categorize the merchant - delegate all categorization logic
                 categorization = self.merchant_categorizer.categorize(description)
                 
                 cleaned.append({
@@ -288,6 +265,49 @@ class PDFStatementParser:
                 except ValueError:
                     continue
         return None
+    
+    def process_transactions(self, transactions: List[Dict]) -> Dict[str, float]:
+        """Process a list of transactions to create a categorized spending profile
+        
+        Args:
+            transactions: List of transaction dictionaries with merchant, amount, etc.
+            
+        Returns:
+            Dictionary mapping spending categories to total amounts
+        """
+        spending_profile = {}
+        
+        # Initialize all categories with zero based on merchant categorizer categories
+        for category in self.merchant_categorizer.get_categories():
+            spending_profile[category] = 0.0
+        
+        # Process each transaction
+        for transaction in transactions:
+            merchant_name = transaction.get('merchant', '')
+            amount = float(transaction.get('amount', 0))
+            
+            # Skip if amount is 0 or negative (outgoing payments are negative in many systems)
+            if amount <= 0:
+                logger.info(f"Skipping zero or negative amount transaction: {merchant_name} ({amount})")
+                continue
+                
+            # Get category from the transaction if it exists, otherwise categorize
+            if 'category' in transaction and transaction['category']:
+                category = transaction['category']
+                method = transaction.get('method', 'existing')
+            else:
+                # Merchant not yet categorized, do it now
+                category_info = self.merchant_categorizer.categorize(merchant_name)
+                category = category_info['category']
+                method = category_info['method']
+            
+            logger.info(f"Transaction {merchant_name} categorized as {category} with method {method}")
+            
+            # Add to spending profile - only if not filtered
+            if method not in ['filtered_incoming', 'filtered_noise']:
+                spending_profile[category] += amount
+        
+        return spending_profile
     
     def parse_text_with_llm(self, text: str) -> List[Dict[str, Any]]:
         """Parse text into structured transaction data

@@ -1,6 +1,6 @@
 {
     "groceries": [
-        "ntuc", "fairprice", "coldstorage", "giant", "shengsiong", "cs fresh", "redmart", "prime supermarket", "market place", "little farms", "jasons deli", "mustafa centre", "song fish", "lee mart", "mahota", "ryans grocery", "medi-ya", "huber's butchery", "ang mo supermarket", "shine korea", "don don donki", "tanglin market", "tekka market", "tiong bahru market", "wet market", "fortune supermarket", "ue square supermarket", "buzz convenience", "7eleven", "7-eleven", "haomart", "cheers"
+        "ntuc", "fairprice", "cold storage", "giant", "sheng siong", "cs fresh", "redmart", "prime supermarket", "market place", "little farms", "jasons deli", "mustafa centre", "song fish", "lee mart", "mahota", "ryans grocery", "medi-ya", "huber's butchery", "ang mo supermarket", "shine korea", "don don donki", "tanglin market", "tekka market", "tiong bahru market", "wet market", "fortune supermarket", "ue square supermarket", "buzz convenience", "7eleven", "7-eleven", "haomart", "cheers"
     ],
 
     "dining": [
@@ -32,7 +32,7 @@
     ],
 
     "education": [
-        "nus", "ntu", "smu", "sit", "sim global", "kaplan singapore", "psb academy", "british council", "mind stretcher", "kumon", "learning lab", "my first skool", "etonhouse", "sparkletots", "raffles institution", "acjc", "ngee ann poly", "temasek poly"
+        "kaplan singapore", "psb academy", "british council", "mind stretcher", "kumon", "learning lab", "my first skool", "etonhouse", "sparkletots"
     ],
     
     "others": [
