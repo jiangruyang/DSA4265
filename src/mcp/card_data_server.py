@@ -161,8 +161,6 @@ if __name__ == "__main__":
     # In particular, the vector database must be created and have the same embedding 
     # model as the one used in the tests.
 
-    import asyncio
-    
     result = asyncio.run(get_available_cards())
     assert len(result) > 0
     
