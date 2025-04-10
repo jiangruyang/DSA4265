@@ -143,10 +143,10 @@ async def search_cards(query: str, num_candidates: int = 10) -> List[Dict[str, A
     ]
 
 if __name__ == "__main__":
-    # # Determine port from environment or use default
+    # Determine port from environment or use default
     port = int(os.environ.get('PORT', 8001))
     
-    # # Set the port in the environment for the server to use
+    # Set the port in the environment for the server to use
     os.environ['MCP_PORT'] = str(port)
     
     print(f"Starting Card Data MCP Server on port {port}...")
