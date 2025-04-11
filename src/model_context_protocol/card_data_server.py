@@ -208,7 +208,6 @@ async def search_cards(query: str, num_candidates: int = 10) -> List[Dict[str, A
         # Return an empty result to avoid breaking the conversation
         return [{'card_name': f'Error: {str(e)}', 'score': 0.0}]
 
-@server.tool()
 async def generate_questions(
     question_history: List[str] = [],
     num_questions: int = 5,
