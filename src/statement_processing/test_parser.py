@@ -1,9 +1,11 @@
 import os
 import sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from statement_processing.pdf_statement_parser import PDFStatementParser
 import pandas as pd
 from datetime import datetime
+
+# Add the parent directory to the path to allow importing statement_processing
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from statement_processing.pdf_statement_parser import PDFStatementParser
 
 def main():
     # Create an instance of the parser
