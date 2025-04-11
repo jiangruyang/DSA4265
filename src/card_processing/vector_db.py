@@ -1,4 +1,4 @@
-from typing import List, Dict, Any, Optional, Union, Tuple
+from typing import List, Dict, Any, Optional, Union, Tuple, Callable, Sequence
 import os
 import json
 
@@ -14,9 +14,31 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 class VectorDB:
+    """
+    A class for managing a vector database for credit card information.
+    
+    This class handles the storage and retrieval of credit card data using vector embeddings.
+    It supports both JSON and PDF data sources, and provides methods for searching and
+    retrieving card information.
+    
+    Attributes:
+        db_path (str): Path to the vector database directory
+        collection_name (str): Name of the collection in the vector database
+        embedding_model: The embedding model used for vectorization
+        vector_store: The vector store instance (e.g., Chroma)
+    """
     
     def __init__(self, db_path: str, collection_name: str = "default", 
-                embedding_model: Optional[Union[str, Any]] = None):
+                embedding_model: Optional[Union[str, Any]] = None) -> None:
+        """
+        Initialize the VectorDB instance.
+        
+        Args:
+            db_path (str): Path to the vector database directory
+            collection_name (str, optional): Name of the collection. Defaults to "default"
+            embedding_model (Optional[Union[str, Any]], optional): Embedding model to use.
+                Can be a string identifier or a model instance. Defaults to None.
+        """
         self.db_path = db_path
         self.collection_name = collection_name
         
@@ -29,7 +51,16 @@ class VectorDB:
         # Initialize vector store
         self.vector_store = self._setup_vector_store()
     
-    def _setup_embedding_model(self, embedding_model):
+    def _setup_embedding_model(self, embedding_model: Optional[Union[str, Any]]) -> Optional[Any]:
+        """
+        Set up the embedding model based on the provided configuration.
+        
+        Args:
+            embedding_model (Optional[Union[str, Any]]): Embedding model configuration
+            
+        Returns:
+            Optional[Any]: Configured embedding model or None if setup fails
+        """
         if embedding_model is not None:
             if isinstance(embedding_model, str):
                 return OpenAIEmbeddings(model=embedding_model)
@@ -41,7 +72,13 @@ class VectorDB:
         
         return None
     
-    def _setup_vector_store(self):
+    def _setup_vector_store(self) -> Optional[Chroma]:
+        """
+        Set up the vector store using the configured embedding model.
+        
+        Returns:
+            Optional[Chroma]: Initialized vector store or None if setup fails
+        """
         if self.embedding_model is not None:
             return Chroma(
                 collection_name=self.collection_name,
@@ -50,7 +87,15 @@ class VectorDB:
             )
         return None
     
-    def add_document(self, doc_id: str, content: str, metadata: Dict[str, Any] = None):
+    def add_document(self, doc_id: str, content: str, metadata: Optional[Dict[str, Any]] = None) -> None:
+        """
+        Add a single document to the vector store.
+        
+        Args:
+            doc_id (str): Unique identifier for the document
+            content (str): Content of the document
+            metadata (Optional[Dict[str, Any]], optional): Additional metadata. Defaults to None
+        """
         if self.vector_store is not None:
             # Add document to real vector store
             doc = Document(
@@ -59,10 +104,15 @@ class VectorDB:
             )
             self.vector_store.add_documents([doc])
             return
+    
+    def add_documents(self, documents: List[Dict[str, Any]], batch_size: int = 100) -> None:
+        """
+        Add multiple documents to the vector store in batches.
         
-    
-    def add_documents(self, documents: List[Dict[str, Any]], batch_size: int = 100):
-    
+        Args:
+            documents (List[Dict[str, Any]]): List of documents to add
+            batch_size (int, optional): Number of documents to process in each batch. Defaults to 100
+        """
         if self.vector_store is not None:
             # Process documents in batches
             for i in range(0, len(documents), batch_size):
@@ -78,20 +128,24 @@ class VectorDB:
                 self.vector_store.add_documents(docs)
             return
 
-    def search_cards(self, query):
+    def search_cards(self, query: str) -> None:
+        """
+        Search for credit cards based on a query string.
+        
+        Args:
+            query (str): Search query
+        """
         print(f"Searching for: {query}")
         results = self.vector_store.similarity_search(query, k=10)
         print(f"Raw results count: {len(results)}")
-        #print(results)
-
 
         if results:
-                temp = []
-                for i, result in enumerate(results, 1):
-                    card_id = result.metadata.get('id')
-                    base_card_id = card_id.split('_chunk')[0]   
-                    if base_card_id not in temp:
-                        temp.append(base_card_id)
+            temp = []
+            for i, result in enumerate(results, 1):
+                card_id = result.metadata.get('id')
+                base_card_id = card_id.split('_chunk')[0]   
+                if base_card_id not in temp:
+                    temp.append(base_card_id)
 
         if not temp:
             print("No matching cards found.")
@@ -102,8 +156,16 @@ class VectorDB:
         return 
     
     def get_card_details(self, card_id: str) -> Optional[Dict[str, Any]]:
-        json_dir = f"data/card/json"
+        """
+        Retrieve detailed information about a specific credit card.
         
+        Args:
+            card_id (str): ID of the card to retrieve
+            
+        Returns:
+            Optional[Dict[str, Any]]: Card details if found, None otherwise
+        """
+        json_dir = f"data/card/json"
         
         # Call load_card_data with the specific directory
         documents, _ = load_card_data(json_dir)
@@ -120,6 +182,16 @@ class VectorDB:
         return None
         
     def search(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
+        """
+        Perform a similarity search in the vector store.
+        
+        Args:
+            query (str): Search query
+            top_k (int, optional): Number of top results to return. Defaults to 3
+            
+        Returns:
+            List[Dict[str, Any]]: List of search results with scores
+        """
         if self.vector_store is not None:
             results = self.vector_store.similarity_search_with_relevance_scores(
                 query, k=top_k
@@ -139,7 +211,15 @@ class VectorDB:
         return results[:top_k]
     
     def get_document(self, doc_id: str) -> Optional[Dict[str, Any]]:
+        """
+        Retrieve a specific document from the vector store.
         
+        Args:
+            doc_id (str): ID of the document to retrieve
+            
+        Returns:
+            Optional[Dict[str, Any]]: Document if found, None otherwise
+        """
         if self.vector_store is not None:
             results = self.vector_store.get(
                 where={"id": doc_id}
@@ -156,8 +236,23 @@ class VectorDB:
         
         return None
     
-    def create_rag_chain(self, llm=None, prompt=None, search_type="similarity", search_kwargs={"k": 3}):
-    
+    def create_rag_chain(self, llm: Optional[Any] = None, prompt: Optional[PromptTemplate] = None, 
+                        search_type: str = "similarity", search_kwargs: Dict[str, Any] = {"k": 3}) -> Any:
+        """
+        Create a RAG chain for question answering.
+        
+        Args:
+            llm (Optional[Any], optional): Language model to use. Defaults to None
+            prompt (Optional[PromptTemplate], optional): Prompt template. Defaults to None
+            search_type (str, optional): Type of search to perform. Defaults to "similarity"
+            search_kwargs (Dict[str, Any], optional): Additional search parameters. Defaults to {"k": 3}
+            
+        Returns:
+            Any: Configured RAG chain
+            
+        Raises:
+            ValueError: If vector store is not properly initialized
+        """
         if self.vector_store is None:
             raise ValueError("RAG chains require a real vector store with embeddings")
         
@@ -191,7 +286,16 @@ class VectorDB:
                 Answer:"""
             )
         
-        def format_docs(docs):
+        def format_docs(docs: Sequence[Document]) -> str:
+            """
+            Format a sequence of documents into a single string.
+            
+            Args:
+                docs (Sequence[Document]): Documents to format
+                
+            Returns:
+                str: Formatted documents as a single string
+            """
             formatted = "\n\n".join(doc.page_content for doc in docs)
             return formatted
         
