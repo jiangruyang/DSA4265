@@ -1,7 +1,8 @@
 from mcp.server.fastmcp import FastMCP
+from mcp import types
 import asyncio
 import os
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Iterator
 import json
 import random
 
@@ -202,6 +203,91 @@ async def generate_questions(
             
     return questions
 
+
+def iter_card_detail_resources() -> Iterator[types.Resource]:
+    '''
+    Iterates over all available card detail resources.
+    
+    Yields:
+        types.Resource: A card detail resource
+    '''
+    # FastMCP does not expose `@app.list_resources()` like low-level MCP.
+    # https://github.com/modelcontextprotocol/python-sdk/blob/main/src/mcp/server/fastmcp/server.py
+    # So I'm doing this as a workaround.
+    available_files = os.listdir("data/card/json")
+    for file in available_files:
+        resource = types.Resource(
+            uri=f"file:///cards/{file}",
+            name=file,
+            mime_type="application/json",
+        )
+        yield resource
+
+
+def load_card_detail_resource(file: str) -> None:
+    '''
+    Loads a card detail resource into the server from file name.
+    
+    Example:
+        load_card_detail_resource("CIMB Visa Signature.json")
+    
+    Args:
+        file (str): The file name of the card detail resource to load
+    '''
+    resource = types.Resource(
+        uri=f"file:///cards/{file}",
+        name=file,
+        mime_type="application/json",
+    )
+    server.add_resource(resource)
+
+
+def load_all_card_detail_resources() -> None:
+    '''
+    Loads all available card detail resources into the server.
+    
+    See `iter_card_detail_resources` for more details.
+    '''
+    for resource in iter_card_detail_resources():
+        server.add_resource(resource)
+
+    
+@server.resource("{uri}")
+async def get_card_detail_resource_uri(uri: str) -> dict:
+    '''
+    MCP Resource that reads a card detail resource from a URI.
+    
+    Args:
+        uri (str): The URI of the card detail resource to read
+        
+    Returns:
+        dict: The card detail json
+    '''
+    available_files = os.listdir("data/card/json")
+    card_id = uri.split("://")[1]
+
+    if card_id in available_files:
+        with open(os.path.join("data/card/json", card_id), "r", encoding="utf-8") as f:
+            return json.load(f)
+    else:
+        raise ValueError("Resource not found")
+    
+
+@server.resource("cards://{file}")
+async def get_card_detail_resource(file: str) -> dict:
+    '''
+    MCP Resource that gets a card detail resource. Thin wrapper to 
+    `get_card_detail_resource_uri` that takes a file name as input.
+    
+    Args:
+        file (str): The file name of the card detail resource to get
+        
+    Returns:
+        dict: The card detail json
+    '''
+    return await get_card_detail_resource_uri(f"cards://{file}")
+
+    
 if __name__ == "__main__":
     # Determine port from environment or use default
     port = int(os.environ.get('PORT', 8001))
@@ -235,6 +321,15 @@ if __name__ == "__main__":
     
     result = asyncio.run(generate_questions())
     assert len(result) > 0
+ 
+    result = asyncio.run(server.list_resources())
+    assert len(result) == 0
 
-
-   
+    load_card_detail_resource("CIMB Visa Signature.json")
+    result = asyncio.run(server.list_resources())
+    assert len(result) > 0
+    
+    result = asyncio.run(get_card_detail_resource("CIMB Visa Signature.json"))
+    assert result is not None
+ 
+    
