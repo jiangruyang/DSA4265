@@ -324,7 +324,7 @@ if __name__ == "__main__":
     result = asyncio.run(get_card_details("CIMB Visa Signature"))
     assert len(result) > 0
     
-    result= asyncio .run(query_tc("What is the annual fee for the CIMB Visa Signature card?", "CIMB Visa Signature"))
+    result= asyncio.run(query_tc("What is the annual fee for the CIMB Visa Signature card?", "CIMB Visa Signature"))
     assert len(result) > 0
 
     result = asyncio.run(search_cards("What card has the highest miles for dining?"))
