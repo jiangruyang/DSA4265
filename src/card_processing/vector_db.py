@@ -156,7 +156,7 @@ class VectorDB:
         
         return None
     
-    def create_rag_chain(self, llm=None, prompt=None):
+    def create_rag_chain(self, llm=None, prompt=None, search_type="similarity", search_kwargs={"k": 3}):
     
         if self.vector_store is None:
             raise ValueError("RAG chains require a real vector store with embeddings")
@@ -167,7 +167,10 @@ class VectorDB:
         
         # Set up retriever with multi-query
         retriever = MultiQueryRetriever.from_llm(
-            retriever=self.vector_store.as_retriever(search_kwargs={"k": 3}),
+            retriever=self.vector_store.as_retriever(
+                search_type=search_type, 
+                search_kwargs=search_kwargs
+            ),
             llm=llm
         )
         

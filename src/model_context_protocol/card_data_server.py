@@ -8,6 +8,10 @@ import random
 import logging
 import time
 import traceback
+import sys
+
+# Add project root to Python path when running script directly
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
@@ -16,6 +20,8 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain import hub
 from langchain_openai import OpenAIEmbeddings
+
+from src.card_processing.vector_db import VectorDB
 
 # Set up logging configuration
 logger = logging.getLogger("card_data_server")
@@ -43,42 +49,11 @@ logger.addHandler(console_handler)
 # Initialize the MCP server for card data access using FastMCP
 server = FastMCP("card_data")
 
-class VectorDBCache:
-    def __init__(self, db_path: str = "data/vector_db/cards"):
-        self.db_path = db_path
-        self._db = None  # Use _db internally
-        self._init_time = time.time()
-        logger.debug(f"VectorDBCache initialized with path: {db_path}")
-
-    @property
-    def db(self):
-        access_start = time.time()
-        logger.debug(f"Accessing VectorDBCache.db, initialized: {self._db is not None}")
-        
-        if self._db is None:
-            try:
-                # Lazy-load Chroma
-                init_start = time.time()
-                logger.debug(f"Starting vector DB initialization at {self.db_path}")
-                self._db = Chroma(
-                    collection_name="credit_cards", 
-                    persist_directory=self.db_path, 
-                    embedding_function=OpenAIEmbeddings(model="text-embedding-3-large")
-                )
-                init_time = time.time() - init_start
-                logger.debug(f"Vector DB initialization completed in {init_time:.4f} seconds")
-            except Exception as e:
-                logger.error(f"Vector DB initialization failed: {str(e)}")
-                logger.error(f"Exception type: {type(e).__name__}")
-                logger.error(f"Traceback: {traceback.format_exc()}")
-                # Re-raise to ensure the error is caught by the calling function
-                raise
-        
-        access_time = time.time() - access_start
-        logger.debug(f"VectorDBCache.db access completed in {access_time:.4f} seconds")
-        return self._db
-
-cache = VectorDBCache()
+db = VectorDB(
+    db_path="data/vector_db/cards", 
+    collection_name="credit_cards",
+    embedding_model="text-embedding-3-large"
+)
 
 
 @server.tool()
@@ -92,12 +67,10 @@ async def get_available_cards() -> List[Dict[str, Any]]:
     start_time = time.time()
     
     try:
-        db = cache.db
-        
         # Get all card details
         logger.debug("Retrieving all card metadata from vector store")
         metadata_start = time.time()
-        metadatas = db.get(include=["metadatas"])["metadatas"]
+        metadatas = db.vector_store.get(include=["metadatas"])["metadatas"]
         metadata_time = time.time() - metadata_start
         logger.debug(f"Metadata retrieval took {metadata_time:.4f} seconds")
         
@@ -173,62 +146,31 @@ async def query_tc(question: str, card_id: str, num_candidates: int = 5, llm_mod
         llm_model (str): The LLM model to use (default is "gpt-3.5-turbo-0125")
         
     Returns:
-        dict: Answer with source information and confidence score
+        dict: Answer with source information
     """
     logger.info(f"query_tc called with question: '{question}', card_id: {card_id}")
     start_time = time.time()
     
     try:
-        logger.debug(f"Setting up LLM with model: {llm_model}")
-        llm_start = time.time()
-        llm = ChatOpenAI(model=llm_model)
-        prompt = hub.pull("rlm/rag-prompt")
-        llm_time = time.time() - llm_start
-        logger.debug(f"LLM setup took {llm_time:.4f} seconds")
-        
-        logger.debug(f"Setting up retriever with num_candidates: {num_candidates}")
-        retriever_start = time.time()
-        retriever = cache.db.as_retriever(
+        rag_chain = db.create_rag_chain(
+            llm=ChatOpenAI(model=llm_model) if llm_model else None,
             search_type="similarity",
             search_kwargs={
                 "k": num_candidates,
                 "filter": {"card_name": card_id}
             }
         )
-        retriever_time = time.time() - retriever_start
-        logger.debug(f"Retriever setup took {retriever_time:.4f} seconds")
-
-        def format_docs(docs):
-            return "\n\n".join(doc.page_content for doc in docs)
-
-        logger.debug("Setting up RAG chain")
-        chain_start = time.time()
-        rag_chain = (
-            {"context": retriever | format_docs, "question": RunnablePassthrough()}
-            | prompt
-            | llm
-            | StrOutputParser()
-        )
-        chain_time = time.time() - chain_start
-        logger.debug(f"RAG chain setup took {chain_time:.4f} seconds")
-        
-        logger.debug("Invoking RAG chain")
-        invoke_start = time.time()
         result = rag_chain.invoke(question)
-        invoke_time = time.time() - invoke_start
-        logger.debug(f"RAG chain invocation took {invoke_time:.4f} seconds")
         
         total_time = time.time() - start_time
         logger.info(f"query_tc completed in {total_time:.4f} seconds")
-        return result
+        return result.model_dump()
     except Exception as e:
         total_time = time.time() - start_time
         logger.error(f"query_tc failed after {total_time:.4f} seconds: {str(e)}")
         logger.error(f"Exception type: {type(e).__name__}")
         logger.error(f"Traceback: {traceback.format_exc()}")
         return f"Error processing query: {str(e)}"
-        
-        
 
 @server.tool()
 async def search_cards(query: str, num_candidates: int = 10) -> List[Dict[str, Any]]:
@@ -251,36 +193,11 @@ async def search_cards(query: str, num_candidates: int = 10) -> List[Dict[str, A
         safe_num = min(max(1, num_candidates), 20)
         logger.debug(f"Using {safe_num} candidates (after safety limits)")
         
-        # Get the database instance
-        logger.debug(f"Accessing vector database at {cache.db_path}")
-        db_access_start = time.time()
-        db = cache.db
-        db_access_time = time.time() - db_access_start
-        logger.debug(f"Database access took {db_access_time:.4f} seconds")
-        
-        # Measure the search operation specifically
-        logger.debug("Starting similarity search")
-        search_start = time.time()
-        results = db.similarity_search_with_score(query, k=safe_num)
-        search_time = time.time() - search_start
-        logger.debug(f"Similarity search took {search_time:.4f} seconds, found {len(results)} results")
-        
-        # Measure the formatting operation
-        logger.debug("Formatting results")
-        format_start = time.time()
-        formatted_results = [
-            {
-                'card_name': result[0].metadata['card_name'],
-                'score': result[1]
-            }
-            for result in results
-        ]
-        format_time = time.time() - format_start
-        logger.debug(f"Formatting took {format_time:.4f} seconds")
+        results = db.search(query, top_k=safe_num)
         
         total_time = time.time() - start_time
-        logger.info(f"search_cards completed in {total_time:.4f} seconds with {len(formatted_results)} results")
-        return formatted_results
+        logger.info(f"search_cards completed in {total_time:.4f} seconds with {len(results)} results")
+        return results
         
     except Exception as e:
         elapsed = time.time() - start_time
@@ -316,7 +233,7 @@ async def generate_questions(
     try:
         logger.debug(f"Setting up retriever and LLM with model: {llm_model}")
         setup_start = time.time()
-        retriever = cache.db.as_retriever(
+        retriever = db.vector_store.as_retriever(
             search_type="similarity",
             search_kwargs={
                 "k": 3,
@@ -418,27 +335,28 @@ if __name__ == "__main__":
             logger.info("Testing get_available_cards...")
             result = await get_available_cards()
             assert len(result) > 0
-            logger.info(f"✓ Found {len(result)} available cards")
+            logger.info(f"Found {len(result)} available cards")
             
             logger.info("Testing get_card_details...")
             result = await get_card_details("CIMB Visa Signature")
             assert len(result) > 0
-            logger.info("✓ Successfully retrieved card details")
+            logger.info("Successfully retrieved card details")
             
             logger.info("Testing query_tc...")
             result = await query_tc("What is the annual fee for the CIMB Visa Signature card?", "CIMB Visa Signature")
-            assert isinstance(result, str) and len(result) > 0
-            logger.info("✓ Successfully queried terms and conditions")
+            print(result, 'TEST', len(result), type(result))
+            assert isinstance(result, dict) and len(result) > 0
+            logger.info("Successfully queried terms and conditions")
 
             logger.info("Testing search_cards...")
             result = await search_cards("What card has the highest miles for dining?")
             assert isinstance(result, list) and len(result) > 0
-            logger.info(f"✓ Found {len(result)} cards matching the query")
+            logger.info(f"Found {len(result)} cards matching the query")
             
             logger.info("Testing generate_questions...")
             result = await generate_questions()
             assert isinstance(result, list) and len(result) > 0
-            logger.info(f"✓ Generated {len(result)} questions")
+            logger.info(f"Generated {len(result)} questions")
             
             logger.info("All tests passed successfully!")
         except Exception as e:
