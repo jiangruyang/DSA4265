@@ -343,7 +343,6 @@ if __name__ == "__main__":
             
             logger.info("Testing query_tc...")
             result = await query_tc("What is the annual fee for the CIMB Visa Signature card?", "CIMB Visa Signature")
-            print(result, 'TEST', len(result), type(result))
             assert isinstance(result, dict) and len(result) > 0
             logger.info("Successfully queried terms and conditions")
 
