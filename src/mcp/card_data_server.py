@@ -224,27 +224,38 @@ def iter_card_detail_resources() -> Iterator[types.Resource]:
         yield resource
 
 
-def load_card_detail_resource(file: str) -> None:
+@server.tool()
+async def list_card_detail_resources() -> List[str]:
     '''
-    Loads a card detail resource into the server from file name.
+    Lists all available card detail resources.
+    '''
+    return [file for file in os.listdir("data/card/json")]
+
+
+@server.tool()
+async def load_card_detail_resource(files: List[str]) -> None:
+    '''
+    Loads a card detail resource into the server from a list of file names.
     
     Example:
-        load_card_detail_resource("CIMB Visa Signature.json")
+        load_card_detail_resource(["CIMB Visa Signature.json"])
     
     Args:
-        file (str): The file name of the card detail resource to load
+        files (List[str]): The list of file names of the card detail resources to load
     '''
-    resource = types.Resource(
-        uri=f"file:///cards/{file}",
-        name=file,
-        mime_type="application/json",
-    )
-    server.add_resource(resource)
+    for file in files:
+        resource = types.Resource(
+            uri=f"file:///cards/{file}",
+            name=file,
+            mime_type="application/json",
+        )
+        server.add_resource(resource)
 
 
 def load_all_card_detail_resources() -> None:
     '''
-    Loads all available card detail resources into the server.
+    Loads all available card detail resources into the server. I suspect this will be quite
+    cost-intensive, so I'm not making it a tool yet.
     
     See `iter_card_detail_resources` for more details.
     '''
@@ -325,11 +336,16 @@ if __name__ == "__main__":
     result = asyncio.run(server.list_resources())
     assert len(result) == 0
 
-    load_card_detail_resource("CIMB Visa Signature.json")
-    result = asyncio.run(server.list_resources())
-    assert len(result) > 0
-    
-    result = asyncio.run(get_card_detail_resource("CIMB Visa Signature.json"))
-    assert result is not None
+    async def test():
+        await load_card_detail_resource("CIMB Visa Signature.json")
+        result = asyncio.run(server.list_resources())
+        assert len(result) > 0
+        
+        result = asyncio.run(get_card_detail_resource("CIMB Visa Signature.json"))
+        assert result is not None
+        
+    asyncio.run(test())
+        
+ 
  
     
