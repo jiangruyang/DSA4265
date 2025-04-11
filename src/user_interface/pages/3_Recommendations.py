@@ -2,9 +2,15 @@ import streamlit as st
 import os
 import sys
 
-# Add parent directory to path
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..')))
+# Fix import paths 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(current_dir, "../../.."))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+# Import required components
+from src.agent.agent import CardOptimizerAgent
+from src.user_interface.utils import run_async, initialize_app_event_loop
 
 # Set page configuration
 st.set_page_config(
@@ -12,13 +18,23 @@ st.set_page_config(
     page_icon="💳",
 )
 
-# Import run_async from main app
-from src.user_interface.streamlit_app import run_async
+# Ensure the application event loop is initialized
+initialize_app_event_loop()
 
 st.title("Credit Card Recommendations")
 
-# Variables for consistent reference
-client = st.session_state.client
+# Initialize agent if not already in session state
+if "agent" not in st.session_state:
+    st.session_state.agent = CardOptimizerAgent()
+    # Initialize the agent (agent will handle client initialization)
+    with st.spinner("Initializing agent..."):
+        run_async(st.session_state.agent.initialize)
+
+# Initialize chat_history if needed
+if "chat_history" not in st.session_state:
+    st.session_state.chat_history = []
+
+# Variable for consistent reference
 agent = st.session_state.agent
 
 if not st.session_state.preferences:
@@ -28,35 +44,41 @@ elif not st.session_state.spending_profile:
     st.warning("Please complete the Spending Input first.")
     st.info("Go to the Spending Input page to enter your spending information.")
 else:
-    if st.button("Generate Recommendations"):
-        with st.spinner("Analyzing your spending profile and generating recommendations..."):
-            # Call agent for recommendations
-            recommendations = run_async(
-                agent.recommend_cards,
-                st.session_state.spending_profile,
-                st.session_state.preferences
-            )
-            st.session_state.recommendations = recommendations
+    if not st.session_state.chat_history or len(st.session_state.chat_history) == 0:
+        if st.button("Generate Recommendations"):
+            with st.spinner("Analyzing your spending profile and generating recommendations..."):
+                # Format the initial message for recommendations
+                initial_message = "I would like credit card recommendations based on my spending profile and preferences."
+                
+                # Prepare context with user data
+                context = {
+                    'spending_profile': st.session_state.spending_profile,
+                    'preferences': st.session_state.preferences
+                }
+                
+                # Get recommendation from agent
+                try:
+                    # Using the shared application event loop via run_async
+                    recommendation = run_async(
+                        agent.send_message,
+                        initial_message,
+                        context
+                    )
+                    
+                    # Add to chat history
+                    st.session_state.chat_history.append({"role": "user", "content": initial_message})
+                    st.session_state.chat_history.append({"role": "assistant", "content": recommendation})
+                except Exception as e:
+                    st.error(f"Error generating recommendations: {str(e)}")
+                    st.session_state.chat_history.append({"role": "user", "content": initial_message})
+                    st.session_state.chat_history.append({"role": "assistant", "content": f"I'm sorry, I encountered an error while generating recommendations: {str(e)}. Please try again later."})
     
-    if st.session_state.recommendations:
-        st.subheader("Top Recommended Cards")
+    # Display recommendation if available
+    if st.session_state.chat_history and len(st.session_state.chat_history) >= 2:
+        st.markdown("## Your Recommendation")
+        st.markdown(st.session_state.chat_history[1]["content"])
         
-        for i, card in enumerate(st.session_state.recommendations['top_cards'], 1):
-            with st.expander(f"{i}. {card['name']} (Priority: {card['priority']})"):
-                # Card details would come from get_card_details
-                card_details = run_async(client.get_card_details, card['id'])
-                
-                st.write(f"**Annual Fee:** ${card_details.get('annual_fee', 0):.2f}")
-                st.write(f"**Promotion:** {card_details.get('promotion', 'N/A')}")
-                
-                if card['id'] in st.session_state.recommendations['usage_strategy']:
-                    st.write("**Optimal Usage Strategy:**")
-                    for usage in st.session_state.recommendations['usage_strategy'][card['id']]:
-                        st.write(f"- {usage['category'].capitalize()}: {usage['reason']}")
-        
-        st.subheader("Estimated Monthly Value")
-        st.write(f"${st.session_state.recommendations.get('estimated_value', 0):.2f}")
-        
+        # Add info about chatting with the agent
         st.info("Proceed to the Chat tab to ask questions about these recommendations or explore scenarios.")
 
 # Navigation buttons
@@ -65,7 +87,7 @@ col1, col2, col3 = st.columns([1, 1, 1])
 with col1:
     st.page_link("pages/2_Spending_Input.py", label="← Spending Input", icon="💰")
 with col3:
-    if "recommendations" in st.session_state and st.session_state.recommendations:
+    if st.session_state.chat_history and len(st.session_state.chat_history) >= 2:
         st.page_link("pages/4_Chat.py", label="Next: Chat with AI →", icon="🤖")
     else:
         st.warning("Please generate recommendations before proceeding to chat.") 

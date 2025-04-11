@@ -18,6 +18,9 @@ chromadb>=0.4.22
 langchain-openai
 langchain
 langchain-community
+langchain-mcp-adapters
+langchain-chroma
+langgraph
 
 # Frontend
 streamlit>=1.10.0
