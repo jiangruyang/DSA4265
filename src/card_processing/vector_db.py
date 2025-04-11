@@ -2,12 +2,12 @@ from typing import List, Dict, Any, Optional, Union, Tuple
 import os
 import json
 
-from langchain_community.embeddings import OpenAIEmbeddings
-from langchain_community.vectorstores import Chroma
+from langchain_openai import OpenAIEmbeddings
+from langchain_chroma import Chroma
 from langchain.schema import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.retrievers.multi_query import MultiQueryRetriever
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.schema.runnable import RunnablePassthrough
 from langchain.prompts import PromptTemplate
 from langchain_community.document_loaders import PyPDFLoader
@@ -106,7 +106,7 @@ class VectorDB:
         
         
         # Call load_card_data with the specific directory
-        documents = load_card_data(json_dir)
+        documents, _ = load_card_data(json_dir)
         print(f"Loaded {len(documents)} documents from {json_dir}")
         matching_docs = [doc for doc in documents if doc['id'] == card_id]
         
