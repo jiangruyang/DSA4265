@@ -275,7 +275,7 @@ async def get_card_detail_resource_uri(uri: str) -> dict:
         dict: The card detail json
     '''
     available_files = os.listdir("data/card/json")
-    card_id = uri.split("://")[1]
+    card_id = uri.split(":///cards/")[1]
 
     if card_id in available_files:
         with open(os.path.join("data/card/json", card_id), "r", encoding="utf-8") as f:
@@ -284,7 +284,7 @@ async def get_card_detail_resource_uri(uri: str) -> dict:
         raise ValueError("Resource not found")
     
 
-@server.resource("cards://{file}")
+@server.resource("file:///cards/{file}")
 async def get_card_detail_resource(file: str) -> dict:
     '''
     MCP Resource that gets a card detail resource. Thin wrapper to 
@@ -296,7 +296,7 @@ async def get_card_detail_resource(file: str) -> dict:
     Returns:
         dict: The card detail json
     '''
-    return await get_card_detail_resource_uri(f"cards://{file}")
+    return await get_card_detail_resource_uri(f"file:///cards/{file}")
 
     
 if __name__ == "__main__":
