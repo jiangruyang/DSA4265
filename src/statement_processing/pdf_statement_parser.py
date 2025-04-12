@@ -168,28 +168,27 @@ class PDFStatementParser:
         # Default to withdrawal
         return 'withdrawal'
     
-    def _clean_description(self, description: str) -> str:
-        """Clean up transaction description
+    def _extract_merchant_name(self, description: str) -> str:
+        """Extract the merchant name from the description
         
         Args:
             description: Raw transaction description
             
         Returns:
-            Cleaned description
+            Merchant name
         """
-        # Remove common patterns
-        patterns_to_remove = [
-            r'\d{1,3}(,\d{3})*(\.\d{2})?\s+\d{1,3}(,\d{3})*(\.\d{2})?',  # Remove balance patterns
-            r'/\s*Receipt\s*\d*',  # Remove receipt numbers
-            r'\s*/\s*$',  # Remove trailing slashes
-            r'\s+',  # Normalize whitespace
-        ]
+        # Remove card numbers (patterns like 4628-4500-5474-7267)
+        desc = re.sub(r'\d{4}-\d{4}-\d{4}-\d{4}', '', description)
         
-        cleaned = description
-        for pattern in patterns_to_remove:
-            cleaned = re.sub(pattern, ' ', cleaned)
-            
-        return cleaned.strip()
+        # Remove dates (patterns like SI NG 27OCT, SINGAPORE SGP 28NOV)
+        desc = re.sub(r'SI ?N?G?P? \d{2}[A-Z]{3}', '', desc)
+        desc = re.sub(r'SINGAPORE ?S?G?P? \d{2}[A-Z]{3}', '', desc)
+        
+        # Remove other common patterns
+        desc = re.sub(r'N/A ?S?G?P?', '', desc)
+        desc = re.sub(r'Debit Card Transaction', '', desc)
+
+        return desc.strip()
     
     def _clean_transactions(self, transactions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Clean and validate transaction data
@@ -204,10 +203,12 @@ class PDFStatementParser:
         for trans in transactions:
             try:
                 # Use the merchant categorizer to categorize the merchant - delegate all categorization logic
-                categorization = self.merchant_categorizer.categorize(trans['description'])
+                categorization = self.merchant_categorizer.categorize(
+                    self._extract_merchant_name(trans['description'])
+                )
                 
                 cleaned.append({
-                    'merchant': trans['merchant'],
+                    'merchant': self._extract_merchant_name(trans['description']),
                     'description': trans['description'],
                     'amount': trans['amount'],
                     'date': trans['date'],
