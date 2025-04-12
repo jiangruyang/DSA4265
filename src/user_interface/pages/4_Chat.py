@@ -20,6 +20,13 @@ from src.user_interface.utils import run_async, initialize_app_event_loop
 # Ensure the application event loop is initialized
 initialize_app_event_loop()
 
+# Initialize session state variables for suggested questions
+if "suggested_questions" not in st.session_state:
+    st.session_state.suggested_questions = []
+    
+if "refresh_questions" not in st.session_state:
+    st.session_state.refresh_questions = True
+
 st.title("Chat with AI Assistant")
 st.header("Ask About Your Cards & Explore Scenarios")
 
@@ -75,6 +82,9 @@ else:
                         # Write answer 
                         st.write(answer)
                         st.session_state.chat_history.append({"role": "assistant", "content": answer})
+                        
+                        # Set flag to refresh suggested questions after receiving an answer
+                        st.session_state.refresh_questions = True
                     except Exception as e:
                         error_message = f"I'm sorry, I encountered an error while processing your question: {str(e)}. Please try again."
                         st.error(error_message)
@@ -109,6 +119,9 @@ else:
                         # Write answer 
                         st.write(answer)
                         st.session_state.chat_history.append({"role": "assistant", "content": answer})
+                        
+                        # Set flag to refresh suggested questions after receiving an answer
+                        st.session_state.refresh_questions = True
                     except Exception as e:
                         error_message = f"I'm sorry, I encountered an error while processing your question: {str(e)}. Please try again."
                         st.error(error_message)
@@ -117,24 +130,57 @@ else:
         # Rerun the app to update the chat display with the new messages
         st.rerun()
     
-    # Suggested questions - place before footer
+    # Suggested questions section
+    st.markdown("---")
     st.subheader("Suggested Questions")
-    suggested_questions = [
-        "What is the annual fee?",
-        "Do miles expire?",
-        "What if I double my dining expenses?",
-        "What if I travel overseas more frequently?",
-        "Can I get lounge access with these cards?"
-    ]
+    st.caption("These personalized questions are based on your conversation and may help you get more value from your credit cards.")
     
-    # Create buttons for suggested questions
-    cols = st.columns(len(suggested_questions))
-    for i, question in enumerate(suggested_questions):
-        if cols[i].button(question, key=f"question_{i}"):
-            # Store the selected question in session state
-            st.session_state.selected_question = question
-            # Rerun immediately to process the question in the main flow
-            st.rerun()
+    # Generate dynamic suggested questions based on conversation history
+    if "suggested_questions" not in st.session_state or st.session_state.get("refresh_questions", False):
+        with st.spinner("Generating suggested questions..."):
+            try:
+                # Get dynamic questions from the agent
+                suggested_questions = run_async(
+                    agent.generate_suggested_questions,
+                    3  # Limit to 3 questions
+                )
+                st.session_state.suggested_questions = suggested_questions
+                st.session_state.refresh_questions = False
+            except Exception as e:
+                st.error(f"Error generating suggested questions: {str(e)}")
+                # Fallback to default questions if there's an error
+                suggested_questions = [
+                    "What is the annual fee?",
+                    "Do miles expire?",
+                    "What if I travel more frequently?"
+                ]
+                st.session_state.suggested_questions = suggested_questions
+    else:
+        # Use cached questions to avoid regenerating on every rerun
+        suggested_questions = st.session_state.suggested_questions
+    
+    # Create a container for the suggested questions
+    question_container = st.container()
+    with question_container:
+        # Use columns for better spacing
+        cols = st.columns(len(suggested_questions))
+        for i, question in enumerate(suggested_questions):
+            with cols[i]:
+                # Create a visually distinct container using Streamlit's native components
+                st.markdown(f"**{question}**")
+                # Add a button below the text
+                if st.button(f"Ask this 💬", key=f"question_{i}", use_container_width=True):
+                    # Store the selected question in session state
+                    st.session_state.selected_question = question
+                    # Set flag to refresh questions on next run (after this question is answered)
+                    st.session_state.refresh_questions = True
+                    # Rerun immediately to process the question in the main flow
+                    st.rerun()
+
+    # Add a refresh button for suggested questions
+    if st.button("Refresh Suggestions 🔄", use_container_width=True):
+        st.session_state.refresh_questions = True
+        st.rerun()
 
     # Navigation buttons
     st.markdown("---")

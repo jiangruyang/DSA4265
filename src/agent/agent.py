@@ -168,6 +168,55 @@ class CardOptimizerAgent:
         Focus on actionable recommendations that maximize real-world value for Singaporean consumers.
         """
     
+    SUGGESTED_QUESTIONS_SYSTEM_PROMPT = """
+        Based on the detailed conversation history about credit card recommendations, generate {limit} highly contextual follow-up questions that provide significant value to the user.
+        
+        IMPORTANT GUIDELINES:
+        1. DO NOT suggest questions that have already been asked or answered in the conversation
+        2. The FIRST question should ALWAYS directly relate to the most recent exchange in the conversation
+        3. Prioritize questions that build upon the latest topics discussed
+        4. Scan the entire conversation history carefully to avoid any repetition of previous questions
+        5. Focus on gaps or unexplored aspects that would yield new, valuable information
+        
+        Analyze the conversation to craft questions covering these key areas:
+        1. Card-Specific Features: Reference specific cards mentioned and their unique benefits (e.g., "How does the DBS Altitude card's miles conversion rate compare to other Singapore travel cards?")
+        2. Spending Scenario Analysis: Build upon the user's stated spending patterns (e.g., "If my dining expenses increase to $800/month, would your recommendation change?")
+        3. Optimization Opportunities: Address untapped potential in the recommendations (e.g., "Could combining the Citi PremierMiles with a cashback card better optimize my overall rewards?")
+        4. Terms & Conditions Clarification: Target specific limitations that impact value (e.g., "What are the exact minimum spend requirements to get the 8% cashback on the UOB One card?")
+        5. Singapore-Specific Benefits: Focus on local perks and promotions (e.g., "Does the OCBC 365 card offer any special dining deals at local hawker centers?")
+        6. Application Strategy: Help with timing and sequencing (e.g., "Should I apply for both recommended cards at once or space them out?")
+        7. Travel Benefits: Address miles conversion, lounge access or overseas benefits (e.g., "What airport lounges can I access with the Citi PremierMiles in Singapore and overseas?")
+        8. Long-term Value: Consider future rewards potential (e.g., "How would these card recommendations change if I plan to travel to Japan next year?")
+        
+        Ensure each question:
+        - Is written from the perspective of the user (these are questions you're suggesting the user ask)
+        - Directly builds on information already exchanged in the conversation
+        - Addresses a specific decision point or knowledge gap
+        - Helps the user maximize value from their recommended cards
+        - Avoids repeating information already covered in detail
+        - Focuses on practical, actionable insights for Singapore residents
+        - Uses Singapore-specific terminology and references (SGD, local banks, local promotions)
+        - Is concise and direct (ideally 10-15 words)
+        
+        SEQUENCE YOUR QUESTIONS THOUGHTFULLY:
+        1. First question: MUST relate to the most recent exchange in the conversation
+        2. Second question: Should explore a different aspect of the recent discussion
+        3. Third/additional questions: Can cover broader topics from the full conversation
+        
+        GOOD EXAMPLES:
+        - "What's the exact miles conversion rate for the DBS Altitude when booking through Expedia?"
+        - "Would getting a supplementary card improve my overall rewards?"
+        - "Are there any special promotions for new DBS Altitude cardholders this month?"
+        
+        AVOID:
+        - Generic questions not tied to the conversation ("What are good travel cards?")
+        - Questions already asked or answered in the conversation
+        - Overly complex questions covering multiple topics
+        - Questions that don't help with decision-making or optimization
+        
+        Return the JSON with the key "questions" and a list of strings containing these highly personalized questions.
+        """
+    
     def __init__(self):
         """Initialize the agent with the client for tool access"""
         self.client = None
@@ -288,7 +337,9 @@ class CardOptimizerAgent:
         
         # Try to initialize, but catch and handle specific errors
         try:
-            await self.initialize()
+            # Initialize the agent if not already initialized
+            if not self.initialized:
+                await self.initialize()
         except ConnectionError as e:
             logger.error(f"Failed to connect to MCP server: {str(e)}")
             return "I'm sorry, but I couldn't connect to the card recommendation service. Please check that the service is running and try again later."
@@ -352,11 +403,41 @@ class CardOptimizerAgent:
             logger.exception(f"Error processing message: {str(e)}")
             return f"I encountered an error while processing your request: {str(e)}. Please try again later."
     
-    async def clear_conversation(self):
-        """Clear the conversation history by generating a new conversation ID"""
-        old_id = self.conversation_id
-        self.conversation_id = f"conversation-{datetime.now().strftime('%Y%m%d%H%M%S')}"
-        logger.info(f"Cleared conversation history: {old_id} -> {self.conversation_id}")
+
+    async def generate_suggested_questions(self, limit: int = 3) -> List[str]:
+        """Generate suggested questions for the user to ask"""
+        logger.info("Generating suggested questions")
+
+        try:
+            # Initialize the agent if not already initialized
+            if not self.initialized:
+                await self.initialize()
+        except Exception as e:
+            logger.exception(f"Error generating suggested questions: {str(e)}")
+            return []
+        
+        config = {"configurable": {"thread_id": self.conversation_id}}
+        logger.info(f"Pulling messages from conversation ID: {self.conversation_id}")
+        
+        # Get the messages from state
+        messages = self.agent_executor.get_state(config).values["messages"]
+        logger.info(f"Found {len(messages)} messages in conversation")
+        
+        # Setup the system message and LLM
+        system_message = SystemMessage(content=self.SUGGESTED_QUESTIONS_SYSTEM_PROMPT.format(limit=limit))
+        llm = ChatOpenAI(model="gpt-4o", temperature=0.7).with_structured_output(method="json_mode")
+        
+        # Invoke the LLM with the system message and messages
+        response = await llm.ainvoke(
+            [system_message] + messages,
+        )
+        logger.info(f"Generated response: {response}")
+        
+        # Extract the questions from the response
+        questions = response.get("questions", [])
+        
+        return questions
+    
     
     async def check_status(self) -> Dict[str, Any]:
         """Check and report the status of the agent components
@@ -494,6 +575,12 @@ if __name__ == "__main__":
             print(recommendation)
         except Exception as e:
             print(f"ERROR: Failed to get recommendation: {str(e)}")
+        
+        # Generate suggested questions
+        suggested_questions = await agent.generate_suggested_questions()
+        print("\nSuggested Questions:")
+        for i, question in enumerate(suggested_questions, 1):
+            print(f"{i}. {question}")
         
         # # Ask about terms and conditions
         # tc_question = "What are the annual fees for the recommended card?"

@@ -208,104 +208,6 @@ async def search_cards(query: str, num_candidates: int = 10) -> List[Dict[str, A
         # Return an empty result to avoid breaking the conversation
         return [{'card_name': f'Error: {str(e)}', 'score': 0.0}]
 
-async def generate_questions(
-    question_history: List[str] = [],
-    num_questions: int = 5,
-    llm_model: str = "gpt-3.5-turbo-0125"
-    ) -> List[str]:
-    """Generate questions based on the question history
-    
-    Args:
-        question_history (List[str]): A list of previous questions.
-                Default is an empty list.
-        num_questions (int): The number of questions to generate.
-                Default is 3.
-        llm_model (str): The LLM model to use.
-                Default is "gpt-3.5-turbo-0125".
-        
-    Returns:
-        list: A list of questions
-    """
-    logger.info(f"generate_questions called with num_questions: {num_questions}")
-    start_time = time.time()
-    
-    try:
-        logger.debug(f"Setting up retriever and LLM with model: {llm_model}")
-        setup_start = time.time()
-        retriever = db.vector_store.as_retriever(
-            search_type="similarity",
-            search_kwargs={
-                "k": 3,
-            }
-        )
-        
-        llm = ChatOpenAI(model=llm_model)
-        prompt = hub.pull("rlm/rag-prompt")
-        setup_time = time.time() - setup_start
-        logger.debug(f"Retriever and LLM setup took {setup_time:.4f} seconds")
-        
-        def format_docs(docs):
-            return "\n\n".join(doc.page_content for doc in docs)
-        
-        logger.debug("Setting up RAG chain")
-        chain_start = time.time()
-        rag_chain = (
-            {"context": retriever | format_docs, "question": RunnablePassthrough()}
-            | prompt
-            | llm
-            | StrOutputParser()
-        )
-        chain_time = time.time() - chain_start
-        logger.debug(f"RAG chain setup took {chain_time:.4f} seconds")
-        
-        questions = []
-        # Limit the number of questions for safety
-        safe_num = min(max(1, num_questions), 10)
-        logger.debug(f"Generating {safe_num} questions")
-        
-        for i in range(safe_num):
-            logger.debug(f"Generating question {i+1}/{safe_num}")
-            q_start = time.time()
-            
-            # Get available cards for cold-start questions
-            if len(question_history) == 0:
-                cards = await get_available_cards()
-                random_card = random.choice(cards)
-                random_card_id = random_card['card_id']
-                logger.debug(f"Selected random card for question: {random_card_id}")
-                prompt_text = f"Come up with a short, one-line question on {random_card_id} that can be answered by the following context."
-            else:
-                prompt_text = (
-                    f"Come up with a short, one-line question.",
-                    f"Additionally, make sure the question is relevant to all of these previously asked questions (but do not repeat an existing question): {questions}."
-                )
-                prompt_text = ' '.join(prompt_text)
-            
-            logger.debug(f"Using prompt: '{prompt_text}'")
-            question = ""
-            
-            invoke_start = time.time()
-            for chunk in rag_chain.stream(prompt_text):
-                question += chunk
-            invoke_time = time.time() - invoke_start
-            logger.debug(f"Question generation took {invoke_time:.4f} seconds")
-            
-            if question:
-                questions.append(question)
-                logger.debug(f"Generated question: '{question}'")
-            
-            q_time = time.time() - q_start
-            logger.debug(f"Question {i+1} generation completed in {q_time:.4f} seconds")
-            
-        total_time = time.time() - start_time
-        logger.info(f"generate_questions completed in {total_time:.4f} seconds, generated {len(questions)} questions")
-        return questions
-    except Exception as e:
-        total_time = time.time() - start_time
-        logger.error(f"generate_questions failed after {total_time:.4f} seconds: {str(e)}")
-        logger.error(f"Exception type: {type(e).__name__}")
-        logger.error(f"Traceback: {traceback.format_exc()}")
-        return [f"Error generating questions: {str(e)}"]
 
 if __name__ == "__main__":
     # Create logs directory if it doesn't exist
@@ -350,11 +252,6 @@ if __name__ == "__main__":
             result = await search_cards("What card has the highest miles for dining?")
             assert isinstance(result, list) and len(result) > 0
             logger.info(f"Found {len(result)} cards matching the query")
-            
-            logger.info("Testing generate_questions...")
-            result = await generate_questions()
-            assert isinstance(result, list) and len(result) > 0
-            logger.info(f"Generated {len(result)} questions")
             
             logger.info("All tests passed successfully!")
         except Exception as e:
