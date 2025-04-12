@@ -42,7 +42,6 @@ venv.bak/
 # Project specific
 data/sample_statements/
 data/user_uploads/
-vector_db/
 .env.local
 .streamlit/secrets.toml
 notebooks/.ipynb_checkpoints/
