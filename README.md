@@ -12,7 +12,7 @@ A Singapore-focused application that uses Generative AI to analyze consumer spen
 
 ## Project Structure
 
-```
+```plaintext
 project/
 ├── src/                       # Main source code
 │   ├── app.py                 # Streamlit application UI
@@ -40,19 +40,28 @@ project/
 ## Setup Instructions
 
 1. Create a virtual environment:
+
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: .\venv\Scripts\Activate.ps1
    ```
 
 2. Install requirements:
+
    ```bash
    pip install -r requirements.txt
    ```
 
 3. Create a .env file by copying .env.example and filling in required values.
 
-4. Run the application:
+4. Start the MCP server:
+
+   ```bash
+   python -m src.model_context_protocol.card_data_server
+   ```
+
+5. Run the Streamlit application (in a new terminal window):
+
    ```bash
    python run_app.py
    ```
@@ -60,20 +69,25 @@ project/
 ## Component Overview
 
 ### 1. Transaction Categorization
+
 - `src/models/merchant_categorizer.py` - Distilled model for categorizing merchant names
 
 ### 2. Card Embeddings & Semantic Search
-- `src/models/vector_db.py` - Vector database for card embeddings
+
+- `src/card_processing/vector_db.py` - Vector database for card embeddings
 - `src/mcp/card_data_server.py` - MCP tools for card data access including semantic search
 
 ### 3. Agent Reasoning
+
 - `src/agent.py` - Main agent implementation for card recommendations and scenario analysis
 
 ### 4. RAG Pipeline
-- `src/models/vector_db.py` - Vector database for T&C document storage
+
+- `src/card_processing/vector_db.py` - Vector database for T&C document storage
 - `src/mcp/card_data_server.py` - Tools for T&C querying
 
 ### 5. UI & DevOps
+
 - `src/app.py` - Streamlit UI implementation
 - `run_app.py` - Application entry point
 - `Dockerfile` and `docker-compose.yml` - Container configuration
@@ -90,26 +104,31 @@ The system implements four core MCP tools as defined in the PRD:
 ## Tasks For Team Members
 
 ### Team Member 1: Transaction Data Wrangling & Merchant Categorization
+
 - Implement `merchant_categorizer.py` with proper model distillation
 - Complete `pdf_statement_parser.py` for statement parsing
 - Test categorization with real Singapore merchant examples
 
 ### Team Member 2: Card Embeddings & Semantic Search
+
 - Implement vector embedding functionality in `vector_db.py` for cards
 - Update `search_cards` in `card_data_server.py` to use vector search
 - Collect and structure Singsaver card data
 
 ### Team Member 3: Agent Reasoning & Strategy Implementation
+
 - Complete `agent.py` with actual LLM-based reasoning
 - Implement multi-card synergy calculations
 - Create advanced scenario analysis
 
 ### Team Member 4: RAG Pipeline & Question Suggestions
+
 - Complete T&C document ingestion with `vector_db.py`
 - Improve `query_tc` function with proper RAG retrieval
 - Implement dynamic suggested questions generator
 
 ### Team Member 5: DevOps, MCP & Chat Orchestration
+
 - Complete `app.py` Streamlit interface
 - Implement multi-step conversation flow in chat
 - Finalize Docker configuration for deployment
@@ -119,6 +138,7 @@ The system implements four core MCP tools as defined in the PRD:
 Each component should include its own `if __name__ == "__main__"` block for quick testing.
 
 Run the complete flow demo with:
+
 ```bash
 python src/main.py
 ```
