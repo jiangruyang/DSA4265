@@ -46,24 +46,36 @@ project/
    source venv/bin/activate  # On Windows: .\venv\Scripts\Activate.ps1
    ```
 
-2. Install requirements:
+2. Install dependancies:
+
+   ```bash
+   apt-get install build-essential libpoppler-cpp-dev pkg-config ocrmypdf
+   ```
+
+   or
+
+   ```bash
+   brew install gcc@11 pkg-config poppler ocrmypdf
+   ```
+   
+4. Install requirements:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Create a .env file by copying .env.example and filling in required values.
+5. Create a .env file by copying .env.example and filling in required values.
 
-4. Start the MCP server:
+6. Start the MCP server:
 
    ```bash
    python -m src.model_context_protocol.card_data_server
    ```
 
-5. Run the Streamlit application (in a new terminal window):
+7. Run the Streamlit application (in a new terminal window):
 
    ```bash
-   python run_app.py
+   python app.py
    ```
 
 ## Component Overview
