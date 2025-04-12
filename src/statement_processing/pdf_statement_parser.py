@@ -86,16 +86,23 @@ class PDFStatementParser:
             - description: Cleaned transaction description
         """
         try:
-            # Extract text from PDF
-            text = self.extract_text_from_pdf(pdf_file, is_path)
-            
-            # Parse transactions from text
-            transactions = self.parse_text_with_llm(text)
-            
-            # Validate and clean transactions
-            cleaned_transactions = self._clean_transactions(transactions)
-            
-            return cleaned_transactions
+            # Extract transactions from PDF
+            df = self.extract_text_from_pdf(pdf_file, is_path)
+            out = [
+                {
+                    'merchant': row['description'],
+                    'amount': row['amount'],
+                    'date': row['date'],
+                    'type': 'withdrawal' if row['amount'] < 0 else 'deposit',
+                    'category': 'TODO',
+                    'description': row['description'],
+                } for _, row in df.iterrows()
+            ]
+            print(out)
+            out = self._clean_transactions(out)
+            print(out)
+            pd.DataFrame(out).to_csv('tmp/transactions.csv', index=False)
+            return out
             
         except Exception as e:
             if is_path:
@@ -113,7 +120,7 @@ class PDFStatementParser:
             is_path: Whether pdf_file is a file path (True) or file-like object (False)
             
         Returns:
-            Extracted text content as string
+            pd.DataFrame: A pandas DataFrame containing the extracted transactions
         """
         try:
             # Check if file exists when using path
@@ -132,8 +139,7 @@ class PDFStatementParser:
             statement = pipeline.extract(safety_check=False)
             transactions = pipeline.transform(statement)
             
-
-            return transactions
+            return pd.DataFrame(transactions)
 
             
         except Exception as e:
@@ -197,91 +203,26 @@ class PDFStatementParser:
         cleaned = []
         for trans in transactions:
             try:
-                # Validate required fields
-                if not all(k in trans for k in ['merchant', 'amount', 'date', 'transaction_type']):
-                    continue
-                    
-                # Clean merchant name
-                merchant = trans['merchant'].strip()
-                if not merchant:
-                    continue
-                    
-                # Clean description - only handle simple text cleanup here
-                description = self._clean_description(merchant)
-                
-                # Validate amount
-                try:
-                    amount = float(trans['amount'])
-                    if amount <= 0:
-                        continue
-                except (ValueError, TypeError):
-                    continue
-                    
-                # Validate and standardize date
-                try:
-                    date = self._standardize_date(trans['date'])
-                    if not date:
-                        continue
-                except ValueError:
-                    continue
-                
-                # Determine transaction type (withdrawal/deposit)
-                trans_type = self._determine_transaction_type(trans['transaction_type'])
-                
                 # Use the merchant categorizer to categorize the merchant - delegate all categorization logic
-                categorization = self.merchant_categorizer.categorize(description)
+                categorization = self.merchant_categorizer.categorize(trans['description'])
                 
                 cleaned.append({
-                    'merchant': merchant,
-                    'description': description,
-                    'amount': amount,
-                    'date': date,
-                    'type': trans_type,
+                    'merchant': trans['merchant'],
+                    'description': trans['description'],
+                    'amount': trans['amount'],
+                    'date': trans['date'],
+                    'type': trans['type'],
                     'category': categorization['category'],
                     'confidence': categorization['confidence'],
                     'method': categorization['method'],
-                    'transaction_type': trans['transaction_type']
+                    'transaction_type': trans['type']
                 })
             except Exception as e:
                 logger.warning(f"Error cleaning transaction: {str(e)}")
                 continue
                 
         return cleaned
-    
-    def _standardize_date(self, date_str: str) -> Optional[str]:
-        """Standardize date string to YYYY-MM-DD format
-        
-        Args:
-            date_str: Date string in various formats
-            
-        Returns:
-            Standardized date string or None if invalid
-        """
-        for pattern in self.date_patterns:
-            match = re.search(pattern, date_str)
-            if match:
-                try:
-                    date_str = match.group(1)
-                    # Handle different date formats
-                    if '/' in date_str:
-                        parts = date_str.split('/')
-                    elif '-' in date_str:
-                        parts = date_str.split('-')
-                    else:
-                        continue
-                        
-                    if len(parts) != 3:
-                        continue
-                        
-                    # Convert to datetime object
-                    if len(parts[2]) == 2:  # YY format
-                        parts[2] = '20' + parts[2]
-                        
-                    date_obj = datetime.strptime(f"{parts[2]}-{parts[1]}-{parts[0]}", "%Y-%m-%d")
-                    return date_obj.strftime("%Y-%m-%d")
-                except ValueError:
-                    continue
-        return None
+
     
     def process_transactions(self, transactions: List[Dict]) -> Dict[str, float]:
         """Process a list of transactions to create a categorized spending profile
@@ -325,96 +266,6 @@ class PDFStatementParser:
                 spending_profile[category] += amount
         
         return spending_profile
-    
-    def parse_text_with_llm(self, text: str) -> List[Dict[str, Any]]:
-        """Parse text into structured transaction data
-        
-        Args:
-            text: Text content extracted from PDF
-            
-        Returns:
-            List of structured transaction dictionaries
-        """
-        transactions = []
-        lines = text.strip().split('\n')
-        
-        # Find transaction section
-        transaction_section = False
-        i = 0
-        while i < len(lines):
-            line = lines[i].strip()
-            
-            # Look for transaction section markers
-            if any(marker in line.lower() for marker in ['transactions', 'transaction details', 'statement of account']):
-                transaction_section = True
-                i += 1
-                continue
-            
-            if not transaction_section:
-                i += 1
-                continue
-                
-            # Skip header lines and empty lines
-            if not line or any(header in line.lower() for header in ['date', 'description', 'amount', 'total']):
-                i += 1
-                continue
-                
-            # Try to parse transaction line
-            try:
-                # Look for date pattern
-                date_match = None
-                for pattern in self.date_patterns:
-                    date_match = re.search(pattern, line)
-                    if date_match:
-                        break
-                        
-                if not date_match:
-                    i += 1
-                    continue
-                    
-                # Extract date
-                date_str = date_match.group(1)
-                
-                # Remove date from line for further processing
-                line = re.sub(pattern, '', line).strip()
-                
-                # Look for amount at the end of line
-                amount_match = re.search(r'([\d,]+\.\d{2})', line)
-                if not amount_match:
-                    i += 1
-                    continue
-                    
-                amount_str = amount_match.group(1).replace(',', '')
-                amount = float(amount_str)
-                
-                # Extract transaction type (everything between date and amount)
-                transaction_type = line[:line.rfind(amount_str)].strip()
-                
-                # Check if next line contains merchant name
-                merchant = transaction_type
-                if i + 1 < len(lines):
-                    next_line = lines[i + 1].strip()
-                    # Skip empty lines and lines with dates or amounts
-                    if (next_line and 
-                        not any(pattern in next_line for pattern in self.date_patterns) and
-                        not re.search(r'([\d,]+\.\d{2})', next_line)):
-                        merchant = next_line
-                        i += 1  # Skip the merchant line in next iteration
-                
-                if merchant and amount > 0:
-                        transactions.append({
-                            'merchant': merchant,
-                            'amount': amount,
-                        'date': date_str,
-                        'transaction_type': transaction_type
-                    })
-                    
-            except Exception as e:
-                logger.warning(f"Error parsing line: {line}, Error: {str(e)}")
-            
-            i += 1
-                    
-        return transactions
 
 
 # Simple demo of the parser
