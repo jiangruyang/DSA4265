@@ -208,7 +208,7 @@ class PDFStatementParser:
                 cleaned.append({
                     'merchant': self._extract_merchant_name(trans['description']),
                     'description': trans['description'],
-                    'amount': trans['amount'],
+                    'amount': abs(float(trans['amount'])),
                     'date': trans['date'],
                     'type': trans['type'],
                     'category': categorization['category'],
