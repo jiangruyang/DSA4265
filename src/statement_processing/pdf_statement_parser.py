@@ -109,7 +109,7 @@ class PDFStatementParser:
             logger.error(error_context)
             return []
     
-    def extract_text_from_pdf(self, pdf_file: Union[str, BytesIO, BinaryIO], is_path: bool = True) -> str:
+    def extract_text_from_pdf(self, pdf_file: Union[str, BytesIO, BinaryIO], is_path: bool = True) -> pd.DataFrame:
         """Extract text content from a PDF file or file-like object
         
         Args:
