@@ -1,5 +1,5 @@
 # Core dependencies
-mcp>=1.6.0  # Official MCP Python SDK
+mcp
 numpy>=1.20.0
 pandas>=1.3.0
 
@@ -47,3 +47,85 @@ pytest-cov>=2.12.0
 
 # Docker support
 python-multipart>=0.0.5
+
+# Statement Parsing
+ocrmypdf==16.5.0
+monopoly-core==0.14.2
+PyMuPDF==1.24.10
+PyMuPDFb==1.24.10
+altair
+altgraph
+annotated-types
+astroid
+attrs
+black
+blinker
+cachetools
+certifi
+charset-normalizer
+click
+dateparser
+dill
+flake8
+git-cliff
+gitdb
+GitPython
+idna
+iniconfig
+isort
+Jinja2
+jsonschema
+jsonschema-specifications
+MarkupSafe
+mccabe
+monopoly-core
+mypy-extensions
+narwhals
+numpy
+packaging
+pandas
+pathspec
+pdftotext
+pillow
+platformdirs
+plotly
+pluggy
+protobuf
+pyarrow
+pycodestyle
+pydantic
+pydantic-settings
+pydantic_core
+pydeck
+pyflakes
+pyinstaller
+pyinstaller-hooks-contrib
+pylint
+PyMuPDF
+PyMuPDFb
+pytest
+python-dateutil
+python-dotenv
+pytz
+referencing
+regex
+requests
+rpds-py
+setuptools
+six
+smmap
+-e git+https://github.com/benjamin-awd/StatementSensei.git@cabcf96ee7056c4b1e9fb3fcdf7ac8a23a3d9f3a#egg=statement_sensei
+streamlit
+StrEnum
+tabulate
+tenacity
+toml
+tomlkit
+tornado
+tqdm
+typing-inspection
+typing_extensions
+tzdata
+tzlocal
+urllib3
+watchdog

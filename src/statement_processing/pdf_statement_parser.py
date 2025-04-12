@@ -4,12 +4,20 @@ import re
 import logging
 from datetime import datetime
 from io import BytesIO
+import sys
 
 # PDF processing
-import pdfplumber
+from monopoly.banks import BankDetector, banks
+from monopoly.pdf import PdfDocument, PdfParser
+from monopoly.pipeline import Pipeline
+from monopoly.generic import GenericBank
+import pandas as pd
+
+# Add project root to Python path when running script directly
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
 # Local imports
-from .merchant_categorizer import MerchantCategorizer
+from src.statement_processing.merchant_categorizer import MerchantCategorizer
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -112,13 +120,22 @@ class PDFStatementParser:
             if is_path and not os.path.exists(pdf_file):
                 logger.error(f"PDF file not found at {pdf_file}")
                 return ""
+
+            with open("tmp/Sample Bank Statement.pdf", "rb") as f:
+                pdf_bytes = BytesIO(f.read())
                 
-            # Use pdfplumber to extract text
-            with pdfplumber.open(pdf_file) as pdf:
-                text = ""
-                for page in pdf.pages:
-                    text += page.extract_text() or ""
-                return text
+            document = PdfDocument(file_bytes=pdf_bytes)
+            
+            bank_class = BankDetector(document).detect_bank(banks)
+            parser = PdfParser(bank_class, document)
+            pipeline = Pipeline(parser)
+            statement = pipeline.extract(safety_check=False)
+            transactions = pipeline.transform(statement)
+            
+
+            return transactions
+
+            
         except Exception as e:
             if is_path:
                 logger.error(f"Error extracting text from PDF at {pdf_file}: {str(e)}")
@@ -402,11 +419,13 @@ class PDFStatementParser:
 
 # Simple demo of the parser
 if __name__ == "__main__":
+    print("Starting PDF statement parser")
+    
     # Create an instance of the parser
     parser = PDFStatementParser()
     
     # Test with the sample PDF file
-    pdf_path = "data/Sample Bank Statement.pdf"
+    pdf_path = "tmp/Sample Bank Statement.pdf"
     
     # Parse the statement
     print(f"Testing PDF parser with file: {pdf_path}")
