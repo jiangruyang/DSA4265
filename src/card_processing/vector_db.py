@@ -143,9 +143,9 @@ class VectorDB:
             temp = []
             for i, result in enumerate(results, 1):
                 card_id = result.metadata.get('id')
-                base_card_id = card_id.split('_chunk')[0]   
-                if base_card_id not in temp:
-                    temp.append(base_card_id)
+                #base_card_id = card_id.split('_chunk')[0]   
+                if card_id not in temp:
+                    temp.append(card_id)
 
         if not temp:
             print("No matching cards found.")
@@ -431,7 +431,7 @@ def load_pdf_data(pdf_dir: str, card_name_mapping: Dict[str, Any], card_data_dic
                         "card_association": card_data_dict.get(card_name, {}).get('card_association', '')
                     }
                     documents.append({
-                        "id": doc_id,
+                        "id": card_name,
                         "content": chunk.page_content,
                         "metadata": metadata
                     })
