@@ -98,9 +98,7 @@ class PDFStatementParser:
                     'description': row['description'],
                 } for _, row in df.iterrows()
             ]
-            print(out)
             out = self._clean_transactions(out)
-            print(out)
             pd.DataFrame(out).to_csv('tmp/transactions.csv', index=False)
             return out
             
