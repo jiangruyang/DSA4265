@@ -49,10 +49,10 @@ pytest-cov>=2.12.0
 python-multipart>=0.0.5
 
 # Statement Parsing
-ocrmypdf==16.5.0
-monopoly-core==0.14.2
-PyMuPDF==1.24.10
-PyMuPDFb==1.24.10
+ocrmypdf
+monopoly-core
+PyMuPDF
+PyMuPDFb
 altair
 altgraph
 annotated-types

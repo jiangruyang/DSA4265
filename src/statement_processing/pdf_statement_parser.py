@@ -99,7 +99,6 @@ class PDFStatementParser:
                 } for _, row in df.iterrows()
             ]
             out = self._clean_transactions(out)
-            pd.DataFrame(out).to_csv('tmp/transactions.csv', index=False)
             return out
             
         except Exception as e:
@@ -126,8 +125,13 @@ class PDFStatementParser:
                 logger.error(f"PDF file not found at {pdf_file}")
                 return ""
 
-            with open("tmp/Sample Bank Statement.pdf", "rb") as f:
-                pdf_bytes = BytesIO(f.read())
+            if isinstance(pdf_file, str):
+                with open(pdf_file, "rb") as f:
+                    pdf_bytes = BytesIO(f.read())
+            elif isinstance(pdf_file, BytesIO):
+                pdf_bytes = pdf_file
+            else:
+                pdf_bytes = BytesIO(pdf_file.read())
                 
             document = PdfDocument(file_bytes=pdf_bytes)
             
