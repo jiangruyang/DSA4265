@@ -97,7 +97,8 @@ class PDFStatementParser:
                     'category': 'TODO',
                     'description': row['description'],
                 } for _, row in df.iterrows()
-                if row['polarity'] == 'DR' and row['amount'] < 0
+                if row['polarity'] == 'DR' and row['amount'] < 0 \
+                    and row['description'].strip().startswith('Debit Card Transaction')
             ]
             out = self._clean_transactions(out)
             return out
