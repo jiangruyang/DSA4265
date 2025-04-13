@@ -37,6 +37,10 @@ project/
 └── docs/                      # Documentation files
 ```
 
+## Requirements
+
+- python>=3.12
+
 ## Setup Instructions
 
 1. Create a virtual environment:
@@ -72,7 +76,7 @@ project/
    python -m src.model_context_protocol.card_data_server
    ```
 
-7. Run the Streamlit application (in a new terminal window):
+7. (**In a new terminal window**) Run the Streamlit application:
 
    ```bash
    python app.py
