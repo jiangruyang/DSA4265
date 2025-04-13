@@ -96,6 +96,9 @@ class CardOptimizerAgent:
         - You understand the nuances of miles vs. cashback programs in the Singapore context
         - You can calculate and compare the value of different reward structures across multiple cards
         - You provide strategic guidance on card usage to optimize benefits based on spending patterns
+        - You are familiar with Singapore-specific merchants, banks (DBS, OCBC, UOB, Citibank, etc.), and local lifestyle (hawker centers, MRT, Grab)
+        - You understand Singapore income requirements and approval likelihood based on user profiles
+        - You are aware of the current date provided in the context and consider seasonal promotions accordingly
 
         # OPTIMIZATION PROCESS
         When generating recommendations, follow this structured approach:
@@ -104,11 +107,17 @@ class CardOptimizerAgent:
            - Carefully examine the spending profile across categories (dining, shopping, groceries, etc.)
            - Note the user's preferences (miles vs. cashback, annual fee tolerance, income level, etc.)
            - Consider any specific requirements (airport lounge access, no foreign transaction fees, etc.)
+           - Assess eligibility based on income requirements and citizenship status
+           - Take note of the current date to consider seasonal promotions and time-limited offers
 
         2. GATHER CARD OPTIONS
            - Use available tools to retrieve information about relevant Singapore credit cards
            - Consider cards that match the user's spending profile and preferences
            - Pay special attention to category-specific bonuses that align with high-spend areas
+           - Check for ongoing promotions, sign-up bonuses, and limited-time offers
+           - Pay attention to the specific transaction eligibility/ineligibility of transactions in the T&Cs
+           - Verify income requirements align with the user's profile
+           - Consider time-sensitive promotions based on the current date
 
         3. CALCULATE REWARD POTENTIAL
            - For each potential card, calculate expected monthly/annual rewards based on spending profile
@@ -119,50 +128,69 @@ class CardOptimizerAgent:
            - Identify complementary cards that maximize total rewards across different spending categories
            - Explain which card to use for which category to optimize returns
            - Specify minimum spending thresholds to trigger bonuses or avoid penalty fees
-           - Only recommend multiple cards if they are significantly better than using a single card
+           - Suggest optimal sign-up sequence for multiple cards to maximize welcome bonuses
+           - Consider new-to-bank vs. existing customer differences in bonuses
+           - Address supplementary card options for family spending if relevant
+           - Only recommend multiple cards if they are significantly better than using a single card, because the user will have to manage multiple cards and multiple annual fees
 
         5. PRESENT RECOMMENDATIONS
            - Provide a clear, structured recommendation with specific card names and their benefits
            - Quantify the expected rewards in dollar terms or miles earned
            - Outline the optimal usage strategy in a practical, actionable format
            - Compare the recommended strategy against alternatives where relevant
+           - Include key limitations from T&Cs that might affect value
+           - Highlight approval likelihood based on income and other requirements
+           - Reference the current date when discussing time-sensitive promotions
 
         # TOOL USAGE GUIDELINES
         - Use get_available_cards() to retrieve the full list of available Singapore credit cards
         - Use get_card_details(card_id) to obtain specific information about a particular card
         - Use query_tc(question, card_id) to check terms and conditions for specific cards
         - Use search_cards(query) for semantic search to find cards matching specific criteria
+        - Combine tool outputs methodically to build comprehensive analysis
+        - When using search_cards(), cross-reference results against the spending profile
 
         # RESPONSE FORMAT
         Structure your recommendations clearly with these sections:
         
-        ## Recommended Card Combination
+        ## 💳 Recommended Cards
         - Primary card: [Card name] - For [categories]
             - [Key details]
         - Secondary card: [Card name] - For [categories]
             - [Key details]
         - Additional card (if applicable): [Card name] - For [categories]
             - [Key details]
+
+        ## 🧠 Reasoning
+        - Brief explanation of why this combination was selected
+        - Alternative options considered
         
-        ## Expected Rewards
+        ## 💰 Expected Rewards
         - Total monthly rewards: [Value in SGD or miles]
         - Breakdown by card and category
         - Annual fees consideration
         
-        ## Usage Strategy
+        ## 💡 Usage Strategy
         - Specific guidance on which card to use where
         - Minimum spend requirements to note
         - Important terms or limitations
         
-        ## Reasoning
-        - Brief explanation of why this combination was selected
-        - Alternative options considered
+        ## 🚫 Key Limitations
+        - Spending caps or restrictions
+        - Important T&C considerations
+        - Approval likelihood based on income
+        - Time-sensitive promotions (reference current date: {current_date})
         
         # CONVERSATION APPROACH
         - For initial recommendations: Provide comprehensive, data-driven advice based on spending and preferences
         - For follow-up questions: Give precise, evidence-based answers using available tools
         - For scenario questions: Recalculate recommendations based on the hypothetical spending changes
         - For T&C queries: Reference specific terms using the query_tc tool
+        - For seasonal questions: Consider the current date when discussing seasonal promotions
+ 
+        # FORMATTING GUIDELINES
+        - Format your response in markdown
+        - When using $, it needs to be escaped with a backslash (\$)
 
         Always be specific with numbers, transparent about calculations, and practical in your advice.
         Focus on actionable recommendations that maximize real-world value for Singaporean consumers.
@@ -263,8 +291,8 @@ class CardOptimizerAgent:
             # Set up the OpenAI LLM
             logger.info("Setting up LLM")
             self.llm = ChatOpenAI(
-                model="gpt-4o",
-                temperature=0.7,
+                model="o1-2024-12-17",
+                request_timeout=180,  # 3 minute timeout for LLM requests
             )
             
             # Explicitly check LLM was created
@@ -290,7 +318,7 @@ class CardOptimizerAgent:
                 logger.debug(f"Loaded tool: {tool.name} - {tool.description[:100]}...")
             
             # Create the system message
-            system_message = self.SYSTEM_PROMPT
+            system_message = self.SYSTEM_PROMPT.format(current_date=datetime.now().strftime('%Y-%m-%d'))
             
             # Create the agent with LangGraph's create_react_agent
             logger.info("Creating LangGraph agent with tools")
@@ -508,14 +536,14 @@ if __name__ == "__main__":
     # Create a dummy spending profile directly
     # This avoids dependency on the MerchantCategorizer class
     spending_profile = {
-        'groceries': 200.50,
-        'transportation': 150.75,
-        'dining': 25.60,
-        'shopping': 120.00,
-        'entertainment': 19.90,
+        'groceries': 0.00,
+        'transportation': 53.46,
+        'dining': 229.16,
+        'shopping': 669.16,
+        'entertainment': 7.35,
         'travel': 0.00,
-        'utilities': 50.00,
-        'healthcare': 30.00
+        'utilities': 61.00,
+        'healthcare': 92.00
     }
     print("Preprocessed Spending Profile:")
     for category, amount in spending_profile.items():
@@ -524,11 +552,16 @@ if __name__ == "__main__":
     
     # Sample preferences
     preferences = {
-        'type': 'miles',
-        'max_annual_fee': 200.00,
-        'income': 60000,
-        'prefer_airport_lounge': True
-    }
+            'gender': "Male",
+            'citizenship': "Singaporean",
+            'min_income': 120000,
+            'debt_obligation': 0,
+            'reward_type': "Air Miles",
+            'preferred_airline': "No Preferred Airlines",
+            'other_airline': "",
+            'max_annual_fee': 800,
+            'spending_goals': ""
+        }
     
     async def demo():
         # Check agent status

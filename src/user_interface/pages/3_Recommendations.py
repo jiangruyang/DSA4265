@@ -114,7 +114,9 @@ else:
         
         # Display recommendation in a highlighted container
         with st.container():
-            st.markdown(st.session_state.chat_history[1]["content"])
+            # Insert "\$" before all "$" in the recommendation
+            formatted_recommendation = st.session_state.chat_history[1]["content"].replace("$", "\\$")
+            st.markdown(formatted_recommendation)
         
         # Add info about chatting with the agent
         st.info("Proceed to the Chat page to ask questions about these recommendations or explore scenarios.")

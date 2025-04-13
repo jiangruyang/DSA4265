@@ -61,10 +61,12 @@ else:
     # Display chat history within the container
     with chat_history_container:
         for message in st.session_state.chat_history[1:]:
+            # Insert "\$" before all "$" in the message content
+            formatted_message = message['content'].replace("$", "\\$")
             if message["role"] == "user":
-                st.chat_message("user").write(message['content'])
+                st.chat_message("user").write(formatted_message)
             else:
-                st.chat_message("assistant").write(message['content'])
+                st.chat_message("assistant").write(formatted_message)
     
     # Check if we have a pending question from a button click
     if "selected_question" in st.session_state and st.session_state.selected_question:
@@ -125,6 +127,9 @@ else:
                             agent.send_message,
                             user_question
                         )
+
+                        # Insert "\" before all "$" in the answer
+                        answer = answer.replace("$", "\\$")
                         
                         # Write answer 
                         st.write(answer)

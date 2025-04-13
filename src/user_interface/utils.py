@@ -114,7 +114,7 @@ def run_async(func: Callable[..., Awaitable[Any]], *args, **kwargs) -> Any:
     
     # Wait for the result with a timeout
     try:
-        return future.result(timeout=60.0)  # 60 second timeout
+        return future.result(timeout=180.0)  # 60 second timeout
     except asyncio.TimeoutError:
         future.cancel()
         raise TimeoutError(f"Async operation timed out after 60 seconds: {func.__name__}")
