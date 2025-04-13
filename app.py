@@ -22,7 +22,7 @@ os.environ["STREAMLIT_SERVER_WATCH_EXCLUDE_PATTERNS"] = "torch.*,torchvision.*" 
 def main():
     """Run the Streamlit app with the correct Python path."""
     # Launch the Streamlit app
-    streamlit_app_path = os.path.join(project_root, "src", "user_interface", "streamlit_app.py")
+    streamlit_app_path = os.path.join(project_root, "src", "user_interface", "Welcome.py")
     
     # Use subprocess to launch Streamlit with the proper Python path
     cmd = ["streamlit", "run", streamlit_app_path]

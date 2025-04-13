@@ -17,6 +17,7 @@ if project_root not in sys.path:
 
 # Import from utils - use absolute import from project root
 from src.user_interface.utils import run_async, initialize_app_event_loop
+from src.user_interface.components import page_header, section_header, nav_buttons
 
 # Set page configuration
 st.set_page_config(
@@ -49,15 +50,55 @@ if "chat_history" not in st.session_state:
 # if "agent" not in st.session_state:
 #     st.session_state.agent = CardOptimizerAgent()
 
-# Main app header
-st.title("Credit Card Rewards Optimizer: Singapore Edition")
-st.write("Welcome to the Credit Card Rewards Optimizer for Singapore! Navigate through the pages to set up your profile, enter your spending data, and get personalized credit card recommendations.")
+# Main app header with standardized component
+page_header(
+    title="Credit Card Rewards Optimizer: Singapore Edition 🇸🇬",
+    icon="💳",
+    description="Welcome to the Credit Card Rewards Optimizer for Singapore! Navigate through the pages to set up your profile, enter your spending data, and get personalized credit card recommendations."
+)
+
+# App workflow section
+section_header(
+    title="How It Works",
+    description="Complete these steps to get personalized credit card recommendations:"
+)
+
+# Create a step-by-step guide using columns with icons
+col1, col2, col3, col4 = st.columns(4)
+with col1:
+    st.markdown("### 1️⃣ User Profile")
+    st.markdown("Set your preferences and financial information")
+    st.page_link("pages/1_User_Profile.py", label="Start Here", icon="👤", use_container_width=True)
+
+with col2:
+    st.markdown("### 2️⃣ Spending Input")
+    st.markdown("Enter your spending data manually or upload statements")
+    if st.session_state.preferences:
+        st.page_link("pages/2_Spending_Input.py", label="Next Step", icon="💰", use_container_width=True)
+    else:
+        st.button("Complete Profile First", disabled=True, use_container_width=True)
+
+with col3:
+    st.markdown("### 3️⃣ Recommendations")
+    st.markdown("Get personalized credit card recommendations")
+    if st.session_state.spending_profile:
+        st.page_link("pages/3_Recommendations.py", label="View Recommendations", icon="💳", use_container_width=True)
+    else:
+        st.button("Enter Spending First", disabled=True, use_container_width=True)
+
+with col4:
+    st.markdown("### 4️⃣ Chat with AI")
+    st.markdown("Ask questions about card options and scenarios")
+    if st.session_state.chat_history and len(st.session_state.chat_history) >= 2:
+        st.page_link("pages/4_Chat.py", label="Chat with AI", icon="🤖", use_container_width=True)
+    else:
+        st.button("Get Recommendations First", disabled=True, use_container_width=True)
 
 # Information about the app navigation
 st.info("Use the sidebar to navigate between different sections of the app.")
 
-# Footer
-st.markdown("---")
+# Footer with divider instead of markdown
+st.divider()
 st.caption("Developed for DSA4265 Project - Singapore Edition")
 
 # Ensure proper cleanup when the app exits
@@ -89,5 +130,3 @@ def on_shutdown():
 
 # Register the shutdown handler
 atexit.register(on_shutdown)
-
-# Run the app with: streamlit run src/app.py 

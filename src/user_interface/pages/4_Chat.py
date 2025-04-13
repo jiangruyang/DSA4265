@@ -12,13 +12,19 @@ if project_root not in sys.path:
 st.set_page_config(
     page_title="AI Chat | Credit Card Optimizer",
     page_icon="🤖",
+    layout="wide"
 )
 
 # Import from utils
 from src.user_interface.utils import run_async, initialize_app_event_loop
+# Import standardized components
+from src.user_interface.components import page_header, section_header, subsection_header, progress_tracker, nav_buttons
 
 # Ensure the application event loop is initialized
 initialize_app_event_loop()
+
+# Display progress tracker (Chat is step 3)
+progress_tracker(current_step=3)
 
 # Initialize session state variables for suggested questions
 if "suggested_questions" not in st.session_state:
@@ -27,13 +33,17 @@ if "suggested_questions" not in st.session_state:
 if "refresh_questions" not in st.session_state:
     st.session_state.refresh_questions = True
 
-st.title("Chat with AI Assistant")
-st.header("Ask About Your Cards & Explore Scenarios")
+# Page header
+page_header(
+    title="Chat with AI Assistant",
+    icon="🤖",
+    description="Ask questions about your card recommendations and explore different spending scenarios."
+)
 
 # Check if agent is initialized
 if "agent" not in st.session_state:
     st.warning("Please go to the Recommendations page first to initialize the system.")
-    st.page_link("pages/3_Recommendations.py", label="Go to Recommendations", icon="💳")
+    st.page_link("pages/3_Recommendations.py", label="Go to Recommendations", icon="💳", use_container_width=False)
     st.stop()
 
 # Variable for consistent reference
@@ -43,7 +53,7 @@ agent = st.session_state.agent
 if not st.session_state.chat_history or len(st.session_state.chat_history) < 2:
     st.warning("Please generate recommendations first before using the chat feature.")
     st.info("Go to the Recommendations page to generate card recommendations.")
-    st.page_link("pages/3_Recommendations.py", label="Go to Recommendations", icon="💳")
+    st.page_link("pages/3_Recommendations.py", label="Go to Recommendations", icon="💳", use_container_width=False)
 else:
     # Create a container for all chat history messages
     chat_history_container = st.container()
@@ -182,10 +192,10 @@ else:
         st.session_state.refresh_questions = True
         st.rerun()
 
-    # Navigation buttons
-    st.markdown("---")
-    col1, col2, col3 = st.columns([1, 1, 1])
-    with col1:
-        st.page_link("pages/3_Recommendations.py", label="← Recommendations", icon="💳")
-    with col2:
-        st.page_link("streamlit_app.py", label="Home", icon="🏠") 
+# Navigation buttons
+st.divider()
+nav_buttons(
+    prev_page="pages/3_Recommendations.py", 
+    next_page=None, 
+    home=True
+) 
