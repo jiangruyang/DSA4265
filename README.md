@@ -1,8 +1,8 @@
-# Credit Card Rewards Optimizer: Singapore Edition
+# 💳 Credit Card Rewards Optimizer: Singapore Edition 🇸🇬:
 
 A Singapore-focused application that uses Generative AI to analyze consumer spending patterns and provide multi-card synergy recommendations with strategic usage guidelines. The system uses an agentic architecture leveraging the Model Context Protocol (MCP) to power AI-driven chat for scenario planning and T&C clarifications.
 
-## Features
+## ✨ Features
 
 - **Spending Analysis**: Analyze transaction data to create a comprehensive spending profile
 - **Merchant Categorization**: Categorize merchant names into spending categories using a distilled model trained on ACRA business data
@@ -10,7 +10,7 @@ A Singapore-focused application that uses Generative AI to analyze consumer spen
 - **Strategic Usage**: Provide specific advice on which card to use for which spending category
 - **T&C Insights**: Answer natural language questions about card terms and conditions
 
-## Project Structure
+## 🌳 Project Structure
 
 ```plaintext
 project/
@@ -37,11 +37,11 @@ project/
 └── docs/                      # Documentation files
 ```
 
-## Requirements
+## 📋 Requirements
 
 - python>=3.12
 
-## Setup Instructions
+## 🏗️ Setup Instructions
 
 1. Create a virtual environment:
 
@@ -82,7 +82,7 @@ project/
    python app.py
    ```
 
-## Component Overview
+## 🧐 Component Overview
 
 ### 1. Transaction Categorization
 
@@ -117,7 +117,7 @@ The system implements four core MCP tools as defined in the PRD:
 3. `query_tc(question, card_id)` - Natural language queries about card terms and conditions
 4. `search_cards(query)` - Semantic search for cards matching natural language criteria
 
-## Tasks For Team Members
+## 🚀 Tasks For Team Members
 
 ### Team Member 1: Transaction Data Wrangling & Merchant Categorization
 
@@ -149,7 +149,7 @@ The system implements four core MCP tools as defined in the PRD:
 - Implement multi-step conversation flow in chat
 - Finalize Docker configuration for deployment
 
-## Testing
+## 🧪 Testing
 
 Each component should include its own `if __name__ == "__main__"` block for quick testing.
 
@@ -159,7 +159,7 @@ Run the complete flow demo with:
 python src/main.py
 ```
 
-## Future Work
+## 🔮 Future Work
 
 - Add support for additional banks and card issuers
 - Implement foreign transaction fee analysis
