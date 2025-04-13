@@ -9,7 +9,6 @@ torch>=1.10.0
 transformers>=4.15.0
 polars
 seaborn
-llama_index
 pdfplumber
 
 # For RAG pipeline
@@ -30,10 +29,6 @@ pdfplumber>=0.7.0
 pdf2image>=1.16.0
 pytesseract>=0.3.9
 
-# Vector database
-faiss-cpu>=1.7.4
-pinecone-client>=2.0.0
-
 # Utilities
 python-dotenv>=0.19.0
 pydantic>=1.9.0
@@ -49,10 +44,10 @@ pytest-cov>=2.12.0
 python-multipart>=0.0.5
 
 # Statement Parsing
-ocrmypdf
-monopoly-core
-PyMuPDF
-PyMuPDFb
+ocrmypdf>=16.5.0
+monopoly-core>=0.14.2
+PyMuPDF>=1.24.10
+PyMuPDFb>=1.24.10
 altair
 altgraph
 annotated-types
@@ -81,9 +76,7 @@ mccabe
 monopoly-core
 mypy-extensions
 narwhals
-numpy
 packaging
-pandas
 pathspec
 pdftotext
 pillow
@@ -101,8 +94,6 @@ pyflakes
 pyinstaller
 pyinstaller-hooks-contrib
 pylint
-PyMuPDF
-PyMuPDFb
 pytest
 python-dateutil
 python-dotenv
@@ -115,7 +106,6 @@ setuptools
 six
 smmap
 -e git+https://github.com/benjamin-awd/StatementSensei.git@cabcf96ee7056c4b1e9fb3fcdf7ac8a23a3d9f3a#egg=statement_sensei
-streamlit
 StrEnum
 tabulate
 tenacity

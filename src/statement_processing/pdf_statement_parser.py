@@ -137,7 +137,33 @@ class PDFStatementParser:
             
             bank_class = BankDetector(document).detect_bank(banks)
             parser = PdfParser(bank_class, document)
-            pipeline = Pipeline(parser)
+            
+            class CustomPipeline(Pipeline):
+                '''
+                Custom pipeline to override the default transaction bound,
+                which keeps causing the extraction to fail
+                '''
+                def extract(self, safety_check=True):
+                    statement = self.handler.get_statement()
+                    # This is where the magic happens
+                    statement.config.transaction_bound = 1000
+                    
+                    transactions = statement.get_transactions()
+
+                    if not transactions:
+                        raise ValueError("No transactions found - statement extraction failed")
+
+                    logger.debug("%s transactions found", len(transactions))
+
+                    if not statement.statement_date:
+                        raise ValueError("No statement date found")
+
+                    if safety_check and statement.config.safety_check:
+                        statement.perform_safety_check()
+
+                    return statement
+            
+            pipeline = CustomPipeline(parser)
             statement = pipeline.extract(safety_check=False)
             transactions = pipeline.transform(statement)
             
