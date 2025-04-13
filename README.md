@@ -1,4 +1,4 @@
-# 💳 Credit Card Rewards Optimizer: Singapore Edition 🇸🇬:
+# 💳 Credit Card Rewards Optimizer: Singapore Edition 🇸🇬
 
 A Singapore-focused application that uses Generative AI to analyze consumer spending patterns and provide multi-card synergy recommendations with strategic usage guidelines. The system uses an agentic architecture leveraging the Model Context Protocol (MCP) to power AI-driven chat for scenario planning and T&C clarifications.
 
