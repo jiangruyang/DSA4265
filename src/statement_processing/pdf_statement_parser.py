@@ -88,7 +88,6 @@ class PDFStatementParser:
         try:
             # Extract transactions from PDF
             df = self.extract_text_from_pdf(pdf_file, is_path)
-            print(df)
             out = [
                 {
                     'merchant': row['description'],
