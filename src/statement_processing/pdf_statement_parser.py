@@ -88,15 +88,17 @@ class PDFStatementParser:
         try:
             # Extract transactions from PDF
             df = self.extract_text_from_pdf(pdf_file, is_path)
+            print(df)
             out = [
                 {
                     'merchant': row['description'],
                     'amount': row['amount'],
                     'date': row['date'],
-                    'type': 'withdrawal' if row['amount'] < 0 else 'deposit',
+                    'type': 'deposit',
                     'category': 'TODO',
                     'description': row['description'],
                 } for _, row in df.iterrows()
+                if row['polarity'] == 'DR' and row['amount'] < 0
             ]
             out = self._clean_transactions(out)
             return out
@@ -168,33 +170,14 @@ class PDFStatementParser:
             transactions = pipeline.transform(statement)
             
             return pd.DataFrame(transactions)
-
-            
+     
         except Exception as e:
             if is_path:
                 logger.error(f"Error extracting text from PDF at {pdf_file}: {str(e)}")
             else:
                 logger.error(f"Error extracting text from PDF in memory: {str(e)}")
             return ""
-    
-    def _determine_transaction_type(self, description: str) -> str:
-        """Determine if a transaction is a withdrawal or deposit
-        
-        Args:
-            description: Transaction description
-            
-        Returns:
-            'withdrawal' or 'deposit'
-        """
-        description_lower = description.lower()
-        
-        # Check for deposit indicators
-        for deposit_term in self.transaction_types['deposit']:
-            if deposit_term in description_lower:
-                return 'deposit'
-                
-        # Default to withdrawal
-        return 'withdrawal'
+
     
     def _extract_merchant_name(self, description: str) -> str:
         """Extract the merchant name from the description
