@@ -37,6 +37,10 @@ project/
 └── docs/                      # Documentation files
 ```
 
+## Requirements
+
+- python>=3.12
+
 ## Setup Instructions
 
 1. Create a virtual environment:
