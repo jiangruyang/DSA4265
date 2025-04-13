@@ -89,14 +89,8 @@ class CardOptimizerClient:
             raise
             
         except Exception as e:
-            if isinstance(e, types.ProtocolError) and "404" in str(e):
-                msg = f"Server returned 404 Not Found. Check if the endpoint {full_url} is correct."
-                logger.error(msg)
-                logger.error("Make sure the MCP server is running and accessible.")
-                raise ConnectionError(msg)
-            else:
-                logger.error(f"Error establishing connection: {str(e)}")
-                raise ConnectionError(f"Failed to connect to MCP server: {str(e)}")
+            logger.error(f"Error establishing connection: {str(e)}")
+            raise ConnectionError(f"Failed to connect to MCP server: {str(e)}")
             
         # If we get here with any errors, clean up
         if not self.initialized:
