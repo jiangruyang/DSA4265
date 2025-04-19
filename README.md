@@ -62,7 +62,7 @@ project/
    brew install gcc@11 pkg-config poppler ocrmypdf
    ```
 
-   For Windows, you have to manually find these binaries and ensure they are discoverable. It is likely that these would be availible on Windows package manaers like `Winget` or `Chocolatey`, but I have not tested them yet.
+   For Windows, you have to manually find these binaries and ensure they are discoverable. It is likely that these would be available on Windows package managers like `Winget` or `Chocolatey`, but I have not tested them yet.
    
 4. Install requirements:
 
