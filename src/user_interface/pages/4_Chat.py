@@ -62,7 +62,7 @@ else:
     with chat_history_container:
         for message in st.session_state.chat_history[1:]:
             # Insert "\$" before all "$" in the message content
-            formatted_message = message['content'].replace("$", "\\$")
+            formatted_message = message['content'].replace("$", "\$")
             if message["role"] == "user":
                 st.chat_message("user").write(formatted_message)
             else:
@@ -129,7 +129,7 @@ else:
                         )
 
                         # Insert "\" before all "$" in the answer
-                        answer = answer.replace("$", "\\$")
+                        answer = answer.replace("$", "\$")
                         
                         # Write answer 
                         st.write(answer)
