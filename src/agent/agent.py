@@ -291,7 +291,7 @@ class CardOptimizerAgent:
             # Set up the OpenAI LLM
             logger.info("Setting up LLM")
             self.llm = ChatOpenAI(
-                model="o1-2024-12-17",
+                model="gpt-4o",
                 request_timeout=180,  # 3 minute timeout for LLM requests
             )
             
