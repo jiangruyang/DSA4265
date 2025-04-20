@@ -10,7 +10,7 @@ from selenium.common.exceptions import TimeoutException, ElementClickIntercepted
 import time
 
 # Ensure output directory exists
-output_dir = "./data/card_tcs/json"
+output_dir = "../../../data/card/json"
 os.makedirs(output_dir, exist_ok=True)
 
 # URL of the Citi PremierMiles Card page
