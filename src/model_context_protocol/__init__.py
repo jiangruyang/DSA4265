@@ -1,6 +1,7 @@
-# MCP Servers package 
+"""
+Model Context Protocol client for interacting with AI models
+"""
 
-# MCP module for Credit Card Rewards Optimizer
 from src.model_context_protocol.client import CardOptimizerClient
 
-__all__ = ['CardOptimizerClient'] 
+__all__ = ['CardOptimizerClient']

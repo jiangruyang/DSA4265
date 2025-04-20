@@ -12,9 +12,13 @@ from tqdm import tqdm
 import openai
 import pandas as pd
 from sklearn.model_selection import train_test_split
+import sys
+
+# Add project root to Python path when running script directly
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
 # Import the main categorizer to access categories and for testing
-from merchant_categorizer import MerchantCategorizer
+from src.statement_processing.merchant_categorizer import MerchantCategorizer
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
