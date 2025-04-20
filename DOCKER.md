@@ -31,8 +31,8 @@ This document describes how to use Docker to run the Credit Card Rewards Optimiz
     - The Streamlit app on port 8501
 
 3. Access the application:
-   - Streamlit web interface: http://localhost:8501
-   - MCP server endpoint: http://localhost:8000
+   - Streamlit web interface: [http://localhost:8501](http://localhost:8501)
+   - MCP server endpoint: [http://localhost:8000](http://localhost:8000)
 
 4. To view the logs:
 
