@@ -19,13 +19,15 @@ class CardOptimizerClient:
     def __init__(self):
         """Initialize the MCP client and connect to required servers"""
         self.session = None
-        # Change the URL format to ensure it's not treated as a path to be stripped
-        # Use http://localhost:8000 for the base and specify /sse as the endpoint that will be used later
-        self.base_url = "http://localhost:8000"
+        # In Docker Compose, services can connect to each other using the service name as hostname
+        # Default to localhost for local development, but override with environment variable if set
+        mcp_host = os.environ.get("MCP_HOST", "localhost")
+        mcp_port = os.environ.get("MCP_PORT", "8000")
+        self.base_url = f"http://{mcp_host}:{mcp_port}"
         self.sse_endpoint = "/sse" 
         self.initialized = False
         self.exit_stack = AsyncExitStack()
-        logger.info("CardOptimizerClient instance created")
+        logger.info(f"CardOptimizerClient instance created, will connect to {self.base_url}")
         
     async def initialize(self):
         """Initialize the client by connecting to servers and getting tools

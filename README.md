@@ -14,32 +14,44 @@ A Singapore-focused application that uses Generative AI to analyze consumer spen
 
 ```plaintext
 project/
+├── app.py                     # Launcher script for Streamlit app
 ├── src/                       # Main source code
-│   ├── app.py                 # Streamlit application UI
-│   ├── main.py                # Main entry point for demo
-│   ├── agent.py               # Card optimizer agent implementation
-│   ├── mcp/                   # MCP implementation
+│   ├── agent/                 # Card optimizer agent implementation
+│   │   └── agent.py           # Main agent implementation
+│   ├── card_processing/       # Card data processing modules
+│   │   └── vector_db.py       # Vector database implementation
+│   ├── data_collection/       # Data collection utilities
+│   ├── model_context_protocol/  # MCP implementation
 │   │   ├── client.py          # MCP client for server communication
 │   │   └── card_data_server.py  # Card data access server
-│   ├── models/                # AI models
+│   ├── statement_processing/  # Statement analysis modules
 │   │   ├── merchant_categorizer.py  # Merchant categorization model
-│   │   ├── pdf_statement_parser.py  # PDF parsing module
-│   │   └── vector_db.py       # Vector database implementation
-│   └── mcp_servers/           # MCP server implementations
-│       └── card_data_server.py  # Card data access server
+│   │   ├── merchant_categorizer_trainer.py  # Training for categorizer
+│   │   └── pdf_statement_parser.py  # PDF parsing module
+│   └── user_interface/        # Streamlit UI components
+│       ├── Welcome.py         # Main Streamlit entry point
+│       ├── components.py      # Reusable UI components
+│       ├── utils.py           # UI utility functions
+│       └── pages/             # Additional app pages
+├── models/                    # Trained models
+│   └── merchant_categorizer/  # Merchant categorization models
 ├── data/                      # Data storage
+│   ├── card/                  # Card data
 │   ├── card_tcs/              # Card terms and conditions
 │   │   └── pdf/               # Original T&C PDFs
+│   ├── categorization/        # Categorization data
 │   ├── sample_statements/     # Sample card statements for testing
 │   └── vector_db/             # Vector database storage
-├── run_app.py                 # Entry point for Streamlit app
-├── requirements.txt           # Python dependencies
-└── docs/                      # Documentation files
+├── notebooks/                 # Jupyter notebooks for analysis
+├── docs/                      # Documentation files
+├── results/                   # Analysis results and outputs
+├── logs/                      # Application logs
+└── requirements.txt           # Python dependencies
 ```
 
 ## 📋 Requirements
 
-- python>=3.12
+- python>=3.13
 
 ## 🏗️ Setup Instructions
 
@@ -63,111 +75,63 @@ project/
    ```
 
    For Windows, you have to manually find these binaries and ensure they are discoverable. It is likely that these would be available on Windows package managers like `Winget` or `Chocolatey`, but I have not tested them yet.
-   
-4. Install requirements:
+
+3. Install requirements:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-5. Create a .env file by copying .env.example and filling in required values.
+4. Create a .env file by copying .env.example and filling in required values.
 
-6. Start the MCP server:
+5. Start the MCP server:
 
    ```bash
    python -m src.model_context_protocol.card_data_server
    ```
 
-7. (**In a new terminal window**) Run the Streamlit application:
+6. (**In a new terminal window**) Run the Streamlit application:
 
    ```bash
    python app.py
    ```
 
+For Docker, see [DOCKER.md](DOCKER.md).
+
 ## 🧐 Component Overview
 
 ### 1. Transaction Categorization
 
-- `src/models/merchant_categorizer.py` - Distilled model for categorizing merchant names
+- `src/statement_processing/merchant_categorizer.py` - Model for categorizing merchant names
+- `src/statement_processing/merchant_categorizer_trainer.py` - Training pipeline for categorizer model
+- `src/statement_processing/pdf_statement_parser.py` - PDF statement parsing and data extraction
 
 ### 2. Card Embeddings & Semantic Search
 
-- `src/card_processing/vector_db.py` - Vector database for card embeddings
-- `src/mcp/card_data_server.py` - MCP tools for card data access including semantic search
+- `src/card_processing/vector_db.py` - Vector database for card embeddings and T&C documents
+- `src/model_context_protocol/card_data_server.py` - MCP tools for card data access including semantic search
 
 ### 3. Agent Reasoning
 
-- `src/agent.py` - Main agent implementation for card recommendations and scenario analysis
+- `src/agent/agent.py` - Main agent implementation for card recommendations and scenario analysis
 
 ### 4. RAG Pipeline
 
 - `src/card_processing/vector_db.py` - Vector database for T&C document storage
-- `src/mcp/card_data_server.py` - Tools for T&C querying
+- `src/model_context_protocol/card_data_server.py` - Tools for T&C querying
 
-### 5. UI & DevOps
+### 5. UI & Application Flow
 
-- `src/app.py` - Streamlit UI implementation
-- `run_app.py` - Application entry point
-- `Dockerfile` and `docker-compose.yml` - Container configuration
+- `app.py` - Main application entry point
+- `src/user_interface/Welcome.py` - Streamlit UI main page
+- `src/user_interface/components.py` - Reusable UI components
+- `src/user_interface/utils.py` - UI utility functions
 
 ## MCP Tool Architecture
 
-The system implements four core MCP tools as defined in the PRD:
+The system implements core MCP tools through the `src/model_context_protocol/card_data_server.py`:
 
 1. `get_available_cards()` - Returns a list of all available cards with basic metadata
 2. `get_card_details(card_id)` - Returns complete card information in its original format
 3. `query_tc(question, card_id)` - Natural language queries about card terms and conditions
 4. `search_cards(query)` - Semantic search for cards matching natural language criteria
-
-## 🚀 Tasks For Team Members
-
-### Team Member 1: Transaction Data Wrangling & Merchant Categorization
-
-- Implement `merchant_categorizer.py` with proper model distillation
-- Complete `pdf_statement_parser.py` for statement parsing
-- Test categorization with real Singapore merchant examples
-
-### Team Member 2: Card Embeddings & Semantic Search
-
-- Implement vector embedding functionality in `vector_db.py` for cards
-- Update `search_cards` in `card_data_server.py` to use vector search
-- Collect and structure Singsaver card data
-
-### Team Member 3: Agent Reasoning & Strategy Implementation
-
-- Complete `agent.py` with actual LLM-based reasoning
-- Implement multi-card synergy calculations
-- Create advanced scenario analysis
-
-### Team Member 4: RAG Pipeline & Question Suggestions
-
-- Complete T&C document ingestion with `vector_db.py`
-- Improve `query_tc` function with proper RAG retrieval
-- Implement dynamic suggested questions generator
-
-### Team Member 5: DevOps, MCP & Chat Orchestration
-
-- Complete `app.py` Streamlit interface
-- Implement multi-step conversation flow in chat
-- Finalize Docker configuration for deployment
-
-## 🧪 Testing
-
-Each component should include its own `if __name__ == "__main__"` block for quick testing.
-
-Run the complete flow demo with:
-
-```bash
-python src/main.py
-```
-
-## 🔮 Future Work
-
-- Add support for additional banks and card issuers
-- Implement foreign transaction fee analysis
-- Add support for statement upload via API
-- Enhance UI with visualizations of rewards optimization
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.

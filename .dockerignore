@@ -1,0 +1,57 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Development/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs and databases
+logs/
+*.log
+*.sqlite3
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Data files (conditionally exclude; may need some for initialization)
+# data/
+# temp/
+# results/
+
+# Documentation
+README.md
+docs/
+*.pdf 

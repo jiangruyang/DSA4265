@@ -1,33 +1,48 @@
 FROM python:3.13-slim
 
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app
+
+# Set working directory
 WORKDIR /app
 
-# Install system dependencies
+# Copy requirements first for better caching
+COPY requirements.txt .
+
+# Install dependencies - with the exact dependencies recommended by the library author
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    build-essential \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+        build-essential \
+        libpoppler-cpp-dev \
+        pkg-config \
+        ocrmypdf \
+        tesseract-ocr \
+        libtesseract-dev \
+        poppler-utils \
+        libmagic1 \
+        qpdf \
+        git \
+        curl && \
+    pip install --no-cache-dir -r requirements.txt && \
+    apt-get autoremove -y && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-# Copy requirements and install Python dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy application code
+# Copy project files
 COPY . .
 
 # Create necessary directories
-RUN mkdir -p data/card_tcs/json \
-    data/sample_statements \
-    data/vector_db
+RUN mkdir -p logs data/vector_db
 
-# Set environment variables
-ENV PYTHONPATH=/app
-ENV STREAMLIT_SERVER_PORT=8501
-ENV STREAMLIT_SERVER_HEADLESS=true
+# Expose ports for both services
+EXPOSE 8000 8501
 
-# Expose port
-EXPOSE 8501
+# Default command runs the MCP server
+# (docker-compose overrides this for the Streamlit container)
+CMD ["python", "src/model_context_protocol/card_data_server.py"]
 
-# Start application
-CMD ["streamlit", "run", "src/app.py", "--server.port=8501", "--server.address=0.0.0.0"] 
+# Set healthcheck
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:8000/ || exit 1 

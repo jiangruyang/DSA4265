@@ -1,12 +1,48 @@
-version: '3'
-
 services:
-  credit-card-optimizer:
+  card-data-server:
     build: .
+    container_name: card-data-server
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    env_file:
+      - .env
+    environment:
+      - MCP_PORT=8000
+      - VECTOR_DB_PATH=/app/data/vector_db
+      - VECTOR_DB_TYPE=chroma
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+      
+  streamlit-app:
+    build: .
+    container_name: streamlit-app
+    command: python app.py
     ports:
       - "8501:8501"
     volumes:
       - ./data:/app/data
+      - ./logs:/app/logs
     env_file:
       - .env
-    restart: unless-stopped 
+    environment:
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_HEADLESS=true
+      - MCP_HOST=card-data-server
+      - MCP_PORT=8000
+    depends_on:
+      - card-data-server
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
