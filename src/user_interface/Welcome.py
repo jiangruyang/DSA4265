@@ -31,9 +31,6 @@ st.set_page_config(
 initialize_app_event_loop()
 
 from src.statement_processing.merchant_categorizer import MerchantCategorizer
-# Import these only when needed in specific pages
-# from src.mcp.client import CardOptimizerClient
-# from src.agent.agent import CardOptimizerAgent
 
 # Initialize session state for shared data across pages
 if "preferences" not in st.session_state:
@@ -44,11 +41,6 @@ if "spending_profile" not in st.session_state:
     st.session_state.spending_profile = {}
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
-# client and agent initialization moved to Recommendations page
-# if "client" not in st.session_state:
-#     st.session_state.client = CardOptimizerClient()
-# if "agent" not in st.session_state:
-#     st.session_state.agent = CardOptimizerAgent()
 
 # Main app header with standardized component
 page_header(

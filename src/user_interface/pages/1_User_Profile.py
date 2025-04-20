@@ -20,6 +20,9 @@ st.set_page_config(
     layout="wide"
 )
 
+if "preferences" not in st.session_state:
+    st.session_state.preferences = {}
+
 # Ensure the application event loop is initialized
 initialize_app_event_loop()
 

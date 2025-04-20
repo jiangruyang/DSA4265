@@ -49,12 +49,12 @@ if "chat_history" not in st.session_state:
 agent = st.session_state.agent
 
 # Check if prerequisites are completed
-if not st.session_state.preferences:
+if "preferences" not in st.session_state or not st.session_state.preferences:
     st.warning("Please complete the User Profile first.")
     st.info("Go to the User Profile page to set your preferences.")
     # Add direct navigation button
     st.page_link("pages/1_User_Profile.py", label="Go to User Profile", icon="👤", use_container_width=False)
-elif not st.session_state.spending_profile:
+elif "spending_profile" not in st.session_state or not st.session_state.spending_profile:
     st.warning("Please complete the Spending Input first.")
     st.info("Go to the Spending Input page to enter your spending information.")
     # Add direct navigation button

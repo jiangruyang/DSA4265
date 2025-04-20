@@ -129,10 +129,10 @@ else:
                         )
 
                         # Insert "\" before all "$" in the answer
-                        answer = answer.replace("$", "\$")
+                        formatted_answer = answer.replace("$", "\$")
                         
                         # Write answer 
-                        st.write(answer)
+                        st.write(formatted_answer)
                         st.session_state.chat_history.append({"role": "assistant", "content": answer})
                         
                         # Set flag to refresh suggested questions after receiving an answer

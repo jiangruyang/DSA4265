@@ -190,7 +190,6 @@ class CardOptimizerAgent:
  
         # FORMATTING GUIDELINES
         - Format your response in markdown
-        - When using $, it needs to be escaped with a backslash (\$)
 
         Always be specific with numbers, transparent about calculations, and practical in your advice.
         Focus on actionable recommendations that maximize real-world value for Singaporean consumers.
@@ -291,7 +290,7 @@ class CardOptimizerAgent:
             # Set up the OpenAI LLM
             logger.info("Setting up LLM")
             self.llm = ChatOpenAI(
-                model="gpt-4o",
+                model=os.environ.get("OPENAI_MODEL", "gpt-4o"),
                 request_timeout=180,  # 3 minute timeout for LLM requests
             )
             
