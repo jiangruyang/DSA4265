@@ -108,3 +108,21 @@ def fetch_ACRA(file_dir: str) -> pl.DataFrame:
     print(f"ACRA + SSIC data written to {file_dir}ACRA.csv")
 
     return df
+
+
+if __name__ == "__main__":
+    # Define the directory where ACRA files are located and where output will be saved
+    # Adjust this path as needed based on your project structure
+    file_dir = "data/categorization/"
+    
+    # Ensure directory exists
+    os.makedirs(file_dir, exist_ok=True)
+    
+    # Fetch and process ACRA data
+    acra_df = fetch_ACRA(file_dir)
+    
+    # Print sample of the data
+    print(f"Loaded {acra_df.shape[0]} ACRA records")
+    print("Sample data:")
+    print(acra_df.head(5))
+    
